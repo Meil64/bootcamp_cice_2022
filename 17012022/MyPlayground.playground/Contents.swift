@@ -178,9 +178,3 @@ let auxDisB = numerosSecuenciaB(2, b: 3, c: 4)
 print(auxDisA)
 print(auxDisB)
 
-
-    
-
-
-
-
