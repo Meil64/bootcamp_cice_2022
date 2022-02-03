@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C391F4227AC2B00009656B8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C391F4127AC2B00009656B8 /* ProfileViewController.swift */; };
+		2C391F4427AC2B76009656B8 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C391F4327AC2B76009656B8 /* ChatViewController.swift */; };
+		2C391F4627AC2B96009656B8 /* StoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C391F4527AC2B96009656B8 /* StoriesViewController.swift */; };
 		2C9349AF27A99741009385B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9349AE27A99741009385B8 /* AppDelegate.swift */; };
 		2C9349B327A99741009385B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9349B227A99741009385B8 /* ViewController.swift */; };
 		2C9349B627A99741009385B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C9349B427A99741009385B8 /* Main.storyboard */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C391F4127AC2B00009656B8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		2C391F4327AC2B76009656B8 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		2C391F4527AC2B96009656B8 /* StoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewController.swift; sourceTree = "<group>"; };
 		2C9349AB27A99741009385B8 /* MiPrimeraApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiPrimeraApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C9349AE27A99741009385B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C9349B227A99741009385B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +41,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C391F3F27AC2A89009656B8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2C9349AE27A99741009385B8 /* AppDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		2C391F4027AC2A90009656B8 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				2C9349B227A99741009385B8 /* ViewController.swift */,
+				2C391F4127AC2B00009656B8 /* ProfileViewController.swift */,
+				2C391F4327AC2B76009656B8 /* ChatViewController.swift */,
+				2C391F4527AC2B96009656B8 /* StoriesViewController.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		2C9349A227A99741009385B8 = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +79,8 @@
 		2C9349AD27A99741009385B8 /* MiPrimeraApp */ = {
 			isa = PBXGroup;
 			children = (
-				2C9349AE27A99741009385B8 /* AppDelegate.swift */,
-				2C9349B227A99741009385B8 /* ViewController.swift */,
+				2C391F3F27AC2A89009656B8 /* Core */,
+				2C391F4027AC2A90009656B8 /* Source */,
 				2C9349B427A99741009385B8 /* Main.storyboard */,
 				2C9349B727A99747009385B8 /* Assets.xcassets */,
 				2C9349B927A99747009385B8 /* LaunchScreen.storyboard */,
@@ -135,7 +160,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C391F4627AC2B96009656B8 /* StoriesViewController.swift in Sources */,
+				2C391F4227AC2B00009656B8 /* ProfileViewController.swift in Sources */,
 				2C9349B327A99741009385B8 /* ViewController.swift in Sources */,
+				2C391F4427AC2B76009656B8 /* ChatViewController.swift in Sources */,
 				2C9349AF27A99741009385B8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
