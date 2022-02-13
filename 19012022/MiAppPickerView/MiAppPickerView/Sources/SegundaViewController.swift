@@ -30,7 +30,7 @@ class SegundaViewController: UIViewController {
     private func configuracionUI(){
         
         //Imagen por defecto
-        self.perfilIV.image = UIImage(named: self.dataSourceFotosPerfil[0])
+        self.perfilIV.image = UIImage(named: self.dataSourceFotosPerfil.first ?? "placeholder")
         
         Utils.shared.configuracionPickerView(tag: 1,
                                              delegate: self,
