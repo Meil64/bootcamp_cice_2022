@@ -61,9 +61,14 @@ class SegundaViewController: UIViewController {
         if segue.identifier == "segueV3"{
             if !(self.miTelefonoTF.text?.isEmpty ?? false) &&
                 !(self.miDireccionTF.text?.isEmpty ?? false) &&
-                nuevaEdadPerro != nil {
+                self.nuevaEdadPerro != nil {
                 
-                _ = segue.destination as? TerceraViewController
+                datosUsuario.telefonoData = self.miTelefonoTF.text
+                datosUsuario.direccionData = self.miDireccionTF.text
+                datosUsuario.edadPerroData = String(self.nuevaEdadPerro ?? 0)
+                
+                let ventana3VC = segue.destination as? TerceraViewController
+                ventana3VC?.datosUsuario = self.datosUsuario
                 
             } else {
                 self.present(Utils.shared.showAlertVC(
