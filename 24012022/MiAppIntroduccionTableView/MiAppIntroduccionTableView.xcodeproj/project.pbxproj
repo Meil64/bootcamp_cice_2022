@@ -8,22 +8,48 @@
 
 /* Begin PBXBuildFile section */
 		2C736D2A27BD794B00CDA432 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C736D2927BD794B00CDA432 /* AppDelegate.swift */; };
-		2C736D2C27BD794B00CDA432 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C736D2B27BD794B00CDA432 /* SceneDelegate.swift */; };
-		2C736D2E27BD794B00CDA432 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C736D2D27BD794B00CDA432 /* ViewController.swift */; };
-		2C736D3127BD794B00CDA432 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C736D2F27BD794B00CDA432 /* Main.storyboard */; };
 		2C736D3327BD794C00CDA432 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C736D3227BD794C00CDA432 /* Assets.xcassets */; };
 		2C736D3627BD794C00CDA432 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C736D3427BD794C00CDA432 /* LaunchScreen.storyboard */; };
+		2C736D3F27BD7ABD00CDA432 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C736D3E27BD7ABD00CDA432 /* AppCoordinator.swift */; };
+		2C736D4527BD7D7700CDA432 /* ListaCochesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C736D4327BD7D7700CDA432 /* ListaCochesViewController.swift */; };
+		2C736D4627BD7D7700CDA432 /* ListaCochesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C736D4427BD7D7700CDA432 /* ListaCochesViewController.xib */; };
+		2C736D4827BD7DD200CDA432 /* ListaCochesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C736D4727BD7DD200CDA432 /* ListaCochesCoordinator.swift */; };
+		2C736D4C27BD959000CDA432 /* MesesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C736D4A27BD959000CDA432 /* MesesCell.swift */; };
+		2C736D4D27BD959000CDA432 /* MesesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C736D4B27BD959000CDA432 /* MesesCell.xib */; };
+		2C8A59D927BE6A6E005F2463 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8A59D827BE6A6E005F2463 /* Utils.swift */; };
+		2C8A59DD27BE6D71005F2463 /* ListaSuperCochesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8A59DB27BE6D71005F2463 /* ListaSuperCochesViewController.swift */; };
+		2C8A59DE27BE6D71005F2463 /* ListaSuperCochesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C8A59DC27BE6D71005F2463 /* ListaSuperCochesViewController.xib */; };
+		2C8A59E027BE6DB6005F2463 /* ListaSuperCochesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8A59DF27BE6DB6005F2463 /* ListaSuperCochesCoordinator.swift */; };
+		2C8A59E427BE6E7C005F2463 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8A59E227BE6E7C005F2463 /* HomeTabBarViewController.swift */; };
+		2C8A59E527BE6E7C005F2463 /* HomeTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C8A59E327BE6E7C005F2463 /* HomeTabBarViewController.xib */; };
+		2C8A59E727BE6E9F005F2463 /* HomeTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8A59E627BE6E9F005F2463 /* HomeTabBarCoordinator.swift */; };
+		2C8A59EA27BE72A0005F2463 /* CochesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8A59E927BE72A0005F2463 /* CochesModel.swift */; };
+		2C8A59EE27BE7751005F2463 /* CochesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8A59EC27BE7751005F2463 /* CochesCell.swift */; };
+		2C8A59EF27BE7751005F2463 /* CochesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C8A59ED27BE7751005F2463 /* CochesCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2C736D2627BD794B00CDA432 /* MiAppIntroduccionTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiAppIntroduccionTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C736D2927BD794B00CDA432 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2C736D2B27BD794B00CDA432 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2C736D2D27BD794B00CDA432 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2C736D3027BD794B00CDA432 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C736D3227BD794C00CDA432 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C736D3527BD794C00CDA432 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C736D3727BD794C00CDA432 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C736D3E27BD7ABD00CDA432 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		2C736D4327BD7D7700CDA432 /* ListaCochesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaCochesViewController.swift; sourceTree = "<group>"; };
+		2C736D4427BD7D7700CDA432 /* ListaCochesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListaCochesViewController.xib; sourceTree = "<group>"; };
+		2C736D4727BD7DD200CDA432 /* ListaCochesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaCochesCoordinator.swift; sourceTree = "<group>"; };
+		2C736D4A27BD959000CDA432 /* MesesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MesesCell.swift; sourceTree = "<group>"; };
+		2C736D4B27BD959000CDA432 /* MesesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MesesCell.xib; sourceTree = "<group>"; };
+		2C8A59D827BE6A6E005F2463 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		2C8A59DB27BE6D71005F2463 /* ListaSuperCochesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaSuperCochesViewController.swift; sourceTree = "<group>"; };
+		2C8A59DC27BE6D71005F2463 /* ListaSuperCochesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListaSuperCochesViewController.xib; sourceTree = "<group>"; };
+		2C8A59DF27BE6DB6005F2463 /* ListaSuperCochesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaSuperCochesCoordinator.swift; sourceTree = "<group>"; };
+		2C8A59E227BE6E7C005F2463 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
+		2C8A59E327BE6E7C005F2463 /* HomeTabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTabBarViewController.xib; sourceTree = "<group>"; };
+		2C8A59E627BE6E9F005F2463 /* HomeTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarCoordinator.swift; sourceTree = "<group>"; };
+		2C8A59E927BE72A0005F2463 /* CochesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CochesModel.swift; sourceTree = "<group>"; };
+		2C8A59EC27BE7751005F2463 /* CochesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CochesCell.swift; sourceTree = "<group>"; };
+		2C8A59ED27BE7751005F2463 /* CochesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CochesCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +82,108 @@
 		2C736D2827BD794B00CDA432 /* MiAppIntroduccionTableView */ = {
 			isa = PBXGroup;
 			children = (
-				2C736D2927BD794B00CDA432 /* AppDelegate.swift */,
-				2C736D2B27BD794B00CDA432 /* SceneDelegate.swift */,
-				2C736D2D27BD794B00CDA432 /* ViewController.swift */,
-				2C736D2F27BD794B00CDA432 /* Main.storyboard */,
+				2C8A59E827BE728C005F2463 /* Models */,
+				2C8A59D727BE6A58005F2463 /* Utils+Helpers */,
+				2C736D4027BD7CED00CDA432 /* Sources */,
+				2C736D3D27BD7AAD00CDA432 /* CoreApp */,
 				2C736D3227BD794C00CDA432 /* Assets.xcassets */,
 				2C736D3427BD794C00CDA432 /* LaunchScreen.storyboard */,
 				2C736D3727BD794C00CDA432 /* Info.plist */,
 			);
 			path = MiAppIntroduccionTableView;
+			sourceTree = "<group>";
+		};
+		2C736D3D27BD7AAD00CDA432 /* CoreApp */ = {
+			isa = PBXGroup;
+			children = (
+				2C736D2927BD794B00CDA432 /* AppDelegate.swift */,
+				2C736D3E27BD7ABD00CDA432 /* AppCoordinator.swift */,
+			);
+			path = CoreApp;
+			sourceTree = "<group>";
+		};
+		2C736D4027BD7CED00CDA432 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				2C736D4127BD7CF600CDA432 /* Modules */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		2C736D4127BD7CF600CDA432 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				2C8A59E127BE6E45005F2463 /* HomeTabBarView */,
+				2C8A59DA27BE6D33005F2463 /* ListaSuperCochesView */,
+				2C736D4227BD7CFD00CDA432 /* ListaCochesView */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		2C736D4227BD7CFD00CDA432 /* ListaCochesView */ = {
+			isa = PBXGroup;
+			children = (
+				2C736D4927BD955600CDA432 /* Cell */,
+				2C736D4327BD7D7700CDA432 /* ListaCochesViewController.swift */,
+				2C736D4427BD7D7700CDA432 /* ListaCochesViewController.xib */,
+				2C736D4727BD7DD200CDA432 /* ListaCochesCoordinator.swift */,
+			);
+			path = ListaCochesView;
+			sourceTree = "<group>";
+		};
+		2C736D4927BD955600CDA432 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2C736D4A27BD959000CDA432 /* MesesCell.swift */,
+				2C736D4B27BD959000CDA432 /* MesesCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		2C8A59D727BE6A58005F2463 /* Utils+Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2C8A59D827BE6A6E005F2463 /* Utils.swift */,
+			);
+			path = "Utils+Helpers";
+			sourceTree = "<group>";
+		};
+		2C8A59DA27BE6D33005F2463 /* ListaSuperCochesView */ = {
+			isa = PBXGroup;
+			children = (
+				2C8A59EB27BE76E4005F2463 /* Cell */,
+				2C8A59DB27BE6D71005F2463 /* ListaSuperCochesViewController.swift */,
+				2C8A59DC27BE6D71005F2463 /* ListaSuperCochesViewController.xib */,
+				2C8A59DF27BE6DB6005F2463 /* ListaSuperCochesCoordinator.swift */,
+			);
+			path = ListaSuperCochesView;
+			sourceTree = "<group>";
+		};
+		2C8A59E127BE6E45005F2463 /* HomeTabBarView */ = {
+			isa = PBXGroup;
+			children = (
+				2C8A59E227BE6E7C005F2463 /* HomeTabBarViewController.swift */,
+				2C8A59E327BE6E7C005F2463 /* HomeTabBarViewController.xib */,
+				2C8A59E627BE6E9F005F2463 /* HomeTabBarCoordinator.swift */,
+			);
+			path = HomeTabBarView;
+			sourceTree = "<group>";
+		};
+		2C8A59E827BE728C005F2463 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2C8A59E927BE72A0005F2463 /* CochesModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2C8A59EB27BE76E4005F2463 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2C8A59EC27BE7751005F2463 /* CochesCell.swift */,
+				2C8A59ED27BE7751005F2463 /* CochesCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +245,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C736D3627BD794C00CDA432 /* LaunchScreen.storyboard in Resources */,
+				2C8A59E527BE6E7C005F2463 /* HomeTabBarViewController.xib in Resources */,
+				2C736D4627BD7D7700CDA432 /* ListaCochesViewController.xib in Resources */,
+				2C8A59EF27BE7751005F2463 /* CochesCell.xib in Resources */,
+				2C8A59DE27BE6D71005F2463 /* ListaSuperCochesViewController.xib in Resources */,
 				2C736D3327BD794C00CDA432 /* Assets.xcassets in Resources */,
-				2C736D3127BD794B00CDA432 /* Main.storyboard in Resources */,
+				2C736D4D27BD959000CDA432 /* MesesCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +261,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C736D2E27BD794B00CDA432 /* ViewController.swift in Sources */,
+				2C8A59EE27BE7751005F2463 /* CochesCell.swift in Sources */,
+				2C8A59E427BE6E7C005F2463 /* HomeTabBarViewController.swift in Sources */,
+				2C736D4C27BD959000CDA432 /* MesesCell.swift in Sources */,
+				2C736D3F27BD7ABD00CDA432 /* AppCoordinator.swift in Sources */,
+				2C8A59EA27BE72A0005F2463 /* CochesModel.swift in Sources */,
+				2C736D4827BD7DD200CDA432 /* ListaCochesCoordinator.swift in Sources */,
+				2C8A59E027BE6DB6005F2463 /* ListaSuperCochesCoordinator.swift in Sources */,
+				2C736D4527BD7D7700CDA432 /* ListaCochesViewController.swift in Sources */,
 				2C736D2A27BD794B00CDA432 /* AppDelegate.swift in Sources */,
-				2C736D2C27BD794B00CDA432 /* SceneDelegate.swift in Sources */,
+				2C8A59DD27BE6D71005F2463 /* ListaSuperCochesViewController.swift in Sources */,
+				2C8A59D927BE6A6E005F2463 /* Utils.swift in Sources */,
+				2C8A59E727BE6E9F005F2463 /* HomeTabBarCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2C736D2F27BD794B00CDA432 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2C736D3027BD794B00CDA432 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2C736D3427BD794C00CDA432 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,7 +418,7 @@
 				INFOPLIST_FILE = MiAppIntroduccionTableView/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -302,11 +426,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ccarrera.ios.MiAppIntroduccionTableView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ccarrera.ios.MiAppTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -322,7 +446,7 @@
 				INFOPLIST_FILE = MiAppIntroduccionTableView/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -330,11 +454,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ccarrera.ios.MiAppIntroduccionTableView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ccarrera.ios.MiAppTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

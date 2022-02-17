@@ -1,19 +1,18 @@
 //
-//  ViewController.swift
+//  HomeTabBarViewController.swift
 //  MiAppIntroduccionTableView
 //
-//  Created by Carlos Carrera on 16/2/22.
+//  Created by Carlos Carrera on 17/2/22.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeTabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
 
-
 }
-
