@@ -7,8 +7,17 @@
 
 import UIKit
 
-class CochesCell: UITableViewCell {
+protocol CochesCellProtocol {
+    func setuCell(data: CochesModel?)
+}
 
+class CochesCell: UITableViewCell, ReuseIdentifierView {
+
+    // MARK: - IBOutlet
+    @IBOutlet weak var miCocheIV: UIImageView!
+    @IBOutlet weak var miNombreCocheLBL: UILabel!
+    @IBOutlet weak var miColorCocheLBL: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,4 +29,12 @@ class CochesCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+}
+
+extension CochesCell: CochesCellProtocol {
+    func setuCell(data: CochesModel?) {
+        self.miNombreCocheLBL.text = data?.nombre
+        self.miColorCocheLBL.text = data?.color
+        self.miCocheIV.image = data?.imagen
+    }
 }

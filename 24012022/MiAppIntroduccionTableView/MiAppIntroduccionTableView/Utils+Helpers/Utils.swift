@@ -20,4 +20,6 @@ extension ReuseIdentifierView where Self: UIView {
 class Constantes {
     static let tituloListaMeses = "Meses"
     static let tituloListaCoches = "Coches"
+    static let tituloListaPerfil = "Feed"
+    static let imagePlaceholder = "fotoPlaceholder"
 }

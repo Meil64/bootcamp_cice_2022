@@ -37,6 +37,11 @@
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="miCocheIV" destination="DAD-jH-YKi" id="Km8-IE-y0v"/>
+                <outlet property="miColorCocheLBL" destination="gen-eW-3l5" id="TYM-M9-m0Y"/>
+                <outlet property="miNombreCocheLBL" destination="93e-hs-uc4" id="zqf-z7-LGW"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="84.375"/>
         </tableViewCell>
     </objects>
