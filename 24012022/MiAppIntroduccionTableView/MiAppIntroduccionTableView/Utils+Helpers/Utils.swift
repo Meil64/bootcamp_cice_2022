@@ -22,4 +22,6 @@ class Constantes {
     static let tituloListaCoches = "Coches"
     static let tituloListaPerfil = "Feed"
     static let imagePlaceholder = "fotoPlaceholder"
+    static let imagePerfil = "fotoPerfil"
+    static let imagePost = "fotoPerfilB"
 }

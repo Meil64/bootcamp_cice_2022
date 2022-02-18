@@ -26,6 +26,9 @@ class ListaPerfilPostViewController: UIViewController {
         self.miPerfilPostTableView.register(
             UINib(nibName: PerfilCell.defaultReuseIdentifier, bundle: nil),
             forCellReuseIdentifier: PerfilCell.defaultReuseIdentifier)
+        self.miPerfilPostTableView.register(
+            UINib(nibName: PostCell.defaultReuseIdentifier, bundle: nil),
+            forCellReuseIdentifier: PostCell.defaultReuseIdentifier)
     }
     
 }
@@ -48,14 +51,21 @@ extension ListaPerfilPostViewController: UITableViewDataSource {
         switch indexPath.section {
         case 0:
             let cellPerfil = self.miPerfilPostTableView.dequeueReusableCell(withIdentifier: PerfilCell.defaultReuseIdentifier, for: indexPath) as! PerfilCell
+            cellPerfil.delegate = self
             cellPerfil.setupCellPerfil(data: UserDataModel(nombrePerfil: "Carlos Carrera",
                                                            descripcionPerfil: "Developer y mucho texto mucho texto mucho texto mucho texto mucho texto",
                                                            puestoActualPerfil: "Developer",
                                                            usuarioLinkedInPerfil: "@ccarrera",
-                                                           imagenPerfil: "fotoPerfil"))
+                                                           imagenPerfil: Constantes.imagePerfil))
             return cellPerfil
         default:
-            return UITableViewCell()
+            let cellPost = self.miPerfilPostTableView.dequeueReusableCell(withIdentifier: PostCell.defaultReuseIdentifier, for: indexPath) as! PostCell
+            cellPost.setupPostCell(data: UserDataModel(nombrePerfil: "Miranda",
+                                                       descripcionPerfil: "mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho texto mucho textomucho texto mucho texto mucho texto mucho texto mucho textomucho texto mucho texto mucho texto mucho texto mucho textomucho texto mucho texto mucho texto mucho texto mucho textomucho texto mucho texto mucho texto mucho texto mucho textomucho texto mucho texto mucho texto mucho texto mucho textomucho texto mucho texto mucho texto mucho texto mucho textomucho texto mucho texto mucho texto mucho texto mucho textomucho texto mucho texto mucho texto mucho texto mucho textomucho texto mucho texto mucho texto mucho texto mucho textomucho texto mucho texto mucho texto mucho texto mucho textomucho texto mucho texto mucho texto mucho texto mucho textomucho texto mucho texto mucho texto mucho texto mucho textomucho texto mucho texto mucho texto mucho texto mucho textomucho texto mucho texto mucho texto mucho texto mucho textomucho texto mucho texto mucho texto mucho texto mucho textomucho texto mucho texto mucho texto mucho texto mucho textomucho texto mucho texto mucho texto mucho texto mucho textomucho texto mucho texto mucho texto mucho texto mucho textomucho texto mucho texto mucho texto mucho texto mucho textomucho texto mucho texto mucho texto mucho texto mucho textomucho texto mucho texto mucho texto mucho texto mucho textomucho texto mucho texto mucho texto mucho texto mucho textomucho texto mucho texto mucho texto mucho texto mucho texto",
+                                                       puestoActualPerfil: "Puesto actual",
+                                                       usuarioLinkedInPerfil: "@miranda",
+                                                       imagenPerfil: Constantes.imagePost))
+            return cellPost
         }
     }
 }
@@ -71,8 +81,28 @@ extension ListaPerfilPostViewController: UITableViewDelegate {
         case 0:
             return 320
         default:
-            return 44
+            return UITableView.automaticDimension
         }
     }
+}
+
+extension ListaPerfilPostViewController: PerfilCellDelegate {
     
+    func showAlertB1() {
+        let alertVC = UIAlertController(title: "Botón 1", message: "\(#function)", preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
+        self.present(alertVC, animated: true, completion: nil)
+    }
+    
+    func showAlertB2() {
+        let alertVC = UIAlertController(title: "Botón 2", message: "\(#function)", preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
+        self.present(alertVC, animated: true, completion: nil)
+    }
+    
+    func navigationToDetailView(withData: UserDataModel?) {
+        let alertVC = UIAlertController(title: "Botón 3", message: withData?.nombrePerfil, preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
+        self.present(alertVC, animated: true, completion: nil)
+    }
 }
