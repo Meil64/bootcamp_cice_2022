@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		2C34388427C15300009AC2EE /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C34388327C15300009AC2EE /* Utils.swift */; };
+		2C34388827C16715009AC2EE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C34388627C16715009AC2EE /* HomeViewController.swift */; };
+		2C34388927C16715009AC2EE /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C34388727C16715009AC2EE /* HomeViewController.xib */; };
+		2C34388D27C16744009AC2EE /* ListaPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C34388B27C16744009AC2EE /* ListaPostViewController.swift */; };
+		2C34388E27C16744009AC2EE /* ListaPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C34388C27C16744009AC2EE /* ListaPostViewController.xib */; };
+		2C34389127C16792009AC2EE /* ListaCochesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C34389027C16792009AC2EE /* ListaCochesViewController.swift */; };
+		2C34389327C167B1009AC2EE /* ListaCochesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C34389227C167B1009AC2EE /* ListaCochesViewController.xib */; };
+		2C34389527C168B7009AC2EE /* ListaCochesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C34389427C168B7009AC2EE /* ListaCochesCoordinator.swift */; };
+		2C34389727C1694B009AC2EE /* ListaPostCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C34389627C1694B009AC2EE /* ListaPostCoordinator.swift */; };
+		2C34389B27C169BC009AC2EE /* HomeViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C34389A27C169BC009AC2EE /* HomeViewCoordinator.swift */; };
 		2C42FD0427C0090900696294 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C42FD0327C0090900696294 /* AppDelegate.swift */; };
 		2C42FD0D27C0090B00696294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C42FD0C27C0090B00696294 /* Assets.xcassets */; };
 		2C42FD1027C0090B00696294 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C42FD0E27C0090B00696294 /* LaunchScreen.storyboard */; };
@@ -19,6 +28,15 @@
 
 /* Begin PBXFileReference section */
 		2C34388327C15300009AC2EE /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		2C34388627C16715009AC2EE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2C34388727C16715009AC2EE /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		2C34388B27C16744009AC2EE /* ListaPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaPostViewController.swift; sourceTree = "<group>"; };
+		2C34388C27C16744009AC2EE /* ListaPostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListaPostViewController.xib; sourceTree = "<group>"; };
+		2C34389027C16792009AC2EE /* ListaCochesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaCochesViewController.swift; sourceTree = "<group>"; };
+		2C34389227C167B1009AC2EE /* ListaCochesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListaCochesViewController.xib; sourceTree = "<group>"; };
+		2C34389427C168B7009AC2EE /* ListaCochesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaCochesCoordinator.swift; sourceTree = "<group>"; };
+		2C34389627C1694B009AC2EE /* ListaPostCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaPostCoordinator.swift; sourceTree = "<group>"; };
+		2C34389A27C169BC009AC2EE /* HomeViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCoordinator.swift; sourceTree = "<group>"; };
 		2C42FD0027C0090900696294 /* MiUserDefault.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiUserDefault.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C42FD0327C0090900696294 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C42FD0C27C0090B00696294 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,6 +65,36 @@
 				2C34388327C15300009AC2EE /* Utils.swift */,
 			);
 			path = "Utils+Helpers";
+			sourceTree = "<group>";
+		};
+		2C34388527C166E9009AC2EE /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				2C34388627C16715009AC2EE /* HomeViewController.swift */,
+				2C34388727C16715009AC2EE /* HomeViewController.xib */,
+				2C34389A27C169BC009AC2EE /* HomeViewCoordinator.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		2C34388A27C16725009AC2EE /* ListaPostView */ = {
+			isa = PBXGroup;
+			children = (
+				2C34388B27C16744009AC2EE /* ListaPostViewController.swift */,
+				2C34388C27C16744009AC2EE /* ListaPostViewController.xib */,
+				2C34389627C1694B009AC2EE /* ListaPostCoordinator.swift */,
+			);
+			path = ListaPostView;
+			sourceTree = "<group>";
+		};
+		2C34388F27C16748009AC2EE /* ListaCochesView */ = {
+			isa = PBXGroup;
+			children = (
+				2C34389027C16792009AC2EE /* ListaCochesViewController.swift */,
+				2C34389227C167B1009AC2EE /* ListaCochesViewController.xib */,
+				2C34389427C168B7009AC2EE /* ListaCochesCoordinator.swift */,
+			);
+			path = ListaCochesView;
 			sourceTree = "<group>";
 		};
 		2C42FCF727C0090900696294 = {
@@ -90,6 +138,9 @@
 		2C42FD1A27C00CDA00696294 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				2C34388F27C16748009AC2EE /* ListaCochesView */,
+				2C34388A27C16725009AC2EE /* ListaPostView */,
+				2C34388527C166E9009AC2EE /* HomeView */,
 				2C42FD1B27C00CE200696294 /* RegistroView */,
 			);
 			path = Sources;
@@ -164,8 +215,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C42FD1F27C00D0700696294 /* RegistroViewController.xib in Resources */,
+				2C34389327C167B1009AC2EE /* ListaCochesViewController.xib in Resources */,
+				2C34388E27C16744009AC2EE /* ListaPostViewController.xib in Resources */,
 				2C42FD1027C0090B00696294 /* LaunchScreen.storyboard in Resources */,
 				2C42FD0D27C0090B00696294 /* Assets.xcassets in Resources */,
+				2C34388927C16715009AC2EE /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,10 +231,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C34388427C15300009AC2EE /* Utils.swift in Sources */,
+				2C34388D27C16744009AC2EE /* ListaPostViewController.swift in Sources */,
+				2C34389527C168B7009AC2EE /* ListaCochesCoordinator.swift in Sources */,
 				2C42FD0427C0090900696294 /* AppDelegate.swift in Sources */,
+				2C34389127C16792009AC2EE /* ListaCochesViewController.swift in Sources */,
+				2C34389B27C169BC009AC2EE /* HomeViewCoordinator.swift in Sources */,
 				2C42FD1E27C00D0700696294 /* RegistroViewController.swift in Sources */,
+				2C34389727C1694B009AC2EE /* ListaPostCoordinator.swift in Sources */,
 				2C42FD1927C00A1B00696294 /* AppCoreCoordinator.swift in Sources */,
 				2C42FD2127C00D1F00696294 /* RegistroCoordinator.swift in Sources */,
+				2C34388827C16715009AC2EE /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

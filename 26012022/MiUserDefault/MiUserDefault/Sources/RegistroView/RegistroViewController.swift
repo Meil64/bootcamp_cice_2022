@@ -43,7 +43,18 @@ class RegistroViewController: UIViewController {
                                                         Utils.Constants().kPrefs.setValue(
                                                             self.usuarioLogado,
                                                             forKey: Utils.Constants().kUserLogado)
+                
+                                                    let vc = HomeViewCoordinator.homeView()
+                                                    vc.modalTransitionStyle = .coverVertical
+                                                    vc.modalPresentationStyle = .fullScreen
+                                                    self.present(vc, animated: true, completion: nil)
                                                     }),
+                         animated: true,
+                         completion: nil)
+        } else {
+            self.present(Utils.shared.muestraAlerta(titulo: "Debes cumplimentar el formulario",
+                                                    mensaje: "Selecciona una foto y te registrarás con éxito",
+                                                    completionHandler: nil),
                          animated: true,
                          completion: nil)
         }
@@ -124,7 +135,8 @@ class RegistroViewController: UIViewController {
         dateFormatter.dateStyle = .medium
         self.fechaLBL.text = "Última actualización: \(dateFormatter.string(from: Utils.Constants().kPrefs.object(forKey: Utils.Constants().kFecha) as! Date))"
         
-        self.imagenPerfil.image = UIImage(data: Utils.Constants().kPrefs.object(forKey: Utils.Constants().kImage))
+        self.imagenPerfil.image = UIImage(data: Utils.Constants().kPrefs.object(forKey: Utils.Constants().kImage) as! Data)
+        self.existeFoto = true
     }
     
     //Funcionalidad para ocultar el teclado cuando tocas fuera del texto

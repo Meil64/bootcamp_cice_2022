@@ -9,7 +9,6 @@ import UIKit
 
 final class RegistroCoordinator {
     
-    //Wildcard
     static func navigation() -> UINavigationController {
         let navVC = UINavigationController (rootViewController: view())
         return navVC
