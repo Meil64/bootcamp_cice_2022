@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C34388427C15300009AC2EE /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C34388327C15300009AC2EE /* Utils.swift */; };
 		2C42FD0427C0090900696294 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C42FD0327C0090900696294 /* AppDelegate.swift */; };
 		2C42FD0D27C0090B00696294 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C42FD0C27C0090B00696294 /* Assets.xcassets */; };
 		2C42FD1027C0090B00696294 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C42FD0E27C0090B00696294 /* LaunchScreen.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C34388327C15300009AC2EE /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		2C42FD0027C0090900696294 /* MiUserDefault.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiUserDefault.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C42FD0327C0090900696294 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C42FD0C27C0090B00696294 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C34388227C15262009AC2EE /* Utils+Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2C34388327C15300009AC2EE /* Utils.swift */,
+			);
+			path = "Utils+Helpers";
+			sourceTree = "<group>";
+		};
 		2C42FCF727C0090900696294 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +68,7 @@
 		2C42FD0227C0090900696294 /* MiUserDefault */ = {
 			isa = PBXGroup;
 			children = (
+				2C34388227C15262009AC2EE /* Utils+Helpers */,
 				2C42FD1A27C00CDA00696294 /* Sources */,
 				2C42FD1727C0097E00696294 /* CoreApp */,
 				2C42FD0C27C0090B00696294 /* Assets.xcassets */,
@@ -165,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C34388427C15300009AC2EE /* Utils.swift in Sources */,
 				2C42FD0427C0090900696294 /* AppDelegate.swift in Sources */,
 				2C42FD1E27C00D0700696294 /* RegistroViewController.swift in Sources */,
 				2C42FD1927C00A1B00696294 /* AppCoreCoordinator.swift in Sources */,
