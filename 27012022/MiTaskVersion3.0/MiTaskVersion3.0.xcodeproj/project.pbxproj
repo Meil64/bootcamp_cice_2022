@@ -31,6 +31,8 @@
 		2C30EE5727C26E9C00A6BDFC /* ListaTareasViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30EE5627C26E9C00A6BDFC /* ListaTareasViewCoordinator.swift */; };
 		2C30EE5927C26EB600A6BDFC /* DetalleTareaViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30EE5827C26EB600A6BDFC /* DetalleTareaViewCoordinator.swift */; };
 		2C30EE5B27C26EE000A6BDFC /* HomeTabBarViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30EE5A27C26EE000A6BDFC /* HomeTabBarViewCoordinator.swift */; };
+		2C30EE5E27C28CD000A6BDFC /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30EE5D27C28CD000A6BDFC /* Utils.swift */; };
+		2C30EE6027C292A600A6BDFC /* PrefsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30EE5F27C292A600A6BDFC /* PrefsHelper.swift */; };
 		2C3438A927C173F8009AC2EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3438A827C173F8009AC2EE /* AppDelegate.swift */; };
 		2C3438B227C173FB009AC2EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C3438B127C173FB009AC2EE /* Assets.xcassets */; };
 		2C3438B527C173FB009AC2EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C3438B327C173FB009AC2EE /* LaunchScreen.storyboard */; };
@@ -61,6 +63,8 @@
 		2C30EE5627C26E9C00A6BDFC /* ListaTareasViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTareasViewCoordinator.swift; sourceTree = "<group>"; };
 		2C30EE5827C26EB600A6BDFC /* DetalleTareaViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleTareaViewCoordinator.swift; sourceTree = "<group>"; };
 		2C30EE5A27C26EE000A6BDFC /* HomeTabBarViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewCoordinator.swift; sourceTree = "<group>"; };
+		2C30EE5D27C28CD000A6BDFC /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		2C30EE5F27C292A600A6BDFC /* PrefsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefsHelper.swift; sourceTree = "<group>"; };
 		2C3438A527C173F8009AC2EE /* MiTaskVersion3.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiTaskVersion3.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C3438A827C173F8009AC2EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C3438B127C173FB009AC2EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -189,6 +193,15 @@
 			path = CategoriasView;
 			sourceTree = "<group>";
 		};
+		2C30EE5C27C28CC100A6BDFC /* Utils+Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2C30EE5D27C28CD000A6BDFC /* Utils.swift */,
+				2C30EE5F27C292A600A6BDFC /* PrefsHelper.swift */,
+			);
+			path = "Utils+Helpers";
+			sourceTree = "<group>";
+		};
 		2C34389C27C173F8009AC2EE = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +221,7 @@
 		2C3438A727C173F8009AC2EE /* MiTaskVersion3.0 */ = {
 			isa = PBXGroup;
 			children = (
+				2C30EE5C27C28CC100A6BDFC /* Utils+Helpers */,
 				2C30EE2927C26BEF00A6BDFC /* Sources */,
 				2C30EE2327C267C200A6BDFC /* Resources */,
 				2C30EE2427C267C700A6BDFC /* Models */,
@@ -302,12 +316,14 @@
 				2C30EE3B27C26D1700A6BDFC /* ContactosViewController.swift in Sources */,
 				2C30EE4327C26D3500A6BDFC /* CategoriasViewController.swift in Sources */,
 				2C30EE4F27C26DC500A6BDFC /* LoginViewCoordinator.swift in Sources */,
+				2C30EE6027C292A600A6BDFC /* PrefsHelper.swift in Sources */,
 				2C30EE5727C26E9C00A6BDFC /* ListaTareasViewCoordinator.swift in Sources */,
 				2C30EE5327C26E5500A6BDFC /* NuevaTareaViewCoordinator.swift in Sources */,
 				2C30EE5527C26E7900A6BDFC /* CategoriasViewCoordinator.swift in Sources */,
 				2C30EE2827C267E800A6BDFC /* TaskModel.swift in Sources */,
 				2C3438A927C173F8009AC2EE /* AppDelegate.swift in Sources */,
 				2C30EE5927C26EB600A6BDFC /* DetalleTareaViewCoordinator.swift in Sources */,
+				2C30EE5E27C28CD000A6BDFC /* Utils.swift in Sources */,
 				2C30EE3F27C26D2600A6BDFC /* NuevaTareaViewController.swift in Sources */,
 				2C30EE1C27C2636500A6BDFC /* AppCoreCoordinator.swift in Sources */,
 				2C30EE4727C26D4200A6BDFC /* ListaTareasViewController.swift in Sources */,
