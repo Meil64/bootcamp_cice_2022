@@ -8,6 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		2C30EE1C27C2636500A6BDFC /* AppCoreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30EE1B27C2636500A6BDFC /* AppCoreCoordinator.swift */; };
+		2C30EE2627C267E000A6BDFC /* contacts.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C30EE2527C267E000A6BDFC /* contacts.json */; };
+		2C30EE2827C267E800A6BDFC /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30EE2727C267E800A6BDFC /* TaskModel.swift */; };
+		2C30EE3327C26C6400A6BDFC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30EE3127C26C6400A6BDFC /* LoginViewController.swift */; };
+		2C30EE3427C26C6400A6BDFC /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C30EE3227C26C6400A6BDFC /* LoginViewController.xib */; };
+		2C30EE3727C26CFE00A6BDFC /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30EE3527C26CFE00A6BDFC /* HomeTabBarController.swift */; };
+		2C30EE3827C26CFE00A6BDFC /* HomeTabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C30EE3627C26CFE00A6BDFC /* HomeTabBarController.xib */; };
+		2C30EE3B27C26D1700A6BDFC /* ContactosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30EE3927C26D1700A6BDFC /* ContactosViewController.swift */; };
+		2C30EE3C27C26D1700A6BDFC /* ContactosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C30EE3A27C26D1700A6BDFC /* ContactosViewController.xib */; };
+		2C30EE3F27C26D2600A6BDFC /* NuevaTareaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30EE3D27C26D2600A6BDFC /* NuevaTareaViewController.swift */; };
+		2C30EE4027C26D2600A6BDFC /* NuevaTareaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C30EE3E27C26D2600A6BDFC /* NuevaTareaViewController.xib */; };
+		2C30EE4327C26D3500A6BDFC /* CategoriasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30EE4127C26D3500A6BDFC /* CategoriasViewController.swift */; };
+		2C30EE4427C26D3500A6BDFC /* CategoriasViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C30EE4227C26D3500A6BDFC /* CategoriasViewController.xib */; };
+		2C30EE4727C26D4200A6BDFC /* ListaTareasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30EE4527C26D4200A6BDFC /* ListaTareasViewController.swift */; };
+		2C30EE4827C26D4200A6BDFC /* ListaTareasViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C30EE4627C26D4200A6BDFC /* ListaTareasViewController.xib */; };
+		2C30EE4B27C26D4F00A6BDFC /* DetalleTareaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30EE4927C26D4F00A6BDFC /* DetalleTareaViewController.swift */; };
+		2C30EE4C27C26D4F00A6BDFC /* DetalleTareaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C30EE4A27C26D4F00A6BDFC /* DetalleTareaViewController.xib */; };
 		2C3438A927C173F8009AC2EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3438A827C173F8009AC2EE /* AppDelegate.swift */; };
 		2C3438B227C173FB009AC2EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C3438B127C173FB009AC2EE /* Assets.xcassets */; };
 		2C3438B527C173FB009AC2EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C3438B327C173FB009AC2EE /* LaunchScreen.storyboard */; };
@@ -15,6 +31,22 @@
 
 /* Begin PBXFileReference section */
 		2C30EE1B27C2636500A6BDFC /* AppCoreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoreCoordinator.swift; sourceTree = "<group>"; };
+		2C30EE2527C267E000A6BDFC /* contacts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = contacts.json; sourceTree = "<group>"; };
+		2C30EE2727C267E800A6BDFC /* TaskModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		2C30EE3127C26C6400A6BDFC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2C30EE3227C26C6400A6BDFC /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		2C30EE3527C26CFE00A6BDFC /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
+		2C30EE3627C26CFE00A6BDFC /* HomeTabBarController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTabBarController.xib; sourceTree = "<group>"; };
+		2C30EE3927C26D1700A6BDFC /* ContactosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactosViewController.swift; sourceTree = "<group>"; };
+		2C30EE3A27C26D1700A6BDFC /* ContactosViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactosViewController.xib; sourceTree = "<group>"; };
+		2C30EE3D27C26D2600A6BDFC /* NuevaTareaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevaTareaViewController.swift; sourceTree = "<group>"; };
+		2C30EE3E27C26D2600A6BDFC /* NuevaTareaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NuevaTareaViewController.xib; sourceTree = "<group>"; };
+		2C30EE4127C26D3500A6BDFC /* CategoriasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriasViewController.swift; sourceTree = "<group>"; };
+		2C30EE4227C26D3500A6BDFC /* CategoriasViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriasViewController.xib; sourceTree = "<group>"; };
+		2C30EE4527C26D4200A6BDFC /* ListaTareasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTareasViewController.swift; sourceTree = "<group>"; };
+		2C30EE4627C26D4200A6BDFC /* ListaTareasViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListaTareasViewController.xib; sourceTree = "<group>"; };
+		2C30EE4927C26D4F00A6BDFC /* DetalleTareaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleTareaViewController.swift; sourceTree = "<group>"; };
+		2C30EE4A27C26D4F00A6BDFC /* DetalleTareaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetalleTareaViewController.xib; sourceTree = "<group>"; };
 		2C3438A527C173F8009AC2EE /* MiTaskVersion3.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiTaskVersion3.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C3438A827C173F8009AC2EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C3438B127C173FB009AC2EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -42,6 +74,100 @@
 			path = CoreApp;
 			sourceTree = "<group>";
 		};
+		2C30EE2327C267C200A6BDFC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2C30EE2527C267E000A6BDFC /* contacts.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2C30EE2427C267C700A6BDFC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2C30EE2727C267E800A6BDFC /* TaskModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2C30EE2927C26BEF00A6BDFC /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				2C30EE2E27C26C1A00A6BDFC /* ListaTareasView */,
+				2C30EE2D27C26C1000A6BDFC /* NuevaTareaView */,
+				2C30EE2C27C26C0700A6BDFC /* ContactosView */,
+				2C30EE2B27C26BFC00A6BDFC /* HomeTabBarView */,
+				2C30EE2A27C26BF600A6BDFC /* LoginView */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		2C30EE2A27C26BF600A6BDFC /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				2C30EE3127C26C6400A6BDFC /* LoginViewController.swift */,
+				2C30EE3227C26C6400A6BDFC /* LoginViewController.xib */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		2C30EE2B27C26BFC00A6BDFC /* HomeTabBarView */ = {
+			isa = PBXGroup;
+			children = (
+				2C30EE3527C26CFE00A6BDFC /* HomeTabBarController.swift */,
+				2C30EE3627C26CFE00A6BDFC /* HomeTabBarController.xib */,
+			);
+			path = HomeTabBarView;
+			sourceTree = "<group>";
+		};
+		2C30EE2C27C26C0700A6BDFC /* ContactosView */ = {
+			isa = PBXGroup;
+			children = (
+				2C30EE3927C26D1700A6BDFC /* ContactosViewController.swift */,
+				2C30EE3A27C26D1700A6BDFC /* ContactosViewController.xib */,
+			);
+			path = ContactosView;
+			sourceTree = "<group>";
+		};
+		2C30EE2D27C26C1000A6BDFC /* NuevaTareaView */ = {
+			isa = PBXGroup;
+			children = (
+				2C30EE3027C26C3C00A6BDFC /* CategoriasView */,
+				2C30EE3D27C26D2600A6BDFC /* NuevaTareaViewController.swift */,
+				2C30EE3E27C26D2600A6BDFC /* NuevaTareaViewController.xib */,
+			);
+			path = NuevaTareaView;
+			sourceTree = "<group>";
+		};
+		2C30EE2E27C26C1A00A6BDFC /* ListaTareasView */ = {
+			isa = PBXGroup;
+			children = (
+				2C30EE2F27C26C2F00A6BDFC /* DetalleTareaView */,
+				2C30EE4527C26D4200A6BDFC /* ListaTareasViewController.swift */,
+				2C30EE4627C26D4200A6BDFC /* ListaTareasViewController.xib */,
+			);
+			path = ListaTareasView;
+			sourceTree = "<group>";
+		};
+		2C30EE2F27C26C2F00A6BDFC /* DetalleTareaView */ = {
+			isa = PBXGroup;
+			children = (
+				2C30EE4927C26D4F00A6BDFC /* DetalleTareaViewController.swift */,
+				2C30EE4A27C26D4F00A6BDFC /* DetalleTareaViewController.xib */,
+			);
+			name = DetalleTareaView;
+			path = "DetalleTareaViewç";
+			sourceTree = "<group>";
+		};
+		2C30EE3027C26C3C00A6BDFC /* CategoriasView */ = {
+			isa = PBXGroup;
+			children = (
+				2C30EE4127C26D3500A6BDFC /* CategoriasViewController.swift */,
+				2C30EE4227C26D3500A6BDFC /* CategoriasViewController.xib */,
+			);
+			path = CategoriasView;
+			sourceTree = "<group>";
+		};
 		2C34389C27C173F8009AC2EE = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +187,9 @@
 		2C3438A727C173F8009AC2EE /* MiTaskVersion3.0 */ = {
 			isa = PBXGroup;
 			children = (
+				2C30EE2927C26BEF00A6BDFC /* Sources */,
+				2C30EE2327C267C200A6BDFC /* Resources */,
+				2C30EE2427C267C700A6BDFC /* Models */,
 				2C30EE1A27C2635300A6BDFC /* CoreApp */,
 				2C3438B127C173FB009AC2EE /* Assets.xcassets */,
 				2C3438B327C173FB009AC2EE /* LaunchScreen.storyboard */,
@@ -127,7 +256,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C30EE3427C26C6400A6BDFC /* LoginViewController.xib in Resources */,
+				2C30EE4027C26D2600A6BDFC /* NuevaTareaViewController.xib in Resources */,
+				2C30EE4C27C26D4F00A6BDFC /* DetalleTareaViewController.xib in Resources */,
+				2C30EE3C27C26D1700A6BDFC /* ContactosViewController.xib in Resources */,
+				2C30EE3827C26CFE00A6BDFC /* HomeTabBarController.xib in Resources */,
+				2C30EE4827C26D4200A6BDFC /* ListaTareasViewController.xib in Resources */,
 				2C3438B527C173FB009AC2EE /* LaunchScreen.storyboard in Resources */,
+				2C30EE2627C267E000A6BDFC /* contacts.json in Resources */,
+				2C30EE4427C26D3500A6BDFC /* CategoriasViewController.xib in Resources */,
 				2C3438B227C173FB009AC2EE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,8 +276,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C30EE3327C26C6400A6BDFC /* LoginViewController.swift in Sources */,
+				2C30EE3B27C26D1700A6BDFC /* ContactosViewController.swift in Sources */,
+				2C30EE4327C26D3500A6BDFC /* CategoriasViewController.swift in Sources */,
+				2C30EE2827C267E800A6BDFC /* TaskModel.swift in Sources */,
 				2C3438A927C173F8009AC2EE /* AppDelegate.swift in Sources */,
+				2C30EE3F27C26D2600A6BDFC /* NuevaTareaViewController.swift in Sources */,
 				2C30EE1C27C2636500A6BDFC /* AppCoreCoordinator.swift in Sources */,
+				2C30EE4727C26D4200A6BDFC /* ListaTareasViewController.swift in Sources */,
+				2C30EE4B27C26D4F00A6BDFC /* DetalleTareaViewController.swift in Sources */,
+				2C30EE3727C26CFE00A6BDFC /* HomeTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
