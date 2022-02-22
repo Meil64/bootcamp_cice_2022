@@ -36,6 +36,11 @@
 		2C3438A927C173F8009AC2EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3438A827C173F8009AC2EE /* AppDelegate.swift */; };
 		2C3438B227C173FB009AC2EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C3438B127C173FB009AC2EE /* Assets.xcassets */; };
 		2C3438B527C173FB009AC2EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C3438B327C173FB009AC2EE /* LaunchScreen.storyboard */; };
+		2C40955827C559F600D17917 /* DetalleContactoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C40955627C559F600D17917 /* DetalleContactoViewController.swift */; };
+		2C40955927C559F600D17917 /* DetalleContactoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C40955727C559F600D17917 /* DetalleContactoViewController.xib */; };
+		2C40955B27C55A0C00D17917 /* DetalleContactoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C40955A27C55A0C00D17917 /* DetalleContactoCoordinator.swift */; };
+		2C40955F27C55F3E00D17917 /* PerfilCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C40955D27C55F3E00D17917 /* PerfilCell.swift */; };
+		2C40956027C55F3E00D17917 /* PerfilCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C40955E27C55F3E00D17917 /* PerfilCell.xib */; };
 		2CD21A8127C3FB03007FFF04 /* ContactosServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD21A8027C3FB03007FFF04 /* ContactosServerModel.swift */; };
 		2CD21A8527C40122007FFF04 /* ContactosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD21A8327C40122007FFF04 /* ContactosCell.swift */; };
 		2CD21A8627C40122007FFF04 /* ContactosCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CD21A8427C40122007FFF04 /* ContactosCell.xib */; };
@@ -73,6 +78,11 @@
 		2C3438B127C173FB009AC2EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C3438B427C173FB009AC2EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C3438B627C173FB009AC2EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C40955627C559F600D17917 /* DetalleContactoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleContactoViewController.swift; sourceTree = "<group>"; };
+		2C40955727C559F600D17917 /* DetalleContactoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetalleContactoViewController.xib; sourceTree = "<group>"; };
+		2C40955A27C55A0C00D17917 /* DetalleContactoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleContactoCoordinator.swift; sourceTree = "<group>"; };
+		2C40955D27C55F3E00D17917 /* PerfilCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilCell.swift; sourceTree = "<group>"; };
+		2C40955E27C55F3E00D17917 /* PerfilCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PerfilCell.xib; sourceTree = "<group>"; };
 		2CD21A8027C3FB03007FFF04 /* ContactosServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactosServerModel.swift; sourceTree = "<group>"; };
 		2CD21A8327C40122007FFF04 /* ContactosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactosCell.swift; sourceTree = "<group>"; };
 		2CD21A8427C40122007FFF04 /* ContactosCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactosCell.xib; sourceTree = "<group>"; };
@@ -150,6 +160,7 @@
 		2C30EE2C27C26C0700A6BDFC /* ContactosView */ = {
 			isa = PBXGroup;
 			children = (
+				2C40955527C5597500D17917 /* DetalleContactoView */,
 				2CD21A8227C400FF007FFF04 /* Cell */,
 				2C30EE3927C26D1700A6BDFC /* ContactosViewController.swift */,
 				2C30EE3A27C26D1700A6BDFC /* ContactosViewController.xib */,
@@ -241,6 +252,26 @@
 			path = MiTaskVersion3.0;
 			sourceTree = "<group>";
 		};
+		2C40955527C5597500D17917 /* DetalleContactoView */ = {
+			isa = PBXGroup;
+			children = (
+				2C40955C27C55F1C00D17917 /* Cell */,
+				2C40955627C559F600D17917 /* DetalleContactoViewController.swift */,
+				2C40955727C559F600D17917 /* DetalleContactoViewController.xib */,
+				2C40955A27C55A0C00D17917 /* DetalleContactoCoordinator.swift */,
+			);
+			path = DetalleContactoView;
+			sourceTree = "<group>";
+		};
+		2C40955C27C55F1C00D17917 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2C40955D27C55F3E00D17917 /* PerfilCell.swift */,
+				2C40955E27C55F3E00D17917 /* PerfilCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		2CD21A8227C400FF007FFF04 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,9 +345,11 @@
 				2C30EE3C27C26D1700A6BDFC /* ContactosViewController.xib in Resources */,
 				2CD21A8627C40122007FFF04 /* ContactosCell.xib in Resources */,
 				2C30EE3827C26CFE00A6BDFC /* HomeTabBarController.xib in Resources */,
+				2C40956027C55F3E00D17917 /* PerfilCell.xib in Resources */,
 				2C30EE4827C26D4200A6BDFC /* ListaTareasViewController.xib in Resources */,
 				2C3438B527C173FB009AC2EE /* LaunchScreen.storyboard in Resources */,
 				2C30EE2627C267E000A6BDFC /* contacts.json in Resources */,
+				2C40955927C559F600D17917 /* DetalleContactoViewController.xib in Resources */,
 				2C30EE4427C26D3500A6BDFC /* CategoriasViewController.xib in Resources */,
 				2C3438B227C173FB009AC2EE /* Assets.xcassets in Resources */,
 			);
@@ -341,11 +374,14 @@
 				2C30EE5527C26E7900A6BDFC /* CategoriasViewCoordinator.swift in Sources */,
 				2C30EE2827C267E800A6BDFC /* TaskModel.swift in Sources */,
 				2C3438A927C173F8009AC2EE /* AppDelegate.swift in Sources */,
+				2C40955B27C55A0C00D17917 /* DetalleContactoCoordinator.swift in Sources */,
+				2C40955F27C55F3E00D17917 /* PerfilCell.swift in Sources */,
 				2C30EE5927C26EB600A6BDFC /* DetalleTareaViewCoordinator.swift in Sources */,
 				2C30EE5E27C28CD000A6BDFC /* Utils.swift in Sources */,
 				2C30EE3F27C26D2600A6BDFC /* NuevaTareaViewController.swift in Sources */,
 				2C30EE1C27C2636500A6BDFC /* AppCoreCoordinator.swift in Sources */,
 				2C30EE4727C26D4200A6BDFC /* ListaTareasViewController.swift in Sources */,
+				2C40955827C559F600D17917 /* DetalleContactoViewController.swift in Sources */,
 				2C30EE4B27C26D4F00A6BDFC /* DetalleTareaViewController.swift in Sources */,
 				2C30EE5127C26E2300A6BDFC /* ContactosViewCoordinator.swift in Sources */,
 				2CD21A8527C40122007FFF04 /* ContactosCell.swift in Sources */,
