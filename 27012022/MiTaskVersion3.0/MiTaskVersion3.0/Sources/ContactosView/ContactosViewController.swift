@@ -9,21 +9,57 @@ import UIKit
 
 class ContactosViewController: UIViewController {
 
+    // MARK: - Variables globales
+    var dataSourceContactos: [ArrayContact] = []
+    
+    // MARK: - IBOutlets
+    @IBOutlet weak var contactsTableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.setDataSourceContacts()
+        self.setConfiguracionTableView()
         // Do any additional setup after loading the view.
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    private func setDataSourceContacts() {
+        self.dataSourceContactos = ContactosServerModel.stubbedContactos ?? []
     }
-    */
+    
+    private func setConfiguracionTableView() {
+        self.contactsTableView.delegate = self
+        self.contactsTableView.dataSource = self
+        // Registrar la celda
+        self.contactsTableView.register(UINib(nibName: ContactosCell.defaultReuseIdentifier,
+                                              bundle: nil),
+                                        forCellReuseIdentifier: ContactosCell.defaultReuseIdentifier)
+    }
+}
 
+extension ContactosViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //let model = self.dataSourceContactos[indexPath.row]
+        //debugPrint(model.abstractoVC)
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
+}
+
+extension ContactosViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.dataSourceContactos.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.contactsTableView.dequeueReusableCell(
+            withIdentifier: ContactosCell.defaultReuseIdentifier,
+            for: indexPath)
+        as! ContactosCell
+        cell.configuracionCell(data: self.dataSourceContactos[indexPath.row])
+        return cell
+    }
 }

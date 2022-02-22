@@ -15,6 +15,10 @@ class Utils {
     }
 }
 
+class Constants {
+    static let imagePlaceholder = "placeholder"
+}
+
 
 protocol ReuseIdentifierProtocol: AnyObject {
     static var defaultReuseIdentifier: String { get }
