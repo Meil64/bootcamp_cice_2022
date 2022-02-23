@@ -10,7 +10,7 @@ import UIKit
 class ContactosViewController: UIViewController {
 
     // MARK: - Variables globales
-    var dataSourceContactos: [ArrayContact] = []
+    var dataSourceContactos: [Contact] = []
     
     // MARK: - IBOutlets
     @IBOutlet weak var contactsTableView: UITableView!

@@ -41,6 +41,7 @@
 		2C40955B27C55A0C00D17917 /* DetalleContactoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C40955A27C55A0C00D17917 /* DetalleContactoCoordinator.swift */; };
 		2C40955F27C55F3E00D17917 /* PerfilCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C40955D27C55F3E00D17917 /* PerfilCell.swift */; };
 		2C40956027C55F3E00D17917 /* PerfilCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C40955E27C55F3E00D17917 /* PerfilCell.xib */; };
+		2C4316F527C6302600139AF9 /* MailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4316F427C6302600139AF9 /* MailHelper.swift */; };
 		2CD21A8127C3FB03007FFF04 /* ContactosServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD21A8027C3FB03007FFF04 /* ContactosServerModel.swift */; };
 		2CD21A8527C40122007FFF04 /* ContactosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD21A8327C40122007FFF04 /* ContactosCell.swift */; };
 		2CD21A8627C40122007FFF04 /* ContactosCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CD21A8427C40122007FFF04 /* ContactosCell.xib */; };
@@ -83,6 +84,7 @@
 		2C40955A27C55A0C00D17917 /* DetalleContactoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleContactoCoordinator.swift; sourceTree = "<group>"; };
 		2C40955D27C55F3E00D17917 /* PerfilCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilCell.swift; sourceTree = "<group>"; };
 		2C40955E27C55F3E00D17917 /* PerfilCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PerfilCell.xib; sourceTree = "<group>"; };
+		2C4316F427C6302600139AF9 /* MailHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailHelper.swift; sourceTree = "<group>"; };
 		2CD21A8027C3FB03007FFF04 /* ContactosServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactosServerModel.swift; sourceTree = "<group>"; };
 		2CD21A8327C40122007FFF04 /* ContactosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactosCell.swift; sourceTree = "<group>"; };
 		2CD21A8427C40122007FFF04 /* ContactosCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactosCell.xib; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 			children = (
 				2C30EE5D27C28CD000A6BDFC /* Utils.swift */,
 				2C30EE5F27C292A600A6BDFC /* PrefsHelper.swift */,
+				2C4316F427C6302600139AF9 /* MailHelper.swift */,
 			);
 			path = "Utils+Helpers";
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				2C30EE5527C26E7900A6BDFC /* CategoriasViewCoordinator.swift in Sources */,
 				2C30EE2827C267E800A6BDFC /* TaskModel.swift in Sources */,
 				2C3438A927C173F8009AC2EE /* AppDelegate.swift in Sources */,
+				2C4316F527C6302600139AF9 /* MailHelper.swift in Sources */,
 				2C40955B27C55A0C00D17917 /* DetalleContactoCoordinator.swift in Sources */,
 				2C40955F27C55F3E00D17917 /* PerfilCell.swift in Sources */,
 				2C30EE5927C26EB600A6BDFC /* DetalleTareaViewCoordinator.swift in Sources */,

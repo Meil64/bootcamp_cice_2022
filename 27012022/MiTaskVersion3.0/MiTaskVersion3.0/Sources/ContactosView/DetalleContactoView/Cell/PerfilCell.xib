@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -37,32 +38,46 @@
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_usuario de twitter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKv-TX-xhq">
                         <rect key="frame" x="16" y="198" width="288" height="21"/>
-                        <color key="backgroundColor" red="0.92133218049999999" green="0.29790015669999997" blue="0.32849240800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_nombre" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nF-a9-uxo">
                         <rect key="frame" x="16" y="237" width="288" height="21"/>
-                        <color key="backgroundColor" red="0.92133218049999999" green="0.29790015669999997" blue="0.32849240800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_apellido" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BfF-dx-Jk2">
                         <rect key="frame" x="16" y="266" width="288" height="21"/>
-                        <color key="backgroundColor" red="0.92133218049999999" green="0.29790015669999997" blue="0.32849240800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="_CV" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1g-i5-eOe">
                         <rect key="frame" x="16" y="305" width="288" height="77"/>
-                        <color key="backgroundColor" red="0.92133218049999999" green="0.29790015669999997" blue="0.32849240800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWg-9S-sBb">
+                        <rect key="frame" x="260" y="110" width="44" height="44"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="44" id="24H-8u-DdP"/>
+                            <constraint firstAttribute="height" constant="44" id="a7b-Ys-QCV"/>
+                        </constraints>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="A"/>
+                        <connections>
+                            <action selector="buttonFotoACTION:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Xu7-gq-Zu8"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="sKv-TX-xhq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="6xk-Mc-8fi"/>
@@ -74,6 +89,7 @@
                     <constraint firstItem="v1g-i5-eOe" firstAttribute="trailing" secondItem="BfF-dx-Jk2" secondAttribute="trailing" id="DGf-Bc-JZm"/>
                     <constraint firstItem="BfF-dx-Jk2" firstAttribute="leading" secondItem="4nF-a9-uxo" secondAttribute="leading" id="E8u-ZG-DlB"/>
                     <constraint firstItem="YBY-Gn-moq" firstAttribute="leading" secondItem="LeZ-mk-MOS" secondAttribute="leading" id="EP2-Gb-UMC"/>
+                    <constraint firstAttribute="trailing" secondItem="KWg-9S-sBb" secondAttribute="trailing" constant="16" id="NLa-sF-ruL"/>
                     <constraint firstItem="l1L-mL-VG6" firstAttribute="bottom" secondItem="VQh-4k-9So" secondAttribute="bottom" id="Sum-Wl-6Wh"/>
                     <constraint firstItem="LeZ-mk-MOS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="TcE-KQ-b74"/>
                     <constraint firstItem="YBY-Gn-moq" firstAttribute="trailing" secondItem="LeZ-mk-MOS" secondAttribute="trailing" id="Trs-ft-H0o"/>
@@ -85,6 +101,7 @@
                     <constraint firstItem="VQh-4k-9So" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="110" id="kMC-r0-EOG"/>
                     <constraint firstItem="4nF-a9-uxo" firstAttribute="top" secondItem="sKv-TX-xhq" secondAttribute="bottom" constant="18" id="lY1-aK-HAt"/>
                     <constraint firstItem="YBY-Gn-moq" firstAttribute="top" secondItem="LeZ-mk-MOS" secondAttribute="top" id="mco-B2-71F"/>
+                    <constraint firstItem="KWg-9S-sBb" firstAttribute="top" secondItem="l1L-mL-VG6" secondAttribute="top" id="q4m-xS-CN1"/>
                     <constraint firstItem="l1L-mL-VG6" firstAttribute="trailing" secondItem="VQh-4k-9So" secondAttribute="trailing" id="sN6-oY-0Nd"/>
                     <constraint firstItem="BfF-dx-Jk2" firstAttribute="top" secondItem="4nF-a9-uxo" secondAttribute="bottom" constant="8" id="uza-nR-Ncd"/>
                     <constraint firstAttribute="trailing" secondItem="sKv-TX-xhq" secondAttribute="trailing" constant="16" id="vc5-DR-1Uz"/>
@@ -108,5 +125,8 @@
         <image name="backPerfil" width="726" height="443"/>
         <image name="fondodegradado" width="726" height="443"/>
         <image name="placeholder" width="1280" height="800"/>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

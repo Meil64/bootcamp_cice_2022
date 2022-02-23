@@ -26,14 +26,14 @@ final class HomeTabBarViewCoordinator {
                                         image: UIImage(systemName: "pencil.and.outline"),
                                         selectedImage: UIImage(systemName: "pencil.and.outline"))
         
-        let listaTareas = UITabBarItem(title: "Lista tareas",
+        let iconListaTareas = UITabBarItem(title: "Lista tareas",
                                         image: UIImage(systemName: "text.redaction"),
                                         selectedImage: UIImage(systemName: "text.redaction"))
         
         //Asignamos iconos
         contactosVC.tabBarItem = iconContacto
         nuevaTareaVC.tabBarItem = iconNuevaTarea
-        listaTareasVC.tabBarItem = listaTareas
+        listaTareasVC.tabBarItem = iconListaTareas
         
         //Asignamos controladores
         homeVC.viewControllers = [contactosVC, nuevaTareaVC, listaTareasVC]

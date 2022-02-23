@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import MessageUI
 
 class DetalleContactoViewController: UIViewController {
     
     //MARK: - Variables globales
-    var dataModel: ArrayContact?
+    var dataModel: Contact?
     
     //MARK: - IBoutlets
     @IBOutlet weak var detalleContactoTableView: UITableView!
@@ -18,7 +19,16 @@ class DetalleContactoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configuracionUI()
         self.configuracionTableView()
+    }
+    
+    private func configuracionUI() {
+        let buttonMail = UIBarButtonItem(image: UIImage(systemName: "mail"),
+                                         style: .plain,
+                                         target: self,
+                                         action: #selector(configuracionMail))
+        self.navigationItem.rightBarButtonItem = buttonMail
     }
     
     private func configuracionTableView() {
@@ -26,6 +36,53 @@ class DetalleContactoViewController: UIViewController {
         self.detalleContactoTableView.dataSource = self
         self.detalleContactoTableView.register(UINib(nibName: PerfilCell.defaultReuseIdentifier, bundle: nil),
                                                forCellReuseIdentifier: PerfilCell.defaultReuseIdentifier)
+    }
+    
+    @objc
+    func configuracionMail() {
+        if MFMailComposeViewController.canSendMail() {
+            self.present(MailHelper.configuracionMailCompose(delegate: self, contactData: dataModel),
+                         animated: true,
+                         completion: nil)
+        } else {
+            self.present(Utils.muestraAlerta(titulo: "hey!",
+                                             mensaje: "Estás en un Simulador y no puedes enviar email",
+                                             completionHandler: nil),
+                        animated: true,
+                        completion: nil)
+        }
+    }
+    
+    private func muestraSelectorFoto() {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            self.muestraFotoMenu()
+        } else {
+            self.muestraFotoLibrary()
+        }
+    }
+    
+    private func muestraFotoMenu() {
+        let actionSheetVC = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        actionSheetVC.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+        actionSheetVC.addAction(UIAlertAction(title: "Tomar foto", style: .default, handler: { _ in self.tomaFoto() }))
+        actionSheetVC.addAction(UIAlertAction(title: "Escoge de la biblioteca", style: .default, handler: { _ in self.muestraFotoLibrary() }))
+        self.present(actionSheetVC, animated: true, completion: nil)
+    }
+    
+    private func muestraFotoLibrary() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
+        self.present(imagePicker, animated: true, completion: nil)
+    }
+    
+    private func tomaFoto() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .camera
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
+        self.present(imagePicker, animated: true, completion: nil)
     }
 }
 
@@ -44,9 +101,47 @@ extension DetalleContactoViewController: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.detalleContactoTableView.dequeueReusableCell(withIdentifier: PerfilCell.defaultReuseIdentifier, for: indexPath) as! PerfilCell
+        cell.delegate = self
         if let modelData = self.dataModel {
             cell.configuracionCell(data: modelData)
         }
         return cell
+    }
+}
+
+extension DetalleContactoViewController: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        DispatchQueue.main.async {
+            controller.dismiss(animated: true, completion: nil)
+        }
+    }
+}
+
+extension DetalleContactoViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        
+        //Código defensivo para evitar bloqueos en el hilo principal
+        DispatchQueue.main.async {
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickerImageUnw = info[.originalImage] as? UIImage {
+            PrefsHelper.saveImage(image: pickerImageUnw)
+            self.detalleContactoTableView.reloadData()
+        }
+        
+        //Código defensivo para evitar bloqueos en el hilo principal
+        DispatchQueue.main.async {
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+}
+
+extension DetalleContactoViewController: PerfilCellDelegate {
+    func showCameraPhoto() {
+        self.muestraSelectorFoto()
     }
 }

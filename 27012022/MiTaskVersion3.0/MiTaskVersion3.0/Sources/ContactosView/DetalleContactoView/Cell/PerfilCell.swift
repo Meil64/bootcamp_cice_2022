@@ -7,18 +7,30 @@
 
 import UIKit
 
+protocol PerfilCellDelegate: AnyObject {
+    func showCameraPhoto()
+}
+
 protocol PerfilCellProtocol {
-    func configuracionCell(data: ArrayContact)
+    func configuracionCell(data: Contact)
 }
 
 class PerfilCell: UITableViewCell, ReuseIdentifierProtocol {
 
+    //MARK: - Variables globales
+    weak var delegate: PerfilCellDelegate?
+    
     //MARK: - IBoutlets
     @IBOutlet weak var photoProfile: UIImageView!
     @IBOutlet weak var usuarioTwitter: UILabel!
     @IBOutlet weak var nombrePerfil: UILabel!
     @IBOutlet weak var apellidoPerfil: UILabel!
     @IBOutlet weak var cvPerfil: UILabel!
+    
+    //MARK: -IBActions
+    @IBAction func buttonFotoACTION(_ sender: UIButton!) {
+        self.delegate?.showCameraPhoto()
+    }
     
     
     override func awakeFromNib() {
@@ -35,8 +47,12 @@ class PerfilCell: UITableViewCell, ReuseIdentifierProtocol {
 }
 
 extension PerfilCell: PerfilCellProtocol {
-    func configuracionCell(data: ArrayContact) {
-        self.photoProfile.image = UIImage(named: data.imageProfile ?? Constants.imagePlaceholder)
+    func configuracionCell(data: Contact) {        
+        if let savedImage = PrefsHelper.getSavedImage() {
+            self.photoProfile.image = savedImage
+        } else {
+            self.photoProfile.image = UIImage(named: data.imageProfile ?? Constants.imagePlaceholder)
+        }        
         self.usuarioTwitter.text = data.usernameTwitter
         self.nombrePerfil.text = data.firstName
         self.apellidoPerfil.text = data.lastName
