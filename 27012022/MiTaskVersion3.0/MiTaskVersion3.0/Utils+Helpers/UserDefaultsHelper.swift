@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class PrefsHelper {
+class UserDefaultsHelper {
     
     private static let kUsername = "USERNAME"
     private static let kPassword = "PASSWORD"

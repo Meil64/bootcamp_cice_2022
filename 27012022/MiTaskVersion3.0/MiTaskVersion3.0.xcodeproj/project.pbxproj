@@ -32,7 +32,7 @@
 		2C30EE5927C26EB600A6BDFC /* DetalleTareaViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30EE5827C26EB600A6BDFC /* DetalleTareaViewCoordinator.swift */; };
 		2C30EE5B27C26EE000A6BDFC /* HomeTabBarViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30EE5A27C26EE000A6BDFC /* HomeTabBarViewCoordinator.swift */; };
 		2C30EE5E27C28CD000A6BDFC /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30EE5D27C28CD000A6BDFC /* Utils.swift */; };
-		2C30EE6027C292A600A6BDFC /* PrefsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30EE5F27C292A600A6BDFC /* PrefsHelper.swift */; };
+		2C30EE6027C292A600A6BDFC /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30EE5F27C292A600A6BDFC /* UserDefaultsHelper.swift */; };
 		2C3438A927C173F8009AC2EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3438A827C173F8009AC2EE /* AppDelegate.swift */; };
 		2C3438B227C173FB009AC2EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C3438B127C173FB009AC2EE /* Assets.xcassets */; };
 		2C3438B527C173FB009AC2EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C3438B327C173FB009AC2EE /* LaunchScreen.storyboard */; };
@@ -42,6 +42,7 @@
 		2C40955F27C55F3E00D17917 /* PerfilCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C40955D27C55F3E00D17917 /* PerfilCell.swift */; };
 		2C40956027C55F3E00D17917 /* PerfilCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C40955E27C55F3E00D17917 /* PerfilCell.xib */; };
 		2C4316F527C6302600139AF9 /* MailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4316F427C6302600139AF9 /* MailHelper.swift */; };
+		2CB75B5927CBA94A00907C9F /* GetPhotoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB75B5827CBA94A00907C9F /* GetPhotoHelper.swift */; };
 		2CD21A8127C3FB03007FFF04 /* ContactosServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD21A8027C3FB03007FFF04 /* ContactosServerModel.swift */; };
 		2CD21A8527C40122007FFF04 /* ContactosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD21A8327C40122007FFF04 /* ContactosCell.swift */; };
 		2CD21A8627C40122007FFF04 /* ContactosCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CD21A8427C40122007FFF04 /* ContactosCell.xib */; };
@@ -73,7 +74,7 @@
 		2C30EE5827C26EB600A6BDFC /* DetalleTareaViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleTareaViewCoordinator.swift; sourceTree = "<group>"; };
 		2C30EE5A27C26EE000A6BDFC /* HomeTabBarViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewCoordinator.swift; sourceTree = "<group>"; };
 		2C30EE5D27C28CD000A6BDFC /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		2C30EE5F27C292A600A6BDFC /* PrefsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefsHelper.swift; sourceTree = "<group>"; };
+		2C30EE5F27C292A600A6BDFC /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		2C3438A527C173F8009AC2EE /* MiTaskVersion3.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiTaskVersion3.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C3438A827C173F8009AC2EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C3438B127C173FB009AC2EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -85,6 +86,7 @@
 		2C40955D27C55F3E00D17917 /* PerfilCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilCell.swift; sourceTree = "<group>"; };
 		2C40955E27C55F3E00D17917 /* PerfilCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PerfilCell.xib; sourceTree = "<group>"; };
 		2C4316F427C6302600139AF9 /* MailHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailHelper.swift; sourceTree = "<group>"; };
+		2CB75B5827CBA94A00907C9F /* GetPhotoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPhotoHelper.swift; sourceTree = "<group>"; };
 		2CD21A8027C3FB03007FFF04 /* ContactosServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactosServerModel.swift; sourceTree = "<group>"; };
 		2CD21A8327C40122007FFF04 /* ContactosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactosCell.swift; sourceTree = "<group>"; };
 		2CD21A8427C40122007FFF04 /* ContactosCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactosCell.xib; sourceTree = "<group>"; };
@@ -218,8 +220,9 @@
 			isa = PBXGroup;
 			children = (
 				2C30EE5D27C28CD000A6BDFC /* Utils.swift */,
-				2C30EE5F27C292A600A6BDFC /* PrefsHelper.swift */,
+				2C30EE5F27C292A600A6BDFC /* UserDefaultsHelper.swift */,
 				2C4316F427C6302600139AF9 /* MailHelper.swift */,
+				2CB75B5827CBA94A00907C9F /* GetPhotoHelper.swift */,
 			);
 			path = "Utils+Helpers";
 			sourceTree = "<group>";
@@ -371,9 +374,10 @@
 				2CD21A8127C3FB03007FFF04 /* ContactosServerModel.swift in Sources */,
 				2C30EE4327C26D3500A6BDFC /* CategoriasViewController.swift in Sources */,
 				2C30EE4F27C26DC500A6BDFC /* LoginViewCoordinator.swift in Sources */,
-				2C30EE6027C292A600A6BDFC /* PrefsHelper.swift in Sources */,
+				2C30EE6027C292A600A6BDFC /* UserDefaultsHelper.swift in Sources */,
 				2C30EE5727C26E9C00A6BDFC /* ListaTareasViewCoordinator.swift in Sources */,
 				2C30EE5327C26E5500A6BDFC /* NuevaTareaViewCoordinator.swift in Sources */,
+				2CB75B5927CBA94A00907C9F /* GetPhotoHelper.swift in Sources */,
 				2C30EE5527C26E7900A6BDFC /* CategoriasViewCoordinator.swift in Sources */,
 				2C30EE2827C267E800A6BDFC /* TaskModel.swift in Sources */,
 				2C3438A927C173F8009AC2EE /* AppDelegate.swift in Sources */,

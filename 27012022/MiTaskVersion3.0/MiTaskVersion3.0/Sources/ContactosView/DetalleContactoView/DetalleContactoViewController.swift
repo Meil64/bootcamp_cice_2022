@@ -52,38 +52,6 @@ class DetalleContactoViewController: UIViewController {
                         completion: nil)
         }
     }
-    
-    private func muestraSelectorFoto() {
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            self.muestraFotoMenu()
-        } else {
-            self.muestraFotoLibrary()
-        }
-    }
-    
-    private func muestraFotoMenu() {
-        let actionSheetVC = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        actionSheetVC.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
-        actionSheetVC.addAction(UIAlertAction(title: "Tomar foto", style: .default, handler: { _ in self.tomaFoto() }))
-        actionSheetVC.addAction(UIAlertAction(title: "Escoge de la biblioteca", style: .default, handler: { _ in self.muestraFotoLibrary() }))
-        self.present(actionSheetVC, animated: true, completion: nil)
-    }
-    
-    private func muestraFotoLibrary() {
-        let imagePicker = UIImagePickerController()
-        imagePicker.sourceType = .photoLibrary
-        imagePicker.delegate = self
-        imagePicker.allowsEditing = true
-        self.present(imagePicker, animated: true, completion: nil)
-    }
-    
-    private func tomaFoto() {
-        let imagePicker = UIImagePickerController()
-        imagePicker.sourceType = .camera
-        imagePicker.delegate = self
-        imagePicker.allowsEditing = true
-        self.present(imagePicker, animated: true, completion: nil)
-    }
 }
 
 extension DetalleContactoViewController: UITableViewDelegate {
@@ -129,7 +97,7 @@ extension DetalleContactoViewController: UIImagePickerControllerDelegate, UINavi
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickerImageUnw = info[.originalImage] as? UIImage {
-            PrefsHelper.saveImage(image: pickerImageUnw)
+            UserDefaultsHelper.saveImage(image: pickerImageUnw)
             self.detalleContactoTableView.reloadData()
         }
         
@@ -142,6 +110,6 @@ extension DetalleContactoViewController: UIImagePickerControllerDelegate, UINavi
 
 extension DetalleContactoViewController: PerfilCellDelegate {
     func showCameraPhoto() {
-        self.muestraSelectorFoto()
+        GetPhotoHelper.muestraFotoMenu(delegate: self, viewController: self)
     }
 }

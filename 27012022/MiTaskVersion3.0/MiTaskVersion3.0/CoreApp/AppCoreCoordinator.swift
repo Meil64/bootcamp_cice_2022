@@ -18,7 +18,7 @@ final class AppCoreCoordinator {
 extension AppCoreCoordinator: AppCoreCoordinatorProtocol {
     func initialViewController(window: UIWindow) {
         
-        if PrefsHelper.isUsuarioLogado() {
+        if UserDefaultsHelper.isUsuarioLogado() {
             self.actualVC = HomeTabBarViewCoordinator.homeViewController()
         } else {
             self.actualVC = LoginViewCoordinator.view()

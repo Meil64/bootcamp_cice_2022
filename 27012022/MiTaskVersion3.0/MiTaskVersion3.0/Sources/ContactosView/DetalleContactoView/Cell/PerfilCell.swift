@@ -48,7 +48,7 @@ class PerfilCell: UITableViewCell, ReuseIdentifierProtocol {
 
 extension PerfilCell: PerfilCellProtocol {
     func configuracionCell(data: Contact) {        
-        if let savedImage = PrefsHelper.getSavedImage() {
+        if let savedImage = UserDefaultsHelper.getSavedImage() {
             self.photoProfile.image = savedImage
         } else {
             self.photoProfile.image = UIImage(named: data.imageProfile ?? Constants.imagePlaceholder)
