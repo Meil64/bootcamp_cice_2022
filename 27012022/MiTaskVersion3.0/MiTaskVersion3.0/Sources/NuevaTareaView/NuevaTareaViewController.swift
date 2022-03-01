@@ -26,21 +26,41 @@ class NuevaTareaViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func muestraCategoriasACTION(_ sender: Any) {
-        
+        let vc = CategoriasViewCoordinator.view()
+        self.show(vc, sender: nil)
     }
     
     @IBAction func guardarTareaACTION(_ sender: Any) {
-        
+        if validacionDatos() {
+            
+        } else {
+            self.present(Utils.muestraAlerta(titulo: "Hey!",
+                                             mensaje: "Por favor rellena todos los campos y ten en cuenta seleccionar una fotografía de la tarea",
+                                             completionHandler: nil),
+                         animated: true,
+                         completion: nil)
+        }
     }
     
     @IBAction func buttonImageACTION(_ sender: Any) {
         GetPhotoHelper.muestraFotoMenu(delegate: self, viewController: self)
     }
     
+    @IBAction func muestraDatePickerACTION(_ sender: UITextField) {
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = .dateAndTime
+        sender.inputView = datePicker
+        datePicker.addTarget(self, action: #selector(datePickerValueChanged(_:)), for: .valueChanged)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configuracionUI()
+    }
+    
+    //Funcionalidad para ocultar el teclado cuando tocas fuera del texto
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     private func configuracionUI() {
@@ -60,10 +80,23 @@ class NuevaTareaViewController: UIViewController {
         self.nuevaTareaTF.delegate = self
     }
     
-    //Funcionalidad para ocultar el teclado cuando tocas fuera del texto
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
+    @objc
+    func datePickerValueChanged(_ sender: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .medium
+        self.fechaTF.text = dateFormatter.string(from: sender.date)
     }
+    
+    private func validacionDatos() -> Bool {
+        return !(self.nuevaTareaTF.text?.isEmpty ?? false)
+            && !(self.prioridadTF.text?.isEmpty ?? false)
+            && !(self.fechaTF.text?.isEmpty ?? false)
+            && !(self.descripcionTV.text?.isEmpty ?? false)
+            && !(self.categoriaLBL.text?.isEmpty ?? false)
+            && fotoSeccionada
+    }
+    
 }
 
 extension NuevaTareaViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
