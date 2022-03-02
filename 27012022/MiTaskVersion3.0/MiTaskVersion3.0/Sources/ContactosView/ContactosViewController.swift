@@ -31,9 +31,9 @@ class ContactosViewController: UIViewController {
         self.contactsTableView.delegate = self
         self.contactsTableView.dataSource = self
         // Registrar la celda
-        self.contactsTableView.register(UINib(nibName: ContactosCell.defaultReuseIdentifier,
+        self.contactsTableView.register(UINib(nibName: ImageAndLabelsCell.defaultReuseIdentifier,
                                               bundle: nil),
-                                        forCellReuseIdentifier: ContactosCell.defaultReuseIdentifier)
+                                        forCellReuseIdentifier: ImageAndLabelsCell.defaultReuseIdentifier)
     }
 }
 
@@ -57,10 +57,14 @@ extension ContactosViewController: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.contactsTableView.dequeueReusableCell(
-            withIdentifier: ContactosCell.defaultReuseIdentifier,
+            withIdentifier: ImageAndLabelsCell.defaultReuseIdentifier,
             for: indexPath)
-        as! ContactosCell
-        cell.configuracionCell(data: self.dataSourceContactos[indexPath.row])
+        as! ImageAndLabelsCell
+                
+        let imagen = UIImage(named: self.dataSourceContactos[indexPath.row].imageProfile ?? Constants.imagePlaceholder)
+        let textMain = self.dataSourceContactos[indexPath.row].firstName
+        let textSecondary = self.dataSourceContactos[indexPath.row].lastName
+        cell.configuracionCell(image: imagen, textMain: textMain, textSecondary: textSecondary)
         return cell
     }
 }

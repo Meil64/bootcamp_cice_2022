@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C15DB9927CF6EE800775E09 /* ImageAndLabelsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C15DB9727CF6EE800775E09 /* ImageAndLabelsCell.swift */; };
+		2C15DB9A27CF6EE800775E09 /* ImageAndLabelsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C15DB9827CF6EE800775E09 /* ImageAndLabelsCell.xib */; };
 		2C30EE1C27C2636500A6BDFC /* AppCoreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30EE1B27C2636500A6BDFC /* AppCoreCoordinator.swift */; };
 		2C30EE2627C267E000A6BDFC /* contacts.json in Resources */ = {isa = PBXBuildFile; fileRef = 2C30EE2527C267E000A6BDFC /* contacts.json */; };
 		2C30EE2827C267E800A6BDFC /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C30EE2727C267E800A6BDFC /* TaskModel.swift */; };
@@ -51,6 +53,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C15DB9727CF6EE800775E09 /* ImageAndLabelsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAndLabelsCell.swift; sourceTree = "<group>"; };
+		2C15DB9827CF6EE800775E09 /* ImageAndLabelsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageAndLabelsCell.xib; sourceTree = "<group>"; };
 		2C30EE1B27C2636500A6BDFC /* AppCoreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoreCoordinator.swift; sourceTree = "<group>"; };
 		2C30EE2527C267E000A6BDFC /* contacts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = contacts.json; sourceTree = "<group>"; };
 		2C30EE2727C267E800A6BDFC /* TaskModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
@@ -107,6 +111,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C15DB9627CF6EB300775E09 /* CommonCells */ = {
+			isa = PBXGroup;
+			children = (
+				2C15DB9727CF6EE800775E09 /* ImageAndLabelsCell.swift */,
+				2C15DB9827CF6EE800775E09 /* ImageAndLabelsCell.xib */,
+			);
+			path = CommonCells;
+			sourceTree = "<group>";
+		};
 		2C30EE1A27C2635300A6BDFC /* CoreApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +149,7 @@
 		2C30EE2927C26BEF00A6BDFC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				2C15DB9627CF6EB300775E09 /* CommonCells */,
 				2C30EE2E27C26C1A00A6BDFC /* ListaTareasView */,
 				2C30EE2D27C26C1000A6BDFC /* NuevaTareaView */,
 				2C30EE2C27C26C0700A6BDFC /* ContactosView */,
@@ -366,6 +380,7 @@
 				2CD21A8627C40122007FFF04 /* ContactosCell.xib in Resources */,
 				2C30EE3827C26CFE00A6BDFC /* HomeTabBarController.xib in Resources */,
 				2C40956027C55F3E00D17917 /* PerfilCell.xib in Resources */,
+				2C15DB9A27CF6EE800775E09 /* ImageAndLabelsCell.xib in Resources */,
 				2C30EE4827C26D4200A6BDFC /* ListaTareasViewController.xib in Resources */,
 				2C3438B527C173FB009AC2EE /* LaunchScreen.storyboard in Resources */,
 				2C30EE2627C267E000A6BDFC /* contacts.json in Resources */,
@@ -391,6 +406,7 @@
 				2C30EE4F27C26DC500A6BDFC /* LoginViewCoordinator.swift in Sources */,
 				2C30EE6027C292A600A6BDFC /* UserDefaultsHelper.swift in Sources */,
 				2C30EE5727C26E9C00A6BDFC /* ListaTareasViewCoordinator.swift in Sources */,
+				2C15DB9927CF6EE800775E09 /* ImageAndLabelsCell.swift in Sources */,
 				2C30EE5327C26E5500A6BDFC /* NuevaTareaViewCoordinator.swift in Sources */,
 				2CB75B5927CBA94A00907C9F /* GetPhotoHelper.swift in Sources */,
 				2C30EE5527C26E7900A6BDFC /* CategoriasViewCoordinator.swift in Sources */,

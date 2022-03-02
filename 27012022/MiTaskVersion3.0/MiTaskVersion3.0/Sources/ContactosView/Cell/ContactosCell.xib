@@ -68,7 +68,7 @@
                 <outlet property="imagePerfil" destination="z3T-yB-gB7" id="WNs-0K-2YQ"/>
                 <outlet property="nombrePerfil" destination="j4z-OV-vJk" id="IQk-Gr-oO4"/>
             </connections>
-            <point key="canvasLocation" x="131.8840579710145" y="97.098214285714278"/>
+            <point key="canvasLocation" x="132" y="96"/>
         </tableViewCell>
     </objects>
 </document>
