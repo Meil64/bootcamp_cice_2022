@@ -41,6 +41,8 @@
 		2C40955B27C55A0C00D17917 /* DetalleContactoCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C40955A27C55A0C00D17917 /* DetalleContactoCoordinator.swift */; };
 		2C40955F27C55F3E00D17917 /* PerfilCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C40955D27C55F3E00D17917 /* PerfilCell.swift */; };
 		2C40956027C55F3E00D17917 /* PerfilCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C40955E27C55F3E00D17917 /* PerfilCell.xib */; };
+		2C40C6E227CEA02E003C81D0 /* CategoriaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C40C6E027CEA02E003C81D0 /* CategoriaCell.swift */; };
+		2C40C6E327CEA02E003C81D0 /* CategoriaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C40C6E127CEA02E003C81D0 /* CategoriaCell.xib */; };
 		2C4316F527C6302600139AF9 /* MailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4316F427C6302600139AF9 /* MailHelper.swift */; };
 		2CB75B5927CBA94A00907C9F /* GetPhotoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB75B5827CBA94A00907C9F /* GetPhotoHelper.swift */; };
 		2CD21A8127C3FB03007FFF04 /* ContactosServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD21A8027C3FB03007FFF04 /* ContactosServerModel.swift */; };
@@ -85,6 +87,8 @@
 		2C40955A27C55A0C00D17917 /* DetalleContactoCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleContactoCoordinator.swift; sourceTree = "<group>"; };
 		2C40955D27C55F3E00D17917 /* PerfilCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilCell.swift; sourceTree = "<group>"; };
 		2C40955E27C55F3E00D17917 /* PerfilCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PerfilCell.xib; sourceTree = "<group>"; };
+		2C40C6E027CEA02E003C81D0 /* CategoriaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriaCell.swift; sourceTree = "<group>"; };
+		2C40C6E127CEA02E003C81D0 /* CategoriaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriaCell.xib; sourceTree = "<group>"; };
 		2C4316F427C6302600139AF9 /* MailHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailHelper.swift; sourceTree = "<group>"; };
 		2CB75B5827CBA94A00907C9F /* GetPhotoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPhotoHelper.swift; sourceTree = "<group>"; };
 		2CD21A8027C3FB03007FFF04 /* ContactosServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactosServerModel.swift; sourceTree = "<group>"; };
@@ -209,6 +213,7 @@
 		2C30EE3027C26C3C00A6BDFC /* CategoriasView */ = {
 			isa = PBXGroup;
 			children = (
+				2C40C6DF27CEA00F003C81D0 /* Cell */,
 				2C30EE4127C26D3500A6BDFC /* CategoriasViewController.swift */,
 				2C30EE4227C26D3500A6BDFC /* CategoriasViewController.xib */,
 				2C30EE5427C26E7900A6BDFC /* CategoriasViewCoordinator.swift */,
@@ -274,6 +279,15 @@
 			children = (
 				2C40955D27C55F3E00D17917 /* PerfilCell.swift */,
 				2C40955E27C55F3E00D17917 /* PerfilCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		2C40C6DF27CEA00F003C81D0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2C40C6E027CEA02E003C81D0 /* CategoriaCell.swift */,
+				2C40C6E127CEA02E003C81D0 /* CategoriaCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -358,6 +372,7 @@
 				2C40955927C559F600D17917 /* DetalleContactoViewController.xib in Resources */,
 				2C30EE4427C26D3500A6BDFC /* CategoriasViewController.xib in Resources */,
 				2C3438B227C173FB009AC2EE /* Assets.xcassets in Resources */,
+				2C40C6E327CEA02E003C81D0 /* CategoriaCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +404,7 @@
 				2C30EE3F27C26D2600A6BDFC /* NuevaTareaViewController.swift in Sources */,
 				2C30EE1C27C2636500A6BDFC /* AppCoreCoordinator.swift in Sources */,
 				2C30EE4727C26D4200A6BDFC /* ListaTareasViewController.swift in Sources */,
+				2C40C6E227CEA02E003C81D0 /* CategoriaCell.swift in Sources */,
 				2C40955827C559F600D17917 /* DetalleContactoViewController.swift in Sources */,
 				2C30EE4B27C26D4F00A6BDFC /* DetalleTareaViewController.swift in Sources */,
 				2C30EE5127C26E2300A6BDFC /* ContactosViewCoordinator.swift in Sources */,

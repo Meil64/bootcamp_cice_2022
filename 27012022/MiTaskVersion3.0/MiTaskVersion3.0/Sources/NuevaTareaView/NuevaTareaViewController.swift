@@ -26,12 +26,43 @@ class NuevaTareaViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func muestraCategoriasACTION(_ sender: Any) {
-        let vc = CategoriasViewCoordinator.view()
+        let vc = CategoriasViewCoordinator.view(delegate: self)
         self.show(vc, sender: nil)
     }
     
     @IBAction func guardarTareaACTION(_ sender: Any) {
         if validacionDatos() {
+            
+            if let imageData = self.imagenTareaIV.image?.jpegData(compressionQuality: 0.3) {
+                SaveFavoritesPresenter.shared.addLocal(favorite: DownloadNewModel(pId: Int.random(in: 0..<999),
+                                                                                  pNewTask: self.nuevaTareaTF.text ?? "",
+                                                                                  pPriority: self.prioridadTF.text ?? "",
+                                                                                  pTaskDate: self.fechaTF.text ?? "",
+                                                                                  pTaskDescription: self.descripcionTV.text ?? "",
+                                                                                  pTaskCategory: self.categoriaLBL.text ?? "",
+                                                                                  pTaskImage: imageData)) { result in
+                    if result != nil {
+                        self.present(Utils.muestraAlerta(titulo: "Genial!",
+                                                         mensaje: "Los datos se han salvado correctamente en Userdefault",
+                                                         completionHandler: { _ in
+                                                            //notification push local (deprecated)
+                                                            let notification = UILocalNotification()
+                                                            notification.fireDate = Date(timeIntervalSinceNow: 5)
+                                                            notification.alertBody = self.nuevaTareaTF.text
+                                                            notification.timeZone = NSTimeZone.default
+                                                            notification.applicationIconBadgeNumber = UIApplication.shared.applicationIconBadgeNumber + 1
+                                                            UIApplication.shared.scheduleLocalNotification(notification)
+                            
+                                                            self.limpiarDatos()
+                                                        }),
+                                     animated: true,
+                                     completion: nil)
+                    }
+                } failure: { error in
+                    debugPrint(error ?? "")
+                }
+
+            }
             
         } else {
             self.present(Utils.muestraAlerta(titulo: "Hey!",
@@ -94,9 +125,18 @@ class NuevaTareaViewController: UIViewController {
             && !(self.fechaTF.text?.isEmpty ?? false)
             && !(self.descripcionTV.text?.isEmpty ?? false)
             && !(self.categoriaLBL.text?.isEmpty ?? false)
-            && fotoSeccionada
+            && self.fotoSeccionada
     }
     
+    private func limpiarDatos(){
+        self.nuevaTareaTF.text = ""
+        self.prioridadTF.text = ""
+        self.fechaTF.text = ""
+        self.descripcionTV.text = "Coloca una breve descripción de tu tarea"
+        self.categoriaLBL.text = self.nombreCategoria
+        self.imagenTareaIV.image = UIImage(named: Constants.imagePlaceholder)
+        self.fotoSeccionada = false
+    }
 }
 
 extension NuevaTareaViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -152,3 +192,8 @@ extension NuevaTareaViewController: UITextFieldDelegate {
     }
 }
 
+extension NuevaTareaViewController : CategoriaViewControllerDelegate {
+    func nombreCategoriaSeleccionada(categoria: String){
+        self.categoriaLBL.text = categoria
+    }
+}
