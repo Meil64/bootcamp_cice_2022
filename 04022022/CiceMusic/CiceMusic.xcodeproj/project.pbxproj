@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C14E5FF27D2446500944817 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C14E5FE27D2446500944817 /* NetworkService.swift */; };
+		2C14E60127D2459600944817 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C14E60027D2459600944817 /* NetworkError.swift */; };
+		2C14E60427D245FF00944817 /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C14E60327D245FF00944817 /* NetworkUtils.swift */; };
+		2C14E60627D2476600944817 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C14E60527D2476600944817 /* UserDefaultsHelper.swift */; };
+		2C14E60827D24BD400944817 /* SplashProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C14E60727D24BD400944817 /* SplashProvider.swift */; };
+		2C14E60B27D2562D00944817 /* MusicServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C14E60A27D2562D00944817 /* MusicServerModel.swift */; };
 		2C2F35A427D13FF8003EE46C /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2F35A327D13FF8003EE46C /* SplashCoordinator.swift */; };
 		2CAD88C627CF99D600186F25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD88C527CF99D600186F25 /* AppDelegate.swift */; };
 		2CAD88CF27CF99D900186F25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CAD88CE27CF99D900186F25 /* Assets.xcassets */; };
@@ -21,6 +27,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C14E5FE27D2446500944817 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		2C14E60027D2459600944817 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		2C14E60327D245FF00944817 /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
+		2C14E60527D2476600944817 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
+		2C14E60727D24BD400944817 /* SplashProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashProvider.swift; sourceTree = "<group>"; };
+		2C14E60A27D2562D00944817 /* MusicServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicServerModel.swift; sourceTree = "<group>"; };
 		2C2F35A327D13FF8003EE46C /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
 		2CAD88C227CF99D600186F25 /* CiceMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CiceMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CAD88C527CF99D600186F25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +59,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C14E5FD27D2444E00944817 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				2C14E60027D2459600944817 /* NetworkError.swift */,
+				2C14E5FE27D2446500944817 /* NetworkService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		2C14E60227D245F000944817 /* Utils+Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2C14E60327D245FF00944817 /* NetworkUtils.swift */,
+				2C14E60527D2476600944817 /* UserDefaultsHelper.swift */,
+			);
+			path = "Utils+Helpers";
+			sourceTree = "<group>";
+		};
+		2C14E60927D2561F00944817 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2C14E60A27D2562D00944817 /* MusicServerModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		2CAD88B927CF99D600186F25 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +104,9 @@
 		2CAD88C427CF99D600186F25 /* CiceMusic */ = {
 			isa = PBXGroup;
 			children = (
+				2C14E60927D2561F00944817 /* Models */,
+				2C14E60227D245F000944817 /* Utils+Helpers */,
+				2C14E5FD27D2444E00944817 /* NetworkService */,
 				2CAD88DF27CF9E2D00186F25 /* Sources */,
 				2CAD88DC27CF9C8500186F25 /* BaseVIPER */,
 				2CAD88D927CF9A2F00186F25 /* CoreApp */,
@@ -110,6 +151,7 @@
 				2CAD88E727CF9F5100186F25 /* SplashInteractor.swift */,
 				2CAD88E927CF9F5A00186F25 /* SplashRouter.swift */,
 				2C2F35A327D13FF8003EE46C /* SplashCoordinator.swift */,
+				2C14E60727D24BD400944817 /* SplashProvider.swift */,
 			);
 			path = SplashView;
 			sourceTree = "<group>";
@@ -186,13 +228,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CAD88C627CF99D600186F25 /* AppDelegate.swift in Sources */,
+				2C14E60827D24BD400944817 /* SplashProvider.swift in Sources */,
 				2C2F35A427D13FF8003EE46C /* SplashCoordinator.swift in Sources */,
 				2CAD88E827CF9F5100186F25 /* SplashInteractor.swift in Sources */,
 				2CAD88EA27CF9F5A00186F25 /* SplashRouter.swift in Sources */,
+				2C14E5FF27D2446500944817 /* NetworkService.swift in Sources */,
 				2CAD88E627CF9E7700186F25 /* SplashPresenter.swift in Sources */,
+				2C14E60627D2476600944817 /* UserDefaultsHelper.swift in Sources */,
 				2CAD88DE27CF9C9D00186F25 /* BaseVIPER.swift in Sources */,
+				2C14E60427D245FF00944817 /* NetworkUtils.swift in Sources */,
 				2CAD88DB27CF9AA800186F25 /* AppCoreCoordinator.swift in Sources */,
 				2CAD88E327CF9E5400186F25 /* SplashViewController.swift in Sources */,
+				2C14E60B27D2562D00944817 /* MusicServerModel.swift in Sources */,
+				2C14E60127D2459600944817 /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
