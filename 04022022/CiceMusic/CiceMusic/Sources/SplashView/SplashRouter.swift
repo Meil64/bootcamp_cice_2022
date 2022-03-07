@@ -9,7 +9,7 @@ import Foundation
 
 // Input del Router
 protocol SplashRouterInputProtocol {
-    
+    func showHomeTabBarRouter(dataSource: [ResultMusic])
 }
 
 final class SplashRouter: BaseRouter<SplashViewController> {
@@ -18,5 +18,9 @@ final class SplashRouter: BaseRouter<SplashViewController> {
 
 // Input del Router
 extension SplashRouter: SplashRouterInputProtocol {
+    func showHomeTabBarRouter(dataSource: [ResultMusic]) {
+        debugPrint(dataSource)
+    }
+    
     
 }
