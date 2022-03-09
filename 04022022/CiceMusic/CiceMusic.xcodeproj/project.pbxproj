@@ -13,6 +13,7 @@
 		2C14E60627D2476600944817 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C14E60527D2476600944817 /* UserDefaultsHelper.swift */; };
 		2C14E60827D24BD400944817 /* SplashProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C14E60727D24BD400944817 /* SplashProvider.swift */; };
 		2C14E60B27D2562D00944817 /* MusicServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C14E60A27D2562D00944817 /* MusicServerModel.swift */; };
+		2C1D1DB527D8C2D70054D326 /* Constantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1D1DB427D8C2D70054D326 /* Constantes.swift */; };
 		2C2F35A427D13FF8003EE46C /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2F35A327D13FF8003EE46C /* SplashCoordinator.swift */; };
 		2C7802B627D67D6F00D40935 /* MusicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C7802AF27D67D6F00D40935 /* MusicViewController.xib */; };
 		2C7802B727D67D6F00D40935 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7802B027D67D6F00D40935 /* MusicViewController.swift */; };
@@ -48,6 +49,10 @@
 		2CAD88E627CF9E7700186F25 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD88E527CF9E7700186F25 /* SplashPresenter.swift */; };
 		2CAD88E827CF9F5100186F25 /* SplashInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD88E727CF9F5100186F25 /* SplashInteractor.swift */; };
 		2CAD88EA27CF9F5A00186F25 /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD88E927CF9F5A00186F25 /* SplashRouter.swift */; };
+		2CEBCE8F27D7D1F800C186D2 /* MusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBCE8D27D7D1F800C186D2 /* MusicCell.swift */; };
+		2CEBCE9027D7D1F800C186D2 /* MusicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CEBCE8E27D7D1F800C186D2 /* MusicCell.xib */; };
+		2CEBCE9227D7D23700C186D2 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBCE9127D7D23700C186D2 /* Utils.swift */; };
+		2CEBCE9527D7D65400C186D2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 2CEBCE9427D7D65400C186D2 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +62,7 @@
 		2C14E60527D2476600944817 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		2C14E60727D24BD400944817 /* SplashProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashProvider.swift; sourceTree = "<group>"; };
 		2C14E60A27D2562D00944817 /* MusicServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicServerModel.swift; sourceTree = "<group>"; };
+		2C1D1DB427D8C2D70054D326 /* Constantes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constantes.swift; sourceTree = "<group>"; };
 		2C2F35A327D13FF8003EE46C /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
 		2C7802AF27D67D6F00D40935 /* MusicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicViewController.xib; sourceTree = "<group>"; };
 		2C7802B027D67D6F00D40935 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +100,9 @@
 		2CAD88E527CF9E7700186F25 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		2CAD88E727CF9F5100186F25 /* SplashInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashInteractor.swift; sourceTree = "<group>"; };
 		2CAD88E927CF9F5A00186F25 /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
+		2CEBCE8D27D7D1F800C186D2 /* MusicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCell.swift; sourceTree = "<group>"; };
+		2CEBCE8E27D7D1F800C186D2 /* MusicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicCell.xib; sourceTree = "<group>"; };
+		2CEBCE9127D7D23700C186D2 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CEBCE9527D7D65400C186D2 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +131,8 @@
 			children = (
 				2C14E60327D245FF00944817 /* NetworkUtils.swift */,
 				2C14E60527D2476600944817 /* UserDefaultsHelper.swift */,
+				2CEBCE9127D7D23700C186D2 /* Utils.swift */,
+				2C1D1DB427D8C2D70054D326 /* Constantes.swift */,
 			);
 			path = "Utils+Helpers";
 			sourceTree = "<group>";
@@ -146,6 +158,7 @@
 		2C7802AC27D67D2F00D40935 /* MusicView */ = {
 			isa = PBXGroup;
 			children = (
+				2CEBCE8C27D7D1DB00C186D2 /* Cell */,
 				2C7802AF27D67D6F00D40935 /* MusicViewController.xib */,
 				2C7802B027D67D6F00D40935 /* MusicViewController.swift */,
 				2C7802B127D67D6F00D40935 /* MusicRouter.swift */,
@@ -260,6 +273,15 @@
 			path = SplashView;
 			sourceTree = "<group>";
 		};
+		2CEBCE8C27D7D1DB00C186D2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2CEBCE8D27D7D1F800C186D2 /* MusicCell.swift */,
+				2CEBCE8E27D7D1F800C186D2 /* MusicCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -276,6 +298,9 @@
 			dependencies = (
 			);
 			name = CiceMusic;
+			packageProductDependencies = (
+				2CEBCE9427D7D65400C186D2 /* Kingfisher */,
+			);
 			productName = CiceMusic;
 			productReference = 2CAD88C227CF99D600186F25 /* CiceMusic.app */;
 			productType = "com.apple.product-type.application";
@@ -304,6 +329,9 @@
 				Base,
 			);
 			mainGroup = 2CAD88B927CF99D600186F25;
+			packageReferences = (
+				2CEBCE9327D7D65400C186D2 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 2CAD88C327CF99D600186F25 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -325,6 +353,7 @@
 				2CAD88E427CF9E5400186F25 /* SplashViewController.xib in Resources */,
 				2CAD88CF27CF99D900186F25 /* Assets.xcassets in Resources */,
 				2C7802D227D67D8E00D40935 /* BooksViewController.xib in Resources */,
+				2CEBCE9027D7D1F800C186D2 /* MusicCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +375,7 @@
 				2CAD88EA27CF9F5A00186F25 /* SplashRouter.swift in Sources */,
 				2C7802D727D67D8E00D40935 /* BooksPresenter.swift in Sources */,
 				2C14E5FF27D2446500944817 /* NetworkService.swift in Sources */,
+				2CEBCE9227D7D23700C186D2 /* Utils.swift in Sources */,
 				2C7802D827D67D8E00D40935 /* BooksInteractor.swift in Sources */,
 				2C7802D327D67D8E00D40935 /* BooksViewController.swift in Sources */,
 				2C7802D627D67D8E00D40935 /* BooksCoordinator.swift in Sources */,
@@ -363,8 +393,10 @@
 				2C7802C727D67D7800D40935 /* PodcastProvider.swift in Sources */,
 				2C14E60427D245FF00944817 /* NetworkUtils.swift in Sources */,
 				2C7802C627D67D7800D40935 /* PodcastRouter.swift in Sources */,
+				2C1D1DB527D8C2D70054D326 /* Constantes.swift in Sources */,
 				2CAD88DB27CF9AA800186F25 /* AppCoreCoordinator.swift in Sources */,
 				2CAD88E327CF9E5400186F25 /* SplashViewController.swift in Sources */,
+				2CEBCE8F27D7D1F800C186D2 /* MusicCell.swift in Sources */,
 				2C7802BC27D67D6F00D40935 /* MusicInteractor.swift in Sources */,
 				2C14E60B27D2562D00944817 /* MusicServerModel.swift in Sources */,
 				2C7802B827D67D6F00D40935 /* MusicRouter.swift in Sources */,
@@ -580,6 +612,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2CEBCE9327D7D65400C186D2 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2CEBCE9427D7D65400C186D2 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2CEBCE9327D7D65400C186D2 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2CAD88BA27CF99D600186F25 /* Project object */;
 }

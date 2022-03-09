@@ -35,7 +35,7 @@ struct RequestDTO {
 }
 
 struct URLEnpoint {
-    static let baseUrl = "https://rss.applemarketingtools.com/api/v2/us/"
+    static let baseUrl = "https://rss.applemarketingtools.com/api/v2/%@/"
     static let music = "music/most-played/%@/songs.json"
     static let podcast = "podcasts/top/%@/podcast-episodes.json"
     static let books = "books/top-free/%@/books.json"

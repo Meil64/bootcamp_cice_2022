@@ -16,6 +16,7 @@ protocol SplashPresenterInputProtocol {
 // Output del Interactor
 protocol SplashInteractorOutputProtocol {
     func setDataFromWebInteractor(data: [ResultMusic]?)
+    func setAlertMessage(error: NetworkError)
 }
 
 final class SplashPresenter: BasePresenter<SplashPresenterOutputProtocol, SplashInteractorInputProtocol, SplashRouterInputProtocol> {
@@ -44,5 +45,7 @@ extension SplashPresenter: SplashInteractorOutputProtocol {
         self.viewController?.launchAnimation()
     }
     
-    
+    func setAlertMessage(error: NetworkError) {
+        self.router?.showAlert(title: error.description, message: error.localizedDescription)
+    }
 }

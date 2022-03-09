@@ -9,11 +9,12 @@ import Foundation
 import UIKit
 
 final class HomeTabBarCoordinator {
-    static func tabBarController() -> UITabBarController {
+    
+    static func tabBarController(dto: HomeTabBarCoordinatorDTO? = nil) -> UITabBarController {
         let tbc = HomeTabBarController()
         
         //Controllers
-        let musicVC = MusicCoordinator.navigation()
+        let musicVC = MusicCoordinator.navigation(dto: MusicCoordinatorDTO(model: dto?.data))
         let podcastVC = PodcastCoordinator.navigation()
         let booksVC = BooksCoordinator.navigation()
         
@@ -37,4 +38,8 @@ final class HomeTabBarCoordinator {
         
         return tbc
     }
+}
+
+struct HomeTabBarCoordinatorDTO {
+    var data: [ResultMusic]?
 }
