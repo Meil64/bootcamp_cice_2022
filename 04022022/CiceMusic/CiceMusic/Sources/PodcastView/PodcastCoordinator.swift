@@ -34,5 +34,5 @@ final class PodcastCoordinator {
 }
 
 struct PodcastCoordinatorDTO {
-    
+    var model: [GenericResult]?
 }

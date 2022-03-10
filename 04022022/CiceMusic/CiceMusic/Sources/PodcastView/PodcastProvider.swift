@@ -2,15 +2,23 @@ import Foundation
 
 // Input Protocol
 protocol PodcastProviderInputProtocol {    
-    func fetchPodcastFromWebServiceProvider()
+    func fetchPodcastFromWebServiceProvider(completionHandler: @escaping (Result<PodcastServerModel, NetworkError>) -> Void)
 }
 
 final class PodcastProvider : PodcastProviderInputProtocol{
     
     let networkService: NetworkServiceProtocol = NetworkService()
     
-    func fetchPodcastFromWebServiceProvider(){
-        
+    func fetchPodcastFromWebServiceProvider(completionHandler: @escaping (Result<PodcastServerModel, NetworkError>) -> Void){
+        self.networkService.requestGeneric(requestPayload: PodcastRequestDTO.requestData(numeroItems: "20"),
+                                           entityClass: PodcastServerModel.self) { [weak self] (result) in
+            guard self != nil else { return }
+            guard let resultUnw = result else { return }
+            completionHandler(.success(resultUnw))
+        } failure: { (error) in
+            completionHandler(.failure(error))
+        }
+
     }
     
 }
