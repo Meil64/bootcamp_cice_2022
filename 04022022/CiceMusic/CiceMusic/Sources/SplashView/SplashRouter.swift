@@ -9,7 +9,7 @@ import Foundation
 
 // Input del Router
 protocol SplashRouterInputProtocol {
-    func showHomeTabBarRouter(dataSource: [ResultMusic])
+    func showHomeTabBarRouter(dataSource: [GenericResult])
     func showAlert(title: String, message: String)
 }
 
@@ -19,7 +19,7 @@ final class SplashRouter: BaseRouter<SplashViewController> {
 
 // Input del Router
 extension SplashRouter: SplashRouterInputProtocol {
-    func showHomeTabBarRouter(dataSource: [ResultMusic]) {
+    func showHomeTabBarRouter(dataSource: [GenericResult]) {
         DispatchQueue.main.async {
             let vc = HomeTabBarCoordinator.tabBarController(dto: HomeTabBarCoordinatorDTO(data: dataSource))
             vc.modalTransitionStyle = .crossDissolve

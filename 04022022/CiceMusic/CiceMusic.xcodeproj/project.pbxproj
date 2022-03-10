@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C12842B27D9F2C2003E866B /* PodcastServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C12842A27D9F2C2003E866B /* PodcastServerModel.swift */; };
+		2C12842D27D9F38E003E866B /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C12842C27D9F38E003E866B /* Common.swift */; };
+		2C12843027D9FC16003E866B /* AppleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C12842F27D9FC16003E866B /* AppleViewModel.swift */; };
 		2C14E5FF27D2446500944817 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C14E5FE27D2446500944817 /* NetworkService.swift */; };
 		2C14E60127D2459600944817 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C14E60027D2459600944817 /* NetworkError.swift */; };
 		2C14E60427D245FF00944817 /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C14E60327D245FF00944817 /* NetworkUtils.swift */; };
@@ -56,6 +59,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C12842A27D9F2C2003E866B /* PodcastServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastServerModel.swift; sourceTree = "<group>"; };
+		2C12842C27D9F38E003E866B /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		2C12842F27D9FC16003E866B /* AppleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleViewModel.swift; sourceTree = "<group>"; };
 		2C14E5FE27D2446500944817 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		2C14E60027D2459600944817 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		2C14E60327D245FF00944817 /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
@@ -117,6 +123,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C12842E27D9FBE6003E866B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2C12842F27D9FC16003E866B /* AppleViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		2C14E5FD27D2444E00944817 /* NetworkService */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				2C14E60A27D2562D00944817 /* MusicServerModel.swift */,
+				2C12842A27D9F2C2003E866B /* PodcastServerModel.swift */,
+				2C12842C27D9F38E003E866B /* Common.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -217,6 +233,7 @@
 		2CAD88C427CF99D600186F25 /* CiceMusic */ = {
 			isa = PBXGroup;
 			children = (
+				2C12842E27D9FBE6003E866B /* ViewModels */,
 				2C14E60927D2561F00944817 /* Models */,
 				2C14E60227D245F000944817 /* Utils+Helpers */,
 				2C14E5FD27D2444E00944817 /* NetworkService */,
@@ -377,6 +394,7 @@
 				2C14E5FF27D2446500944817 /* NetworkService.swift in Sources */,
 				2CEBCE9227D7D23700C186D2 /* Utils.swift in Sources */,
 				2C7802D827D67D8E00D40935 /* BooksInteractor.swift in Sources */,
+				2C12843027D9FC16003E866B /* AppleViewModel.swift in Sources */,
 				2C7802D327D67D8E00D40935 /* BooksViewController.swift in Sources */,
 				2C7802D627D67D8E00D40935 /* BooksCoordinator.swift in Sources */,
 				2C7802B727D67D6F00D40935 /* MusicViewController.swift in Sources */,
@@ -385,12 +403,14 @@
 				2C7802D427D67D8E00D40935 /* BooksRouter.swift in Sources */,
 				2C7802BA27D67D6F00D40935 /* MusicCoordinator.swift in Sources */,
 				2CAD88E627CF9E7700186F25 /* SplashPresenter.swift in Sources */,
+				2C12842B27D9F2C2003E866B /* PodcastServerModel.swift in Sources */,
 				2C14E60627D2476600944817 /* UserDefaultsHelper.swift in Sources */,
 				2C7802CA27D67D7800D40935 /* PodcastInteractor.swift in Sources */,
 				2C7802C527D67D7800D40935 /* PodcastViewController.swift in Sources */,
 				2CAD88DE27CF9C9D00186F25 /* BaseVIPER.swift in Sources */,
 				2C7802C927D67D7800D40935 /* PodcastPresenter.swift in Sources */,
 				2C7802C727D67D7800D40935 /* PodcastProvider.swift in Sources */,
+				2C12842D27D9F38E003E866B /* Common.swift in Sources */,
 				2C14E60427D245FF00944817 /* NetworkUtils.swift in Sources */,
 				2C7802C627D67D7800D40935 /* PodcastRouter.swift in Sources */,
 				2C1D1DB527D8C2D70054D326 /* Constantes.swift in Sources */,

@@ -1,15 +1,15 @@
 //
-//  MusicServerModel.swift
+//  PodcastServerModel.swift
 //  CiceMusic
 //
-//  Created by Carlos Carrera on 4/3/22.
+//  Created by Carlos Carrera on 10/3/22.
 //
 
 import Foundation
 
-// MARK: - MusicServerModel
-struct MusicServerModel: Codable {
-    let feed: FeedMusic?
+// MARK: - PodcastServerModel
+struct PodcastServerModel: Codable {
+    let feed: FeedPodcast?
 
     enum CodingKeys: String, CodingKey {
         case feed = "feed"
@@ -17,7 +17,7 @@ struct MusicServerModel: Codable {
 }
 
 // MARK: - Feed
-struct FeedMusic: Codable {
+struct FeedPodcast: Codable {
     let title: String?
     let id: String?
     let author: Author?
@@ -26,7 +26,7 @@ struct FeedMusic: Codable {
     let country: String?
     let icon: String?
     let updated: String?
-    let results: [ResultMusic]?
+    let results: [ResultPodcast]?
 
     enum CodingKeys: String, CodingKey {
         case title = "title"
@@ -42,15 +42,11 @@ struct FeedMusic: Codable {
 }
 
 // MARK: - Result
-struct ResultMusic: Codable {
+struct ResultPodcast: Codable {
     let artistName: String?
     let id: String?
     let name: String?
-    let releaseDate: String?
     let kind: String?
-    let artistId: String?
-    let artistUrl: String?
-    let contentAdvisoryRating: String?
     let artworkUrl100: String?
     let genres: [Genre]?
     let url: String?
@@ -59,11 +55,7 @@ struct ResultMusic: Codable {
         case artistName = "artistName"
         case id = "id"
         case name = "name"
-        case releaseDate = "releaseDate"
         case kind = "kind"
-        case artistId = "artistId"
-        case artistUrl = "artistUrl"
-        case contentAdvisoryRating = "contentAdvisoryRating"
         case artworkUrl100 = "artworkUrl100"
         case genres = "genres"
         case url = "url"

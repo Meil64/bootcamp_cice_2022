@@ -35,5 +35,5 @@ final class MusicCoordinator {
 }
 
 struct MusicCoordinatorDTO {
-    var model: [ResultMusic]?
+    var model: [GenericResult]?
 }

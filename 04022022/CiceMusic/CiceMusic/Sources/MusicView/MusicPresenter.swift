@@ -4,18 +4,18 @@ import Foundation
 protocol MusicPresenterInputProtocol {
     func loadDataFromInteractor()
     func numberOfRows() -> Int?
-    func informationForCell(indexPath: Int) -> ResultMusic?
+    func informationForCell(indexPath: Int) -> GenericResult?
 }
 
 // Output del Interactor
 protocol MusicInteractorOutputProtocol {
-    func dataTransformedFromInteractor(data: [ResultMusic]?)
+    func dataTransformedFromInteractor(data: [GenericResult]?)
 }
 
 final class MusicPresenter: BasePresenter<MusicPresenterOutputProtocol, MusicInteractorInputProtocol, MusicRouterInputProtocol> {    
     
     //MARK: - Variables globales
-    var dataSourceMusic: [ResultMusic] = []
+    var dataSourceViewModel: [GenericResult] = []
     
 }
 
@@ -26,22 +26,22 @@ extension MusicPresenter: MusicPresenterInputProtocol {
     }
     
     func numberOfRows() -> Int? {
-        return self.dataSourceMusic.count
+        return self.dataSourceViewModel.count
     }
     
-    func informationForCell(indexPath: Int) -> ResultMusic? {
-        return self.dataSourceMusic[indexPath]
+    func informationForCell(indexPath: Int) -> GenericResult? {
+        return self.dataSourceViewModel[indexPath]
     }
 }
 
 // Output del Interactor
 extension MusicPresenter: MusicInteractorOutputProtocol {
     
-    func dataTransformedFromInteractor(data: [ResultMusic]?){
+    func dataTransformedFromInteractor(data: [GenericResult]?){
         
-        self.dataSourceMusic.removeAll()
+        self.dataSourceViewModel.removeAll()
         guard let dataSourceUnw = data else { return }
-        self.dataSourceMusic = dataSourceUnw
+        self.dataSourceViewModel = dataSourceUnw
         
         self.viewController?.reloadInformationInView()
     }

@@ -41,5 +41,5 @@ final class HomeTabBarCoordinator {
 }
 
 struct HomeTabBarCoordinatorDTO {
-    var data: [ResultMusic]?
+    var data: [GenericResult]?
 }
