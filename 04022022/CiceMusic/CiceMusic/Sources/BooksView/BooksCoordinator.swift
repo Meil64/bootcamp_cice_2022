@@ -34,5 +34,5 @@ final class BooksCoordinator {
 }
 
 struct BooksCoordinatorDTO {
-    
+    var model: [GenericResult]?
 }

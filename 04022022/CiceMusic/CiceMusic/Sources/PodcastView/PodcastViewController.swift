@@ -8,8 +8,7 @@ protocol PodcastPresenterOutputProtocol {
 class PodcastViewController: BaseView<PodcastPresenterInputProtocol> {
     
     //MARK: - IBOutlets
-    @IBOutlet weak var podcastTableView: UITableView!
-    
+    @IBOutlet weak var podcastTableView: UITableView!    
     
     override func viewDidLoad() {
         super.viewDidLoad()
