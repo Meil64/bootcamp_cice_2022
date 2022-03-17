@@ -14,6 +14,7 @@ class MusicViewController: BaseView<MusicPresenterInputProtocol> {
         super.viewDidLoad()
         self.presenter?.loadDataFromInteractor()
         self.configuracionTV()
+        self.menuButton()
     }
 
     private func configuracionTV() {
@@ -53,6 +54,12 @@ extension MusicViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let model = self.presenter?.informationForCell(indexPath: indexPath.row) {
+            self.presenter?.didSelectRow(data: model)
+        }
     }
 
 }

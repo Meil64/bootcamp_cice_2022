@@ -25,3 +25,15 @@ extension ReuseIdentifierProtocol where Self: UIView {
         return NSStringFromClass(self).components(separatedBy: ".").last!
     }
 }
+
+extension UIViewController {
+    func menuButton(){
+        let menuButton = UIBarButtonItem(image: UIImage(named: "menu_Iz"),
+                                         style: .plain,
+                                         target: revealViewController(),
+                                         action: #selector(SWRevealViewController.revealToggle(_:)))
+        revealViewController().rightViewRevealWidth = 150
+        revealViewController().panGestureRecognizer()
+        self.navigationItem.leftBarButtonItem = menuButton
+    }
+}

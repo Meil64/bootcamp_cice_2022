@@ -5,6 +5,7 @@ protocol MusicPresenterInputProtocol {
     func loadDataFromInteractor()
     func numberOfRows() -> Int?
     func informationForCell(indexPath: Int) -> GenericResult?
+    func didSelectRow(data: GenericResult)
 }
 
 // Output del Interactor
@@ -31,6 +32,10 @@ extension MusicPresenter: MusicPresenterInputProtocol {
     
     func informationForCell(indexPath: Int) -> GenericResult? {
         return self.dataSourceViewModel[indexPath]
+    }
+    
+    func didSelectRow(data: GenericResult){
+        self.router?.didSelectRowRouter(data: data)
     }
 }
 
