@@ -26,7 +26,7 @@ extension AppCoreCoordinator: AppCoreCoordinatorProtocol {
     
     func createSlidingMenu(window: UIWindow, vc: UIViewController) {
         let frontViewController = vc
-        let rearViewController = UIViewController()
+        let rearViewController = MenuCoordinator.view()
         let swRevealVC = SWRevealViewController(rearViewController: rearViewController, frontViewController: frontViewController)
         swRevealVC?.toggleAnimationType = SWRevealToggleAnimationType.easeOut
         swRevealVC?.toggleAnimationDuration = 0.3

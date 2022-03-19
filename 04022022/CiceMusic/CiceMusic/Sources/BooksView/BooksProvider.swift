@@ -28,7 +28,7 @@ struct BooksRequestDTO {
     static func requestData(numeroItems: String) -> RequestDTO {
         let argument: [CVarArg] = [numeroItems]
         let urlComplete = String(format: URLEnpoint.books, arguments: argument)
-        let request = RequestDTO(params: nil, method: .get, endpoint: urlComplete)
+        let request = RequestDTO(params: nil, method: .get, endpoint: urlComplete, urlContext: .webService)
         return request
     }
     
