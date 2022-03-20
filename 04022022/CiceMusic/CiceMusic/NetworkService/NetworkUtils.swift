@@ -7,6 +7,11 @@
 
 import Foundation
 
+class NetworkUtils{
+    static let Authentication = "Authorization"
+    static let BearerAuthentication = "Bearer 123456789"
+}
+
 enum HTTPMethods: String {
     case get = "GET"
     case post = "POST"
@@ -59,13 +64,11 @@ struct URLEnpoint {
         case heroku
     }
     
-    static let baseUrl = "https://rss.applemarketingtools.com/api/v2/%@/"
-    static let music = "music/most-played/%@/songs.json"
-    static let podcast = "podcasts/top/%@/podcast-episodes.json"
-    static let books = "books/top-free/%@/books.json"
-    static let apps = "apps/top-free/%@/apps.json"
+    static let music = "%@/music/most-played/%@/songs.json"
+    static let podcast = "%@/podcasts/top/%@/podcast-episodes.json"
+    static let books = "%@/books/top-free/%@/books.json"
+    static let apps = "%@/apps/top-free/%@/apps.json"
     
-    static let baseUrlHeroku = "https://iconspartan-app.herokuapp.com/"
     static let menu = "iCoMenuResponse"
 }
 
@@ -84,16 +87,16 @@ extension URLEnpoint{
         case .webService:
             switch self.defaultEnvironment {
             case .DEV:
-                return ""
+                return "https://rss.applemarketingtools.com/api/v2/"
             case .PRE:
                 return ""
             case .PRO:
-                return "https://rss.applemarketingtools.com/api/v2/us/"
+                return ""
             }
         case .heroku:
             switch self.defaultEnvironment {
             case .DEV:
-                return "https://iconspartan-app.herokuapp.com/"
+                return "https://icospartan-app.herokuapp.com/"
             case .PRE:
                 return ""
             case .PRO:

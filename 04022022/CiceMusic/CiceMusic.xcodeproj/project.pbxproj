@@ -71,6 +71,7 @@
 		2CAD88EA27CF9F5A00186F25 /* SplashRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD88E927CF9F5A00186F25 /* SplashRouter.swift */; };
 		2CB58F9227DFCF7E00F23C82 /* AppServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB58F9127DFCF7E00F23C82 /* AppServerModel.swift */; };
 		2CC2B22127DE6C21001CD175 /* BookServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC2B22027DE6C21001CD175 /* BookServerModel.swift */; };
+		2CDDF28827E7822D00A258F1 /* MenuServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDF28727E7822D00A258F1 /* MenuServerModel.swift */; };
 		2CEBCE8F27D7D1F800C186D2 /* MusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBCE8D27D7D1F800C186D2 /* MusicCell.swift */; };
 		2CEBCE9027D7D1F800C186D2 /* MusicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CEBCE8E27D7D1F800C186D2 /* MusicCell.xib */; };
 		2CEBCE9227D7D23700C186D2 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBCE9127D7D23700C186D2 /* Utils.swift */; };
@@ -146,6 +147,7 @@
 		2CAD88E927CF9F5A00186F25 /* SplashRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
 		2CB58F9127DFCF7E00F23C82 /* AppServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServerModel.swift; sourceTree = "<group>"; };
 		2CC2B22027DE6C21001CD175 /* BookServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookServerModel.swift; sourceTree = "<group>"; };
+		2CDDF28727E7822D00A258F1 /* MenuServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuServerModel.swift; sourceTree = "<group>"; };
 		2CEBCE8D27D7D1F800C186D2 /* MusicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCell.swift; sourceTree = "<group>"; };
 		2CEBCE8E27D7D1F800C186D2 /* MusicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicCell.xib; sourceTree = "<group>"; };
 		2CEBCE9127D7D23700C186D2 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 		2C14E5FD27D2444E00944817 /* NetworkService */ = {
 			isa = PBXGroup;
 			children = (
+				2C14E60327D245FF00944817 /* NetworkUtils.swift */,
 				2C14E60027D2459600944817 /* NetworkError.swift */,
 				2C14E5FE27D2446500944817 /* NetworkService.swift */,
 			);
@@ -198,7 +201,6 @@
 		2C14E60227D245F000944817 /* Utils+Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				2C14E60327D245FF00944817 /* NetworkUtils.swift */,
 				2C14E60527D2476600944817 /* UserDefaultsHelper.swift */,
 				2CEBCE9127D7D23700C186D2 /* Utils.swift */,
 				2C1D1DB427D8C2D70054D326 /* Constantes.swift */,
@@ -214,6 +216,7 @@
 				2C12842C27D9F38E003E866B /* Common.swift */,
 				2CC2B22027DE6C21001CD175 /* BookServerModel.swift */,
 				2CB58F9127DFCF7E00F23C82 /* AppServerModel.swift */,
+				2CDDF28727E7822D00A258F1 /* MenuServerModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -505,6 +508,7 @@
 				2C7802D627D67D8E00D40935 /* BooksCoordinator.swift in Sources */,
 				2C11D7AB27DE780700EAABBE /* AppleGenericDetailInteractor.swift in Sources */,
 				2C7802B727D67D6F00D40935 /* MusicViewController.swift in Sources */,
+				2CDDF28827E7822D00A258F1 /* MenuServerModel.swift in Sources */,
 				2C7802D527D67D8E00D40935 /* BooksProvider.swift in Sources */,
 				2C11D7A927DE780700EAABBE /* AppleGenericDetailCoordinator.swift in Sources */,
 				2C7802BB27D67D6F00D40935 /* MusicPresenter.swift in Sources */,

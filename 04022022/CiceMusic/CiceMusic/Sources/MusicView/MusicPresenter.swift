@@ -11,6 +11,7 @@ protocol MusicPresenterInputProtocol {
 // Output del Interactor
 protocol MusicInteractorOutputProtocol {
     func dataTransformedFromInteractor(data: [GenericResult]?)
+    func setAlertMessage(error: NetworkError)
 }
 
 final class MusicPresenter: BasePresenter<MusicPresenterOutputProtocol, MusicInteractorInputProtocol, MusicRouterInputProtocol> {    
@@ -49,5 +50,9 @@ extension MusicPresenter: MusicInteractorOutputProtocol {
         self.dataSourceViewModel = dataSourceUnw
         
         self.viewController?.reloadInformationInView()
+    }
+    
+    func setAlertMessage(error: NetworkError) {
+        self.router?.showAlert(title: error.description, message: error.localizedDescription)
     }
 }

@@ -16,6 +16,12 @@ protocol NetworkServiceProtocol {
 
 final class NetworkService: NetworkServiceProtocol {
     
+    typealias HTTPHeaders = [String: String]
+    
+    let defaultHTTPHeaders: HTTPHeaders = {
+        return [NetworkUtils.Authentication: NetworkUtils.BearerAuthentication]
+    }()
+    
     func requestGeneric<M>(requestPayload: RequestDTO,
                            entityClass: M.Type,
                            success: @escaping (M?) -> Void,
@@ -23,21 +29,22 @@ final class NetworkService: NetworkServiceProtocol {
         
         let sessionConfig = URLSessionConfiguration.default
         let session = URLSession(configuration: sessionConfig)
-        
-        //let argument: [CVarArg] = [NSLocale.current.languageCode ?? ""]
-        //let baseUrl = String(format: URLEnpoint.get, arguments: argument)
-        
-        let baseUrl = URLEnpoint.getUrlBase(urlContext: requestPayload.urlContext)
-        
+        let baseUrl = URLEnpoint.getUrlBase(urlContext: requestPayload.urlContext)        
         let endpoint = "\(baseUrl)\(requestPayload.endpoint)"
         
         guard let urlUnw = URL(string: endpoint) else {
             failure(NetworkError(status: .unsupportedURL))
             return
         }
-        let urlEndpoint = urlUnw
         
-        session.dataTask(with: urlEndpoint) { [weak self] (data, response, error) in
+        var urlRequest = URLRequest(url: urlUnw)
+        let headers = defaultHTTPHeaders
+        
+        headers.forEach{ (key, value) in
+            urlRequest.setValue(value, forHTTPHeaderField: key)
+        }
+        
+        session.dataTask(with: urlRequest) { [weak self] (data, response, error) in
             guard self != nil else { return }
             if let errorUnw = error {
                 failure(NetworkError(error: errorUnw))

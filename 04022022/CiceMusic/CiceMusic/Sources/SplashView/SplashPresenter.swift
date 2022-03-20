@@ -15,13 +15,13 @@ protocol SplashPresenterInputProtocol {
 
 // Output del Interactor
 protocol SplashInteractorOutputProtocol {
-    func setDataFromWebInteractor(data: [GenericResult]?)
+    func setDataFromWebInteractor(data: [MenuResponse]?)
     func setAlertMessage(error: NetworkError)
 }
 
 final class SplashPresenter: BasePresenter<SplashPresenterOutputProtocol, SplashInteractorInputProtocol, SplashRouterInputProtocol> {
     
-    var dataSourceViewModel: [GenericResult] = []
+    var dataSourceViewModel: [MenuResponse] = []
     
 }
 
@@ -38,7 +38,7 @@ extension SplashPresenter: SplashPresenterInputProtocol {
 
 // Output del Interactor
 extension SplashPresenter: SplashInteractorOutputProtocol {
-    func setDataFromWebInteractor(data: [GenericResult]?) {
+    func setDataFromWebInteractor(data: [MenuResponse]?) {
         guard let dataUnw = data else {return}
         self.dataSourceViewModel.removeAll()
         self.dataSourceViewModel = dataUnw
