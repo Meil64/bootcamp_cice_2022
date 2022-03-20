@@ -27,7 +27,7 @@ extension SplashRouter: SplashRouterInputProtocol {
             vc.modalTransitionStyle = .crossDissolve
             vc.modalPresentationStyle = .fullScreen
             if let windowUnw = self.delegate.window {
-                self.appCore.createSlidingMenu(window: windowUnw, vc: vc)
+                self.appCore.createSlidingMenu(window: windowUnw, vc: vc, menuDto: dataSource)
             }             
         }
     }    

@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController">
             <connections>
+                <outlet property="menuTV" destination="bVf-fk-bwq" id="U9T-E8-ADO"/>
                 <outlet property="view" destination="iN0-l3-epB" id="0KK-4V-vEI"/>
             </connections>
         </placeholder>

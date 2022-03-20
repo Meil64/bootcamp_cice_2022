@@ -72,6 +72,8 @@
 		2CB58F9227DFCF7E00F23C82 /* AppServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB58F9127DFCF7E00F23C82 /* AppServerModel.swift */; };
 		2CC2B22127DE6C21001CD175 /* BookServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC2B22027DE6C21001CD175 /* BookServerModel.swift */; };
 		2CDDF28827E7822D00A258F1 /* MenuServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDF28727E7822D00A258F1 /* MenuServerModel.swift */; };
+		2CDDF28C27E7993200A258F1 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDF28A27E7993200A258F1 /* MenuCell.swift */; };
+		2CDDF28D27E7993200A258F1 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CDDF28B27E7993200A258F1 /* MenuCell.xib */; };
 		2CEBCE8F27D7D1F800C186D2 /* MusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBCE8D27D7D1F800C186D2 /* MusicCell.swift */; };
 		2CEBCE9027D7D1F800C186D2 /* MusicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CEBCE8E27D7D1F800C186D2 /* MusicCell.xib */; };
 		2CEBCE9227D7D23700C186D2 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBCE9127D7D23700C186D2 /* Utils.swift */; };
@@ -148,6 +150,8 @@
 		2CB58F9127DFCF7E00F23C82 /* AppServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServerModel.swift; sourceTree = "<group>"; };
 		2CC2B22027DE6C21001CD175 /* BookServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookServerModel.swift; sourceTree = "<group>"; };
 		2CDDF28727E7822D00A258F1 /* MenuServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuServerModel.swift; sourceTree = "<group>"; };
+		2CDDF28A27E7993200A258F1 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		2CDDF28B27E7993200A258F1 /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		2CEBCE8D27D7D1F800C186D2 /* MusicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCell.swift; sourceTree = "<group>"; };
 		2CEBCE8E27D7D1F800C186D2 /* MusicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicCell.xib; sourceTree = "<group>"; };
 		2CEBCE9127D7D23700C186D2 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -296,6 +300,7 @@
 		2C8B2A4627E344E8001781F8 /* MenuView */ = {
 			isa = PBXGroup;
 			children = (
+				2CDDF28927E7991E00A258F1 /* Cell */,
 				2C8B2A4727E3451F001781F8 /* MenuViewController.xib */,
 				2C8B2A4827E3451F001781F8 /* MenuViewController.swift */,
 				2C8B2A4927E3451F001781F8 /* MenuRouter.swift */,
@@ -386,6 +391,15 @@
 			path = SplashView;
 			sourceTree = "<group>";
 		};
+		2CDDF28927E7991E00A258F1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2CDDF28A27E7993200A258F1 /* MenuCell.swift */,
+				2CDDF28B27E7993200A258F1 /* MenuCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		2CEBCE8C27D7D1DB00C186D2 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -466,6 +480,7 @@
 				2CAD88D227CF99D900186F25 /* LaunchScreen.storyboard in Resources */,
 				2CAD88E427CF9E5400186F25 /* SplashViewController.xib in Resources */,
 				2C8B2A4027E329DC001781F8 /* AppsCell.xib in Resources */,
+				2CDDF28D27E7993200A258F1 /* MenuCell.xib in Resources */,
 				2CAD88CF27CF99D900186F25 /* Assets.xcassets in Resources */,
 				2C8B2A4E27E3451F001781F8 /* MenuViewController.xib in Resources */,
 				2C11D7A527DE780700EAABBE /* AppleGenericDetailViewController.xib in Resources */,
@@ -511,6 +526,7 @@
 				2CDDF28827E7822D00A258F1 /* MenuServerModel.swift in Sources */,
 				2C7802D527D67D8E00D40935 /* BooksProvider.swift in Sources */,
 				2C11D7A927DE780700EAABBE /* AppleGenericDetailCoordinator.swift in Sources */,
+				2CDDF28C27E7993200A258F1 /* MenuCell.swift in Sources */,
 				2C7802BB27D67D6F00D40935 /* MusicPresenter.swift in Sources */,
 				2C7802D427D67D8E00D40935 /* BooksRouter.swift in Sources */,
 				2C7802BA27D67D6F00D40935 /* MusicCoordinator.swift in Sources */,
