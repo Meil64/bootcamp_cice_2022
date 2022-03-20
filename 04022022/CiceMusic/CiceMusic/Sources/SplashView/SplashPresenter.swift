@@ -32,7 +32,12 @@ extension SplashPresenter: SplashPresenterInputProtocol {
     }
     
     func showHomeTabBar() {
-        self.router?.showHomeTabBarRouter(dataSource: self.dataSourceViewModel)
+        if UserDefaultsHelper.isUsuarioLogado() {
+            self.router?.showHomeTabBarRouter(dataSource: self.dataSourceViewModel)
+        } else {
+            self.router?.showLoginViewRouter(dataSource: self.dataSourceViewModel)
+        }
+        
     }
 }
 

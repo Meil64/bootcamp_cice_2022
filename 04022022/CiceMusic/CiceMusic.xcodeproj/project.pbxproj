@@ -74,6 +74,13 @@
 		2CDDF28827E7822D00A258F1 /* MenuServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDF28727E7822D00A258F1 /* MenuServerModel.swift */; };
 		2CDDF28C27E7993200A258F1 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDF28A27E7993200A258F1 /* MenuCell.swift */; };
 		2CDDF28D27E7993200A258F1 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CDDF28B27E7993200A258F1 /* MenuCell.xib */; };
+		2CDDF29627E7A1A900A258F1 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CDDF28F27E7A1A900A258F1 /* LoginViewController.xib */; };
+		2CDDF29727E7A1A900A258F1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDF29027E7A1A900A258F1 /* LoginViewController.swift */; };
+		2CDDF29827E7A1A900A258F1 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDF29127E7A1A900A258F1 /* LoginRouter.swift */; };
+		2CDDF29927E7A1A900A258F1 /* LoginProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDF29227E7A1A900A258F1 /* LoginProvider.swift */; };
+		2CDDF29A27E7A1A900A258F1 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDF29327E7A1A900A258F1 /* LoginCoordinator.swift */; };
+		2CDDF29B27E7A1A900A258F1 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDF29427E7A1A900A258F1 /* LoginPresenter.swift */; };
+		2CDDF29C27E7A1A900A258F1 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDF29527E7A1A900A258F1 /* LoginInteractor.swift */; };
 		2CEBCE8F27D7D1F800C186D2 /* MusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBCE8D27D7D1F800C186D2 /* MusicCell.swift */; };
 		2CEBCE9027D7D1F800C186D2 /* MusicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CEBCE8E27D7D1F800C186D2 /* MusicCell.xib */; };
 		2CEBCE9227D7D23700C186D2 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEBCE9127D7D23700C186D2 /* Utils.swift */; };
@@ -152,6 +159,13 @@
 		2CDDF28727E7822D00A258F1 /* MenuServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuServerModel.swift; sourceTree = "<group>"; };
 		2CDDF28A27E7993200A258F1 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		2CDDF28B27E7993200A258F1 /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
+		2CDDF28F27E7A1A900A258F1 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		2CDDF29027E7A1A900A258F1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2CDDF29127E7A1A900A258F1 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		2CDDF29227E7A1A900A258F1 /* LoginProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProvider.swift; sourceTree = "<group>"; };
+		2CDDF29327E7A1A900A258F1 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		2CDDF29427E7A1A900A258F1 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		2CDDF29527E7A1A900A258F1 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		2CEBCE8D27D7D1F800C186D2 /* MusicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCell.swift; sourceTree = "<group>"; };
 		2CEBCE8E27D7D1F800C186D2 /* MusicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicCell.xib; sourceTree = "<group>"; };
 		2CEBCE9127D7D23700C186D2 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -366,6 +380,7 @@
 		2CAD88DF27CF9E2D00186F25 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				2CDDF28E27E7A19500A258F1 /* Login */,
 				2C8B2A4627E344E8001781F8 /* MenuView */,
 				2C11D79D27DE77EA00EAABBE /* AppleGenericDetail */,
 				2C7802AD27D67D3400D40935 /* PodcastView */,
@@ -398,6 +413,20 @@
 				2CDDF28B27E7993200A258F1 /* MenuCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		2CDDF28E27E7A19500A258F1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2CDDF28F27E7A1A900A258F1 /* LoginViewController.xib */,
+				2CDDF29027E7A1A900A258F1 /* LoginViewController.swift */,
+				2CDDF29127E7A1A900A258F1 /* LoginRouter.swift */,
+				2CDDF29227E7A1A900A258F1 /* LoginProvider.swift */,
+				2CDDF29327E7A1A900A258F1 /* LoginCoordinator.swift */,
+				2CDDF29427E7A1A900A258F1 /* LoginPresenter.swift */,
+				2CDDF29527E7A1A900A258F1 /* LoginInteractor.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		2CEBCE8C27D7D1DB00C186D2 /* Cell */ = {
@@ -483,6 +512,7 @@
 				2CDDF28D27E7993200A258F1 /* MenuCell.xib in Resources */,
 				2CAD88CF27CF99D900186F25 /* Assets.xcassets in Resources */,
 				2C8B2A4E27E3451F001781F8 /* MenuViewController.xib in Resources */,
+				2CDDF29627E7A1A900A258F1 /* LoginViewController.xib in Resources */,
 				2C11D7A527DE780700EAABBE /* AppleGenericDetailViewController.xib in Resources */,
 				2C7802D227D67D8E00D40935 /* BooksViewController.xib in Resources */,
 				2CEBCE9027D7D1F800C186D2 /* MusicCell.xib in Resources */,
@@ -500,6 +530,7 @@
 				2C14E60827D24BD400944817 /* SplashProvider.swift in Sources */,
 				2C8B2A5127E3451F001781F8 /* MenuProvider.swift in Sources */,
 				2C8B2A5327E3451F001781F8 /* MenuPresenter.swift in Sources */,
+				2CDDF29C27E7A1A900A258F1 /* LoginInteractor.swift in Sources */,
 				2C7802DB27D67F2D00D40935 /* HomeTabBarController.swift in Sources */,
 				2C7802DE27D67F3F00D40935 /* HomeTabBarCoordinator.swift in Sources */,
 				2C7802B927D67D6F00D40935 /* MusicProvider.swift in Sources */,
@@ -519,12 +550,14 @@
 				2C8B2A3F27E329DC001781F8 /* AppsCell.swift in Sources */,
 				2C12843027D9FC16003E866B /* AppleViewModel.swift in Sources */,
 				2C7802D327D67D8E00D40935 /* BooksViewController.swift in Sources */,
+				2CDDF29727E7A1A900A258F1 /* LoginViewController.swift in Sources */,
 				2C11D7A827DE780700EAABBE /* AppleGenericDetailProvider.swift in Sources */,
 				2C7802D627D67D8E00D40935 /* BooksCoordinator.swift in Sources */,
 				2C11D7AB27DE780700EAABBE /* AppleGenericDetailInteractor.swift in Sources */,
 				2C7802B727D67D6F00D40935 /* MusicViewController.swift in Sources */,
 				2CDDF28827E7822D00A258F1 /* MenuServerModel.swift in Sources */,
 				2C7802D527D67D8E00D40935 /* BooksProvider.swift in Sources */,
+				2CDDF29B27E7A1A900A258F1 /* LoginPresenter.swift in Sources */,
 				2C11D7A927DE780700EAABBE /* AppleGenericDetailCoordinator.swift in Sources */,
 				2CDDF28C27E7993200A258F1 /* MenuCell.swift in Sources */,
 				2C7802BB27D67D6F00D40935 /* MusicPresenter.swift in Sources */,
@@ -533,6 +566,7 @@
 				2CAD88E627CF9E7700186F25 /* SplashPresenter.swift in Sources */,
 				2C8B2A4F27E3451F001781F8 /* MenuViewController.swift in Sources */,
 				2C12842B27D9F2C2003E866B /* PodcastServerModel.swift in Sources */,
+				2CDDF29827E7A1A900A258F1 /* LoginRouter.swift in Sources */,
 				2C14E60627D2476600944817 /* UserDefaultsHelper.swift in Sources */,
 				2C7802CA27D67D7800D40935 /* PodcastInteractor.swift in Sources */,
 				2C11D7AA27DE780700EAABBE /* AppleGenericDetailPresenter.swift in Sources */,
@@ -540,10 +574,12 @@
 				2CAD88DE27CF9C9D00186F25 /* BaseVIPER.swift in Sources */,
 				2C11D7A727DE780700EAABBE /* AppleGenericDetailRouter.swift in Sources */,
 				2C11D7A627DE780700EAABBE /* AppleGenericDetailViewController.swift in Sources */,
+				2CDDF29A27E7A1A900A258F1 /* LoginCoordinator.swift in Sources */,
 				2C7802C927D67D7800D40935 /* PodcastPresenter.swift in Sources */,
 				2C8B2A4527E33A24001781F8 /* SWRevealViewController.m in Sources */,
 				2C7802C727D67D7800D40935 /* PodcastProvider.swift in Sources */,
 				2C12842D27D9F38E003E866B /* Common.swift in Sources */,
+				2CDDF29927E7A1A900A258F1 /* LoginProvider.swift in Sources */,
 				2C14E60427D245FF00944817 /* NetworkUtils.swift in Sources */,
 				2C7802C627D67D7800D40935 /* PodcastRouter.swift in Sources */,
 				2C1D1DB527D8C2D70054D326 /* Constantes.swift in Sources */,
