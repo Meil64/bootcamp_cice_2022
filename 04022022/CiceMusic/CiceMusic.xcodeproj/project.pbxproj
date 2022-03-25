@@ -25,6 +25,11 @@
 		2C14E60B27D2562D00944817 /* MusicServerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C14E60A27D2562D00944817 /* MusicServerModel.swift */; };
 		2C1D1DB527D8C2D70054D326 /* Constantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1D1DB427D8C2D70054D326 /* Constantes.swift */; };
 		2C2F35A427D13FF8003EE46C /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2F35A327D13FF8003EE46C /* SplashCoordinator.swift */; };
+		2C6A4A8427EBADF800B39F70 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C6A4A8627EBADF800B39F70 /* Localizable.strings */; };
+		2C6A4A8E27EBAFC000B39F70 /* AlertDefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A4A8C27EBAFC000B39F70 /* AlertDefaultViewController.swift */; };
+		2C6A4A8F27EBAFC000B39F70 /* AlertDefaultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C6A4A8D27EBAFC000B39F70 /* AlertDefaultViewController.xib */; };
+		2C6A4A9227EBBA4600B39F70 /* CustomAlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A4A9127EBBA4600B39F70 /* CustomAlertManager.swift */; };
+		2C6A4A9427EBBB4400B39F70 /* LocalizedKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A4A9327EBBB4400B39F70 /* LocalizedKeys.swift */; };
 		2C7802B627D67D6F00D40935 /* MusicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C7802AF27D67D6F00D40935 /* MusicViewController.xib */; };
 		2C7802B727D67D6F00D40935 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7802B027D67D6F00D40935 /* MusicViewController.swift */; };
 		2C7802B827D67D6F00D40935 /* MusicRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7802B127D67D6F00D40935 /* MusicRouter.swift */; };
@@ -106,6 +111,14 @@
 		2C14E60A27D2562D00944817 /* MusicServerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicServerModel.swift; sourceTree = "<group>"; };
 		2C1D1DB427D8C2D70054D326 /* Constantes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constantes.swift; sourceTree = "<group>"; };
 		2C2F35A327D13FF8003EE46C /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
+		2C6A4A8527EBADF800B39F70 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2C6A4A8727EBADFD00B39F70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2C6A4A8827EBADFD00B39F70 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2C6A4A8927EBADFE00B39F70 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2C6A4A8C27EBAFC000B39F70 /* AlertDefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDefaultViewController.swift; sourceTree = "<group>"; };
+		2C6A4A8D27EBAFC000B39F70 /* AlertDefaultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertDefaultViewController.xib; sourceTree = "<group>"; };
+		2C6A4A9127EBBA4600B39F70 /* CustomAlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertManager.swift; sourceTree = "<group>"; };
+		2C6A4A9327EBBB4400B39F70 /* LocalizedKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedKeys.swift; sourceTree = "<group>"; };
 		2C7802AF27D67D6F00D40935 /* MusicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicViewController.xib; sourceTree = "<group>"; };
 		2C7802B027D67D6F00D40935 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		2C7802B127D67D6F00D40935 /* MusicRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicRouter.swift; sourceTree = "<group>"; };
@@ -239,6 +252,40 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		2C6A4A7E27EBAD0200B39F70 /* Localizables */ = {
+			isa = PBXGroup;
+			children = (
+				2C6A4A8627EBADF800B39F70 /* Localizable.strings */,
+			);
+			path = Localizables;
+			sourceTree = "<group>";
+		};
+		2C6A4A8A27EBAF9A00B39F70 /* CustomAlerts */ = {
+			isa = PBXGroup;
+			children = (
+				2C6A4A8B27EBAFA200B39F70 /* AlertDefault */,
+			);
+			path = CustomAlerts;
+			sourceTree = "<group>";
+		};
+		2C6A4A8B27EBAFA200B39F70 /* AlertDefault */ = {
+			isa = PBXGroup;
+			children = (
+				2C6A4A8C27EBAFC000B39F70 /* AlertDefaultViewController.swift */,
+				2C6A4A8D27EBAFC000B39F70 /* AlertDefaultViewController.xib */,
+			);
+			path = AlertDefault;
+			sourceTree = "<group>";
+		};
+		2C6A4A9027EBBA3500B39F70 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				2C6A4A9127EBBA4600B39F70 /* CustomAlertManager.swift */,
+				2C6A4A9327EBBB4400B39F70 /* LocalizedKeys.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		2C7802AB27D67D2600D40935 /* HomeTabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -345,6 +392,9 @@
 		2CAD88C427CF99D600186F25 /* CiceMusic */ = {
 			isa = PBXGroup;
 			children = (
+				2C6A4A9027EBBA3500B39F70 /* Managers */,
+				2C6A4A8A27EBAF9A00B39F70 /* CustomAlerts */,
+				2C6A4A7E27EBAD0200B39F70 /* Localizables */,
 				2C8B2A4127E33911001781F8 /* MenuLateral */,
 				2C12842E27D9FBE6003E866B /* ViewModels */,
 				2C14E60927D2561F00944817 /* Models */,
@@ -484,6 +534,9 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
+				es,
+				de,
 			);
 			mainGroup = 2CAD88B927CF99D600186F25;
 			packageReferences = (
@@ -503,9 +556,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C6A4A8F27EBAFC000B39F70 /* AlertDefaultViewController.xib in Resources */,
 				2C7802DC27D67F2D00D40935 /* HomeTabBarController.xib in Resources */,
 				2C7802C427D67D7800D40935 /* PodcastViewController.xib in Resources */,
 				2C7802B627D67D6F00D40935 /* MusicViewController.xib in Resources */,
+				2C6A4A8427EBADF800B39F70 /* Localizable.strings in Resources */,
 				2CAD88D227CF99D900186F25 /* LaunchScreen.storyboard in Resources */,
 				2CAD88E427CF9E5400186F25 /* SplashViewController.xib in Resources */,
 				2C8B2A4027E329DC001781F8 /* AppsCell.xib in Resources */,
@@ -539,6 +594,7 @@
 				2C8B2A5227E3451F001781F8 /* MenuCoordinator.swift in Sources */,
 				2C2F35A427D13FF8003EE46C /* SplashCoordinator.swift in Sources */,
 				2CAD88E827CF9F5100186F25 /* SplashInteractor.swift in Sources */,
+				2C6A4A9427EBBB4400B39F70 /* LocalizedKeys.swift in Sources */,
 				2C7802C827D67D7800D40935 /* PodcastCoordinator.swift in Sources */,
 				2CB58F9227DFCF7E00F23C82 /* AppServerModel.swift in Sources */,
 				2CAD88EA27CF9F5A00186F25 /* SplashRouter.swift in Sources */,
@@ -571,9 +627,11 @@
 				2C7802CA27D67D7800D40935 /* PodcastInteractor.swift in Sources */,
 				2C11D7AA27DE780700EAABBE /* AppleGenericDetailPresenter.swift in Sources */,
 				2C7802C527D67D7800D40935 /* PodcastViewController.swift in Sources */,
+				2C6A4A9227EBBA4600B39F70 /* CustomAlertManager.swift in Sources */,
 				2CAD88DE27CF9C9D00186F25 /* BaseVIPER.swift in Sources */,
 				2C11D7A727DE780700EAABBE /* AppleGenericDetailRouter.swift in Sources */,
 				2C11D7A627DE780700EAABBE /* AppleGenericDetailViewController.swift in Sources */,
+				2C6A4A8E27EBAFC000B39F70 /* AlertDefaultViewController.swift in Sources */,
 				2CDDF29A27E7A1A900A258F1 /* LoginCoordinator.swift in Sources */,
 				2C7802C927D67D7800D40935 /* PodcastPresenter.swift in Sources */,
 				2C8B2A4527E33A24001781F8 /* SWRevealViewController.m in Sources */,
@@ -596,6 +654,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		2C6A4A8627EBADF800B39F70 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C6A4A8527EBADF800B39F70 /* fr */,
+				2C6A4A8727EBADFD00B39F70 /* en */,
+				2C6A4A8827EBADFD00B39F70 /* es */,
+				2C6A4A8927EBADFE00B39F70 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		2CAD88D027CF99D900186F25 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -611,6 +680,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -697,6 +767,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -758,6 +829,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

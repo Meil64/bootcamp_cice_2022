@@ -1,0 +1,11 @@
+//GENERAL
+"general_accept" = "Aceptar";
+"general_cancel" = "Cancelar";
+"title_my_alert" = "Mi título";
+"message_my_alert" = "Mi mensaje";
+
+//LOGIN
+"title_my_alert_login_success" = "Enhorabuena!";
+"message_my_alert_login_success" = "Ahora tendrás acceso al portal de música, podcasts y books de iTunes";
+"title_my_alert_login_failure" = "Error";
+"message_my_alert_login_failure" = "Es necesario rellenar los campos de usuario y contraseña";

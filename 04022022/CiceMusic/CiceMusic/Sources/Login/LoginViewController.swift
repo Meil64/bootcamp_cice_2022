@@ -20,11 +20,7 @@ class LoginViewController: BaseView<LoginPresenterInputProtocol> {
                                       password: self.passwordTF.text)
             self.configuracionUI(color: #colorLiteral(red: 0.2827598444, green: 1, blue: 0.25824927, alpha: 1))
         } else {
-            self.present(Utils.muestraAlerta(titulo: "hey!",
-                                             mensaje: "Rellena el username y el password",
-                                             completionHandler: nil),
-                        animated: true,
-                        completion: nil)
+            self.presenter?.showCustomAlertFailure()
         }
     }
     
@@ -32,11 +28,7 @@ class LoginViewController: BaseView<LoginPresenterInputProtocol> {
         if datosCompletados() {
             self.navegarHomeTabBar()
         } else {
-            self.present(Utils.muestraAlerta(titulo: "hey!",
-                                             mensaje: "Rellena el username y el password",
-                                             completionHandler: nil),
-                        animated: true,
-                        completion: nil)
+            self.presenter?.showCustomAlertFailure()
         }
     }
     
@@ -72,10 +64,7 @@ class LoginViewController: BaseView<LoginPresenterInputProtocol> {
     
     private func navegarHomeTabBar() {
         self.borrarDatosFormulario()
-        //let vc = HomeTabBarViewCoordinator.homeViewController()
-        //vc.modalTransitionStyle = .coverVertical
-        //vc.modalPresentationStyle = .fullScreen
-        //self.present(vc, animated: true, completion: nil)
+        self.presenter?.showCustomAlertSuccess()
     }
     
     //Funcionalidad para ocultar el teclado cuando tocas fuera del texto
