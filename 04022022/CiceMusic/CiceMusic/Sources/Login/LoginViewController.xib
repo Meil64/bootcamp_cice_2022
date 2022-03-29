@@ -14,6 +14,7 @@
                 <outlet property="contentViewUsername" destination="UqJ-xm-dSp" id="oew-AP-C5i"/>
                 <outlet property="loginBTN" destination="EU3-Ka-sgh" id="VbN-Bz-1gO"/>
                 <outlet property="passwordTF" destination="vNm-E4-yUT" id="5Ay-E7-y7d"/>
+                <outlet property="togglePasswordBTN" destination="KIC-vj-BWL" id="flv-EE-PoX"/>
                 <outlet property="usernameTF" destination="7FX-gM-Taq" id="RXH-ZY-O7l"/>
                 <outlet property="view" destination="iN0-l3-epB" id="0KK-4V-vEI"/>
             </connections>
@@ -91,7 +92,7 @@
                                 <constraint firstAttribute="height" constant="34" id="WoA-7r-h08"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                         </textField>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jHe-eC-oVK">
                             <rect key="frame" x="55" y="56" width="297" height="1"/>
@@ -100,6 +101,19 @@
                                 <constraint firstAttribute="height" constant="1" id="HWG-Br-UoC"/>
                             </constraints>
                         </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIC-vj-BWL">
+                            <rect key="frame" x="312" y="17" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="CST-cb-mBV"/>
+                                <constraint firstAttribute="height" constant="40" id="lEj-Hh-Mbf"/>
+                            </constraints>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="eye" catalog="system"/>
+                            <connections>
+                                <action selector="togglePasswordACTION:" destination="-1" eventType="touchUpInside" id="Vdc-Oa-K2g"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemYellowColor"/>
                     <constraints>
@@ -110,8 +124,10 @@
                         <constraint firstAttribute="trailing" secondItem="vNm-E4-yUT" secondAttribute="trailing" constant="22" id="XVk-Bf-6pP"/>
                         <constraint firstItem="JI2-2r-nso" firstAttribute="leading" secondItem="ZRz-zB-705" secondAttribute="leading" constant="10" id="Xm2-jp-rVK"/>
                         <constraint firstItem="jHe-eC-oVK" firstAttribute="leading" secondItem="vNm-E4-yUT" secondAttribute="leading" id="dIO-GA-8Xd"/>
+                        <constraint firstItem="KIC-vj-BWL" firstAttribute="centerY" secondItem="ZRz-zB-705" secondAttribute="centerY" id="kGo-Hk-Zt3"/>
                         <constraint firstAttribute="height" constant="74" id="nI6-xq-z3o"/>
                         <constraint firstItem="JI2-2r-nso" firstAttribute="top" secondItem="ZRz-zB-705" secondAttribute="top" constant="22" id="pBZ-e9-egc"/>
+                        <constraint firstItem="KIC-vj-BWL" firstAttribute="trailing" secondItem="jHe-eC-oVK" secondAttribute="trailing" id="wv8-sy-cFt"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EU3-Ka-sgh">
@@ -165,6 +181,7 @@
         </view>
     </objects>
     <resources>
+        <image name="eye" catalog="system" width="128" height="81"/>
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlertDefaultViewController" customModule="CiceMusic" customModuleProvider="target">
             <connections>
+                <outlet property="bodyView" destination="4Qf-Eh-k9R" id="5zW-ZK-OUJ"/>
                 <outlet property="closeBTN" destination="GJs-iF-STW" id="zti-5t-PKD"/>
                 <outlet property="constHeightButtonClose" destination="teF-aX-Eew" id="GAV-D2-naO"/>
                 <outlet property="constHeightLeftButton" destination="4gN-yQ-APA" id="dhU-oc-8fU"/>
@@ -39,6 +41,7 @@
                                 <constraint firstAttribute="width" constant="44" id="r14-tT-2dV"/>
                                 <constraint firstAttribute="height" constant="44" id="teF-aX-Eew"/>
                             </constraints>
+                            <color key="tintColor" name="AccentColor"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="X">
                                 <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
@@ -63,27 +66,31 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vp2-oK-1Rz" userLabel="_Cancelar">
-                            <rect key="frame" x="20" y="166" width="150" height="50"/>
+                            <rect key="frame" x="20" y="166" width="140" height="50"/>
+                            <color key="backgroundColor" name="AccentColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="4gN-yQ-APA"/>
-                                <constraint firstAttribute="width" constant="150" id="c7s-ON-pDY"/>
+                                <constraint firstAttribute="width" constant="140" id="c7s-ON-pDY"/>
                             </constraints>
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="_Cancelar"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="_Cancelar"/>
                             <connections>
                                 <action selector="leftButtonACTION:" destination="-1" eventType="touchUpInside" id="Pdl-ex-lWj"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpK-OL-wzu">
-                            <rect key="frame" x="204" y="166" width="150" height="50"/>
+                            <rect key="frame" x="214" y="166" width="140" height="50"/>
+                            <color key="backgroundColor" name="AccentColor"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="150" id="KkA-fY-QxJ"/>
+                                <constraint firstAttribute="width" constant="140" id="KkA-fY-QxJ"/>
                                 <constraint firstAttribute="height" constant="50" id="guK-0p-if9"/>
                             </constraints>
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="_Aceptar"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="_Aceptar"/>
                             <connections>
                                 <action selector="rightButtonACTION:" destination="-1" eventType="touchUpInside" id="xnq-PC-tCb"/>
                             </connections>
@@ -122,6 +129,9 @@
         </view>
     </objects>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

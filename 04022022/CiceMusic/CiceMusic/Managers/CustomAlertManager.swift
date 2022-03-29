@@ -10,6 +10,9 @@ enum DefaultAlertType: Int {
     case none
     case successLogin
     case failureLogin
+    case successMail
+    case failureMail
+    case navigationWebView
 }
 
 struct CustomAlertManager {
@@ -26,6 +29,18 @@ struct CustomAlertManager {
     //Failure Login
     var failureLoginTitle = LocalizedKeys.Login.failureTitle
     var failureLoginMessage = LocalizedKeys.Login.failureMessage
+    
+    //Success Mail
+    var successMailTitle = LocalizedKeys.Mail.successTitle
+    var successMailMessage = LocalizedKeys.Mail.successMessage
+    
+    //Failure Mail
+    var failureMailTitle = LocalizedKeys.Mail.failureTitle
+    var failureMailMessage = LocalizedKeys.Mail.failureMessage
+    
+    //WebView
+    var webViewTitle = LocalizedKeys.WebView.webViewTitle
+    var webViewMessage = LocalizedKeys.WebView.webViewMessage
     
     init(type: DefaultAlertType) {
         self.type = type

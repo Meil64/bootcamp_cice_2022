@@ -12,6 +12,7 @@ class PodcastViewController: BaseView<PodcastPresenterInputProtocol> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.showLoading()
         self.presenter?.fetchPodcastFromWebService()
         self.configuracionTV()
         self.menuButton()
@@ -31,6 +32,7 @@ extension PodcastViewController: PodcastPresenterOutputProtocol {
 
     func reloadInformationInView() {
         self.podcastTableView.reloadData()
+        self.hideLoading()
     }
 }
 

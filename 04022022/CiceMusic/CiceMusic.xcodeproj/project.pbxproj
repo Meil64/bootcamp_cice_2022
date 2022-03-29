@@ -64,6 +64,11 @@
 		2C8B2A5227E3451F001781F8 /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B2A4B27E3451F001781F8 /* MenuCoordinator.swift */; };
 		2C8B2A5327E3451F001781F8 /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B2A4C27E3451F001781F8 /* MenuPresenter.swift */; };
 		2C8B2A5427E3451F001781F8 /* MenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B2A4D27E3451F001781F8 /* MenuInteractor.swift */; };
+		2CAD7FA727F349E2008BEA63 /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 2CAD7FA627F349E2008BEA63 /* PKHUD */; };
+		2CAD7FAB27F368CB008BEA63 /* GenericWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD7FA927F368CB008BEA63 /* GenericWebViewController.swift */; };
+		2CAD7FAC27F368CB008BEA63 /* GenericWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CAD7FAA27F368CB008BEA63 /* GenericWebViewController.xib */; };
+		2CAD7FAE27F368E3008BEA63 /* GenericWebViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD7FAD27F368E3008BEA63 /* GenericWebViewPresenter.swift */; };
+		2CAD7FB027F368F3008BEA63 /* GenericWebViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD7FAF27F368F3008BEA63 /* GenericWebViewCoordinator.swift */; };
 		2CAD88C627CF99D600186F25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD88C527CF99D600186F25 /* AppDelegate.swift */; };
 		2CAD88CF27CF99D900186F25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CAD88CE27CF99D900186F25 /* Assets.xcassets */; };
 		2CAD88D227CF99D900186F25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CAD88D027CF99D900186F25 /* LaunchScreen.storyboard */; };
@@ -155,6 +160,10 @@
 		2C8B2A4B27E3451F001781F8 /* MenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinator.swift; sourceTree = "<group>"; };
 		2C8B2A4C27E3451F001781F8 /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
 		2C8B2A4D27E3451F001781F8 /* MenuInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuInteractor.swift; sourceTree = "<group>"; };
+		2CAD7FA927F368CB008BEA63 /* GenericWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericWebViewController.swift; sourceTree = "<group>"; };
+		2CAD7FAA27F368CB008BEA63 /* GenericWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericWebViewController.xib; sourceTree = "<group>"; };
+		2CAD7FAD27F368E3008BEA63 /* GenericWebViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericWebViewPresenter.swift; sourceTree = "<group>"; };
+		2CAD7FAF27F368F3008BEA63 /* GenericWebViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericWebViewCoordinator.swift; sourceTree = "<group>"; };
 		2CAD88C227CF99D600186F25 /* CiceMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CiceMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CAD88C527CF99D600186F25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CAD88CE27CF99D900186F25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -190,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CEBCE9527D7D65400C186D2 /* Kingfisher in Frameworks */,
+				2CAD7FA727F349E2008BEA63 /* PKHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +383,17 @@
 			path = MenuView;
 			sourceTree = "<group>";
 		};
+		2CAD7FA827F368AF008BEA63 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				2CAD7FA927F368CB008BEA63 /* GenericWebViewController.swift */,
+				2CAD7FAA27F368CB008BEA63 /* GenericWebViewController.xib */,
+				2CAD7FAD27F368E3008BEA63 /* GenericWebViewPresenter.swift */,
+				2CAD7FAF27F368F3008BEA63 /* GenericWebViewCoordinator.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
 		2CAD88B927CF99D600186F25 = {
 			isa = PBXGroup;
 			children = (
@@ -430,6 +451,7 @@
 		2CAD88DF27CF9E2D00186F25 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				2CAD7FA827F368AF008BEA63 /* WebView */,
 				2CDDF28E27E7A19500A258F1 /* Login */,
 				2C8B2A4627E344E8001781F8 /* MenuView */,
 				2C11D79D27DE77EA00EAABBE /* AppleGenericDetail */,
@@ -506,6 +528,7 @@
 			name = CiceMusic;
 			packageProductDependencies = (
 				2CEBCE9427D7D65400C186D2 /* Kingfisher */,
+				2CAD7FA627F349E2008BEA63 /* PKHUD */,
 			);
 			productName = CiceMusic;
 			productReference = 2CAD88C227CF99D600186F25 /* CiceMusic.app */;
@@ -541,6 +564,7 @@
 			mainGroup = 2CAD88B927CF99D600186F25;
 			packageReferences = (
 				2CEBCE9327D7D65400C186D2 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				2CAD7FA527F349E2008BEA63 /* XCRemoteSwiftPackageReference "PKHUD" */,
 			);
 			productRefGroup = 2CAD88C327CF99D600186F25 /* Products */;
 			projectDirPath = "";
@@ -563,6 +587,7 @@
 				2C6A4A8427EBADF800B39F70 /* Localizable.strings in Resources */,
 				2CAD88D227CF99D900186F25 /* LaunchScreen.storyboard in Resources */,
 				2CAD88E427CF9E5400186F25 /* SplashViewController.xib in Resources */,
+				2CAD7FAC27F368CB008BEA63 /* GenericWebViewController.xib in Resources */,
 				2C8B2A4027E329DC001781F8 /* AppsCell.xib in Resources */,
 				2CDDF28D27E7993200A258F1 /* MenuCell.xib in Resources */,
 				2CAD88CF27CF99D900186F25 /* Assets.xcassets in Resources */,
@@ -596,6 +621,7 @@
 				2CAD88E827CF9F5100186F25 /* SplashInteractor.swift in Sources */,
 				2C6A4A9427EBBB4400B39F70 /* LocalizedKeys.swift in Sources */,
 				2C7802C827D67D7800D40935 /* PodcastCoordinator.swift in Sources */,
+				2CAD7FAB27F368CB008BEA63 /* GenericWebViewController.swift in Sources */,
 				2CB58F9227DFCF7E00F23C82 /* AppServerModel.swift in Sources */,
 				2CAD88EA27CF9F5A00186F25 /* SplashRouter.swift in Sources */,
 				2C7802D727D67D8E00D40935 /* BooksPresenter.swift in Sources */,
@@ -624,11 +650,13 @@
 				2C12842B27D9F2C2003E866B /* PodcastServerModel.swift in Sources */,
 				2CDDF29827E7A1A900A258F1 /* LoginRouter.swift in Sources */,
 				2C14E60627D2476600944817 /* UserDefaultsHelper.swift in Sources */,
+				2CAD7FB027F368F3008BEA63 /* GenericWebViewCoordinator.swift in Sources */,
 				2C7802CA27D67D7800D40935 /* PodcastInteractor.swift in Sources */,
 				2C11D7AA27DE780700EAABBE /* AppleGenericDetailPresenter.swift in Sources */,
 				2C7802C527D67D7800D40935 /* PodcastViewController.swift in Sources */,
 				2C6A4A9227EBBA4600B39F70 /* CustomAlertManager.swift in Sources */,
 				2CAD88DE27CF9C9D00186F25 /* BaseVIPER.swift in Sources */,
+				2CAD7FAE27F368E3008BEA63 /* GenericWebViewPresenter.swift in Sources */,
 				2C11D7A727DE780700EAABBE /* AppleGenericDetailRouter.swift in Sources */,
 				2C11D7A627DE780700EAABBE /* AppleGenericDetailViewController.swift in Sources */,
 				2C6A4A8E27EBAFC000B39F70 /* AlertDefaultViewController.swift in Sources */,
@@ -970,6 +998,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2CAD7FA527F349E2008BEA63 /* XCRemoteSwiftPackageReference "PKHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pkluz/PKHUD.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
 		2CEBCE9327D7D65400C186D2 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -981,6 +1017,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2CAD7FA627F349E2008BEA63 /* PKHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2CAD7FA527F349E2008BEA63 /* XCRemoteSwiftPackageReference "PKHUD" */;
+			productName = PKHUD;
+		};
 		2CEBCE9427D7D65400C186D2 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2CEBCE9327D7D65400C186D2 /* XCRemoteSwiftPackageReference "Kingfisher" */;

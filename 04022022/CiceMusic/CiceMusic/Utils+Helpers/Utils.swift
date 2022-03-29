@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import MessageUI
 
 class Utils {
     static func showAlert(title: String, message: String) -> UIAlertController {
@@ -19,6 +20,16 @@ class Utils {
         let alertVC = UIAlertController(title: titulo, message: mensaje, preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: completionHandler))
         return alertVC
+    }
+    
+    static func configuracionMailCompose(delegate: MFMailComposeViewControllerDelegate, data: [String]) -> MFMailComposeViewController{
+        let mailCompo = MFMailComposeViewController()
+        mailCompo.mailComposeDelegate = delegate
+        mailCompo.setToRecipients(["info@mail.com", "masinfo@mail.com"])
+        mailCompo.setSubject("Asunto del mensaje")
+        let emailBody = "\(data)"
+        mailCompo.setMessageBody(emailBody, isHTML: false)
+        return mailCompo
     }
 }
 

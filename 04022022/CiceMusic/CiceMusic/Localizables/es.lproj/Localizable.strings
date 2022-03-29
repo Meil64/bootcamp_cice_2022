@@ -9,3 +9,13 @@
 "message_my_alert_login_success" = "Ahora tendrás acceso al portal de música, podcasts y books de iTunes";
 "title_my_alert_login_failure" = "Error";
 "message_my_alert_login_failure" = "Es necesario rellenar los campos de usuario y contraseña";
+
+//MAIL
+"title_my_alert_mail_success" = "Mail success";
+"message_my_alert_mail_success" = "Message mail success";
+"title_my_alert_mail_failure" = "Mail error";
+"message_my_alert_mail_failure" = "Message mail error";
+
+//WEBVIEW
+"title_my_alert_webview" = "WebView";
+"message_my_alert_webview" = "¿Navegar a WebView?";

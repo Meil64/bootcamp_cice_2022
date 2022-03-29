@@ -26,6 +26,7 @@ class AlertDefaultViewController: UIViewController {
     @IBOutlet weak var leftBTN: UIButton!
     @IBOutlet weak var rightBTN: UIButton!
     @IBOutlet weak var closeBTN: UIButton!
+    @IBOutlet weak var bodyView: UIView!
     
     @IBOutlet weak var constHeightButtonClose: NSLayoutConstraint!
     @IBOutlet weak var constHeightLeftButton: NSLayoutConstraint!
@@ -54,13 +55,16 @@ class AlertDefaultViewController: UIViewController {
 
     private func configuracionUI(){
         
+        self.leftBTN.layer.cornerRadius = constHeightLeftButton.constant * 0.5
+        self.rightBTN.layer.cornerRadius = constHeightRightButton.constant * 0.5
+        self.bodyView.layer.cornerRadius = 10
+        
         switch alertManager?.type {
         case .successLogin:
             self.tituloLBL.text = alertManager?.successLoginTitle
             self.mensageAlertLBL.text = alertManager?.successLoginMessage
             self.leftBTN.isHidden = true
             self.rightBTN.setTitle(alertManager?.rightButton, for: .normal)
-            
             self.closeBTN.isHidden = true
             self.constHeightButtonClose.constant = 0
             
@@ -69,6 +73,27 @@ class AlertDefaultViewController: UIViewController {
             self.mensageAlertLBL.text = alertManager?.failureLoginMessage
             self.leftBTN.setTitle(alertManager?.leftButton, for: .normal)
             self.rightBTN.isHidden = true
+            
+        case .successMail:
+            self.tituloLBL.text = alertManager?.successMailTitle
+            self.mensageAlertLBL.text = alertManager?.successMailMessage
+            self.leftBTN.isHidden = true
+            self.rightBTN.setTitle(alertManager?.rightButton, for: .normal)
+            self.closeBTN.isHidden = true
+            self.constHeightButtonClose.constant = 0
+            
+        case .failureMail:
+            self.tituloLBL.text = alertManager?.failureMailTitle
+            self.mensageAlertLBL.text = alertManager?.failureMailMessage
+            self.leftBTN.setTitle(alertManager?.leftButton, for: .normal)
+            self.rightBTN.isHidden = true
+            
+        case .navigationWebView:
+            self.tituloLBL.text = alertManager?.webViewTitle
+            self.mensageAlertLBL.text = alertManager?.webViewMessage
+            self.leftBTN.setTitle(alertManager?.leftButton, for: .normal)
+            self.rightBTN.setTitle(alertManager?.rightButton, for: .normal)
+            
         default:
             self.tituloLBL.text = ""
             self.mensageAlertLBL.text = ""

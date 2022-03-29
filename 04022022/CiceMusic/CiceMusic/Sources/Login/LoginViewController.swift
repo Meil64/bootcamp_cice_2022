@@ -13,6 +13,7 @@ class LoginViewController: BaseView<LoginPresenterInputProtocol> {
     @IBOutlet weak var contentViewUsername: UIView!
     @IBOutlet weak var contentViewPassword: UIView!
     @IBOutlet weak var loginBTN: UIButton!
+    @IBOutlet weak var togglePasswordBTN: UIButton!
     
     @IBAction func rememberMeACTION(_ sender: Any) {
         if datosCompletados() {
@@ -29,6 +30,15 @@ class LoginViewController: BaseView<LoginPresenterInputProtocol> {
             self.navegarHomeTabBar()
         } else {
             self.presenter?.showCustomAlertFailure()
+        }
+    }
+    
+    @IBAction func togglePasswordACTION(_ sender: Any) {
+        self.passwordTF.isSecureTextEntry = !self.passwordTF.isSecureTextEntry
+        if(self.passwordTF.isSecureTextEntry) {
+            togglePasswordBTN.setImage(UIImage(systemName: "eye"), for: .normal)
+        } else {
+            togglePasswordBTN.setImage(UIImage(systemName: "eye.slash"), for: .normal)
         }
     }
     
