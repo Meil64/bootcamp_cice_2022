@@ -19,6 +19,7 @@ class GenericWebViewController: UIViewController {
 
     // MARK: - Variables globales
     var myWebViewInContainer: WKWebView!
+    let appDelegate = Utils.appDelegate
     
     // MARK: - IBOutlets
     @IBOutlet weak var contentWebView: UIView!
@@ -29,6 +30,21 @@ class GenericWebViewController: UIViewController {
         super.viewDidLoad()
         self.configuracionWebView()
         self.loadWebView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.appDelegate.canRotate = true
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        self.appDelegate.canRotate = false
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        //Actualizo el frame de la webView (esto soluciona el problema del tamaño del frame al girar la pantalla)
+        DispatchQueue.main.async() {
+            self.myWebViewInContainer.frame = self.contentWebView.bounds
+          }
     }
     
     private func configuracionWebView() {

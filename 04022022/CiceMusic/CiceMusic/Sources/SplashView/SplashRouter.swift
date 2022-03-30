@@ -16,7 +16,7 @@ protocol SplashRouterInputProtocol {
 
 final class SplashRouter: BaseRouter<SplashViewController> {
     
-    let delegate = UIApplication.shared.delegate as! AppDelegate
+    let delegate = Utils.appDelegate
     let appCore: AppCoreCoordinatorProtocol = AppCoreCoordinator()
 }
 

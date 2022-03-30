@@ -9,7 +9,7 @@ protocol LoginRouterInputProtocol {
 
 final class LoginRouter: BaseRouter<LoginViewController> {
     
-    let delegate = UIApplication.shared.delegate as! AppDelegate
+    let delegate = Utils.appDelegate
     let appCore: AppCoreCoordinatorProtocol = AppCoreCoordinator()
     
 }
