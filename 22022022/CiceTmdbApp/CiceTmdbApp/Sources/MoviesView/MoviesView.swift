@@ -9,15 +9,21 @@ import SwiftUI
 
 struct MoviesView: View {
     
+    //En el padre @StateObject, en los hijos @ObservedObject
     @StateObject var viewModel = MoviesViewModel()
     
     var body: some View {
-        List(self.viewModel.dataSourceNowPlaying){ item in
-            VStack{
-                Text(item.originalTitle ?? "")
+        List{
+            Group{
+                if !self.viewModel.dataSourceNowPlaying.isEmpty {
+                    MoviesPosterCarousel(title: "Now Playting",
+                                         moviesModel: self.viewModel.dataSourceNowPlaying,
+                                         isPoster: true)
+                }
             }
         }
-        .navigationTitle(Text("NowPlaying"))
+        .listStyle(PlainListStyle())
+        .navigationTitle(Text("Movies"))
         .onAppear {
             self.viewModel.fetchData()
         }

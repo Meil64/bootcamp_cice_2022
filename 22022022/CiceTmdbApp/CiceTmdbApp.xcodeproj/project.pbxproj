@@ -13,6 +13,8 @@
 		2C181EE127FDEA1900E59B63 /* MoviesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C181EE027FDEA1900E59B63 /* MoviesInteractor.swift */; };
 		2C181EE327FDEDA900E59B63 /* MoviesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C181EE227FDEDA900E59B63 /* MoviesProvider.swift */; };
 		2C181EE527FDF02200E59B63 /* MoviesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C181EE427FDF02200E59B63 /* MoviesCoordinator.swift */; };
+		2C342D2727FF22C7001F592D /* MoviesPosterCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C342D2627FF22C7001F592D /* MoviesPosterCarousel.swift */; };
+		2C342D2927FF2901001F592D /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C342D2827FF2900001F592D /* ImageLoader.swift */; };
 		2C651C5127FE16210078C8BD /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C651C5027FE16210078C8BD /* NetworkError.swift */; };
 		2C651C5327FE163F0078C8BD /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C651C5227FE163F0078C8BD /* NetworkService.swift */; };
 		2C651C5527FE165A0078C8BD /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C651C5427FE165A0078C8BD /* NetworkUtils.swift */; };
@@ -33,6 +35,8 @@
 		2C181EE027FDEA1900E59B63 /* MoviesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesInteractor.swift; sourceTree = "<group>"; };
 		2C181EE227FDEDA900E59B63 /* MoviesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesProvider.swift; sourceTree = "<group>"; };
 		2C181EE427FDF02200E59B63 /* MoviesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCoordinator.swift; sourceTree = "<group>"; };
+		2C342D2627FF22C7001F592D /* MoviesPosterCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesPosterCarousel.swift; sourceTree = "<group>"; };
+		2C342D2827FF2900001F592D /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		2C651C5027FE16210078C8BD /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		2C651C5227FE163F0078C8BD /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		2C651C5427FE165A0078C8BD /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
@@ -86,6 +90,14 @@
 			path = MoviesView;
 			sourceTree = "<group>";
 		};
+		2C342D2527FF2298001F592D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2C342D2627FF22C7001F592D /* MoviesPosterCarousel.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		2C651C4F27FE154B0078C8BD /* NetworkService */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +127,7 @@
 		2CA641B627FB632E00BE6F14 /* CiceTmdbApp */ = {
 			isa = PBXGroup;
 			children = (
+				2C342D2527FF2298001F592D /* Components */,
 				2C651C4F27FE154B0078C8BD /* NetworkService */,
 				2C181EDA27FDE73200E59B63 /* Sources */,
 				2C181ED727FDE37C00E59B63 /* ServerModel */,
@@ -173,6 +186,7 @@
 		2CA641D527FB748A00BE6F14 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				2C342D2827FF2900001F592D /* ImageLoader.swift */,
 				2CA641D627FB749A00BE6F14 /* Obfuscator.swift */,
 				2CA641DA27FB758700BE6F14 /* Constants.swift */,
 			);
@@ -254,7 +268,9 @@
 				2C181EDF27FDE7F900E59B63 /* MoviesViewModel.swift in Sources */,
 				2C181EE527FDF02200E59B63 /* MoviesCoordinator.swift in Sources */,
 				2CA641B827FB632E00BE6F14 /* CiceTmdbAppApp.swift in Sources */,
+				2C342D2727FF22C7001F592D /* MoviesPosterCarousel.swift in Sources */,
 				2C181EDD27FDE75800E59B63 /* MoviesView.swift in Sources */,
+				2C342D2927FF2901001F592D /* ImageLoader.swift in Sources */,
 				2C181EE127FDEA1900E59B63 /* MoviesInteractor.swift in Sources */,
 				2CA641C927FB63AE00BE6F14 /* BaseVIP.swift in Sources */,
 				2C181ED927FDE44100E59B63 /* MoviesServerModel.swift in Sources */,

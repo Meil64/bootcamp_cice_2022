@@ -11,6 +11,7 @@ struct ContentView: View {
     var body: some View {
         VStack{
             MoviesCoordinator.navigation()
+                .environment(\.colorScheme, .dark)
         }
     }
 }
