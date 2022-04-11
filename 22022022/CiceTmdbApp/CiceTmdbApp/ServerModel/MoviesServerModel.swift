@@ -10,7 +10,7 @@ import Foundation
 // MARK: - MoviesServerModel
 struct MoviesServerModel: Codable {
     let page: Int?
-    let results: [ApiResult]?
+    let results: [MovieApiResult]?
     let totalPages: Int?
     let totalResults: Int?
 
@@ -23,7 +23,7 @@ struct MoviesServerModel: Codable {
 }
 
 // MARK: - ApiResult
-struct ApiResult: Codable, Identifiable {
+struct MovieApiResult: Codable, Identifiable {
     let adult: Bool?
     let backdropPath: String?
     let genreIDS: [Int]?
@@ -64,13 +64,15 @@ struct ApiResult: Codable, Identifiable {
     }
 }
 
+// MARK: - JSON local para maquetar
+
 extension MoviesServerModel {
-    static var stubbedMoviesNowPlaying: [ApiResult] {
+    static var stubbedMoviesNowPlaying: [MovieApiResult] {
         let response: MoviesServerModel? = try? Bundle.main.loadAndDecodeJSON(filename: "MoviesModel")
         return response?.results ?? []
     }
     
-    static var stubbedMovieNowPlaying: ApiResult {
+    static var stubbedMovieNowPlaying: MovieApiResult {
         return stubbedMoviesNowPlaying[0]
     }
 }

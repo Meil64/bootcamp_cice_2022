@@ -10,7 +10,7 @@ import SwiftUI
 struct MoviesPosterCarousel: View {
     
     var title: String
-    var moviesModel: [ApiResult]
+    var moviesModel: [MoviesTVModelView]
     var isPoster: Bool
     
     var body: some View {
@@ -41,10 +41,10 @@ struct MoviePosterCell: View {
     
     //En el padre @StateObject, en los hijos @ObservedObject
     @ObservedObject var imageLoaderVM = ImageLoader()
-    private var modelData: ApiResult
+    private var modelData: MoviesTVModelView
     var isPoster: Bool
     
-    init(model: ApiResult, isPoster: Bool? = true) {
+    init(model: MoviesTVModelView, isPoster: Bool? = true) {
         self.modelData = model
         self.isPoster = isPoster ?? false
         
@@ -88,7 +88,7 @@ struct MoviePosterCell: View {
     }
 }
 
-
+/*
 struct MoviesPosterCarousel_Previews: PreviewProvider {
     static var previews: some View {
         MoviesPosterCarousel(title: "Now Playing",
@@ -96,3 +96,4 @@ struct MoviesPosterCarousel_Previews: PreviewProvider {
                              isPoster: true)
     }
 }
+ */

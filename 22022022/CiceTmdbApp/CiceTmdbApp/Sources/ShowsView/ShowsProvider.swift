@@ -1,50 +1,66 @@
-//
-//  MoviesProvider.swift
-//  CiceTmdbApp
-//
-//  Created by Carlos Carrera on 6/4/22.
-//
-
 import Foundation
 import Combine
 
-protocol MoviesProviderInputProtocol: BaseProviderInputProtocol {
-    func fetchDataNowPlayingProvider()
+// Input Protocol
+protocol ShowsProviderInputProtocol: BaseProviderInputProtocol {
+    func fetchDataAiringTodayProvider()
+    func fetchDataOnTheAirProvider()
     func fetchDataPopularProvider()
     func fetchDataTopRatedProvider()
-    func fetchDataUpcomingProvider()
 }
 
-final class MoviesProvider: BaseProvider {
+final class ShowsProvider : BaseProvider{
     
     //MARK: - DI
-    weak var interactor: MoviesProviderOutputProtocol? {
-        super.baseInteractor as? MoviesProviderOutputProtocol
+    weak var interactor: ShowsProviderOutputProtocol? {
+        super.baseInteractor as? ShowsProviderOutputProtocol
     }
     
     let networkService: NetworkServiceInputProtocol = NetworkService()
     var cancellable: Set<AnyCancellable> = []
+    
 }
 
-extension MoviesProvider: MoviesProviderInputProtocol {
+extension ShowsProvider: ShowsProviderInputProtocol {
     
-    func fetchDataNowPlayingProvider(){
+    func fetchDataAiringTodayProvider(){
         let request = RequestDTO(params: nil,
                                  method: .get,
-                                 endpoint: URLEnpoint.endpointMoviesNowPlaying,
+                                 endpoint: URLEnpoint.endpointShowsAiringToday,
                                  urlContext: .webService)
-        self.networkService.requestGeneric(payloadRequest: request, entityClass: MoviesServerModel.self)
+        self.networkService.requestGeneric(payloadRequest: request, entityClass: TVShowServerModel.self)
             .sink { [weak self] completion in
                 guard self != nil else { return }
                 switch completion {
                 case .finished:
                     debugPrint("finished")
                 case let .failure(error):
-                    self?.interactor?.setInformationNowPlaying(completion: .failure(error))
+                    self?.interactor?.setInformationAiringToday(completion: .failure(error))
                 }
             } receiveValue: { [weak self] resultData in
                 guard self != nil else { return }
-                self?.interactor?.setInformationNowPlaying(completion: .success(resultData.results))
+                self?.interactor?.setInformationAiringToday(completion: .success(resultData.results))
+            }
+            .store(in: &cancellable)
+    }
+    
+    func fetchDataOnTheAirProvider() {
+        let request = RequestDTO(params: nil,
+                                 method: .get,
+                                 endpoint: URLEnpoint.endpointShowsOnTheAir,
+                                 urlContext: .webService)
+        self.networkService.requestGeneric(payloadRequest: request, entityClass: TVShowServerModel.self)
+            .sink { [weak self] completion in
+                guard self != nil else { return }
+                switch completion {
+                case .finished:
+                    debugPrint("finished")
+                case let .failure(error):
+                    self?.interactor?.setInformationOnTheAir(completion: .failure(error))
+                }
+            } receiveValue: { [weak self] resultData in
+                guard self != nil else { return }
+                self?.interactor?.setInformationOnTheAir(completion: .success(resultData.results))
             }
             .store(in: &cancellable)
     }
@@ -52,9 +68,9 @@ extension MoviesProvider: MoviesProviderInputProtocol {
     func fetchDataPopularProvider() {
         let request = RequestDTO(params: nil,
                                  method: .get,
-                                 endpoint: URLEnpoint.endpointMoviesPopular,
+                                 endpoint: URLEnpoint.endpointShowsPopular,
                                  urlContext: .webService)
-        self.networkService.requestGeneric(payloadRequest: request, entityClass: MoviesServerModel.self)
+        self.networkService.requestGeneric(payloadRequest: request, entityClass: TVShowServerModel.self)
             .sink { [weak self] completion in
                 guard self != nil else { return }
                 switch completion {
@@ -73,9 +89,9 @@ extension MoviesProvider: MoviesProviderInputProtocol {
     func fetchDataTopRatedProvider() {
         let request = RequestDTO(params: nil,
                                  method: .get,
-                                 endpoint: URLEnpoint.endpointMoviesTopRated,
+                                 endpoint: URLEnpoint.endpointShowsTopRated,
                                  urlContext: .webService)
-        self.networkService.requestGeneric(payloadRequest: request, entityClass: MoviesServerModel.self)
+        self.networkService.requestGeneric(payloadRequest: request, entityClass: TVShowServerModel.self)
             .sink { [weak self] completion in
                 guard self != nil else { return }
                 switch completion {
@@ -87,27 +103,6 @@ extension MoviesProvider: MoviesProviderInputProtocol {
             } receiveValue: { [weak self] resultData in
                 guard self != nil else { return }
                 self?.interactor?.setInformationTopRated(completion: .success(resultData.results))
-            }
-            .store(in: &cancellable)
-    }
-    
-    func fetchDataUpcomingProvider() {
-        let request = RequestDTO(params: nil,
-                                 method: .get,
-                                 endpoint: URLEnpoint.endpointMoviesUpcoming,
-                                 urlContext: .webService)
-        self.networkService.requestGeneric(payloadRequest: request, entityClass: MoviesServerModel.self)
-            .sink { [weak self] completion in
-                guard self != nil else { return }
-                switch completion {
-                case .finished:
-                    debugPrint("finished")
-                case let .failure(error):
-                    self?.interactor?.setInformationUpcoming(completion: .failure(error))
-                }
-            } receiveValue: { [weak self] resultData in
-                guard self != nil else { return }
-                self?.interactor?.setInformationUpcoming(completion: .success(resultData.results))
             }
             .store(in: &cancellable)
     }
