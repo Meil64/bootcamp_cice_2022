@@ -15,7 +15,7 @@ protocol NetworkServiceInputProtocol {
 final class NetworkService: NetworkServiceInputProtocol {
     
     func requestGeneric<M>(payloadRequest: RequestDTO, entityClass: M.Type) -> AnyPublisher<M, NetworkError> where M : Decodable {
-        let baseUrl = URLEnpoint.getUrlBase(urlContext: payloadRequest.urlContext)
+        let baseUrl = URLEndpoint.getUrlBase(urlContext: payloadRequest.urlContext)
         let endpoint = "\(baseUrl)\(payloadRequest.endpoint)"
         guard let urlUnw = URL(string: endpoint) else {
             return Fail(error: NetworkError(status: .badURL)).eraseToAnyPublisher()

@@ -10,28 +10,36 @@ struct ShowsView: View {
                 if !self.viewModel.dataSourceAiringToday.isEmpty {
                     MoviesPosterCarousel(title: "Airing today",
                                          moviesModel: self.viewModel.dataSourceAiringToday,
-                                         isPoster: false)
+                                         isPoster: false,
+                                         isMovie: false,
+                                         isShow: true)
                 }
             }
             Group{
                 if !self.viewModel.dataSourceOnTheAir.isEmpty {
                     MoviesPosterCarousel(title: "On the air",
                                          moviesModel: self.viewModel.dataSourceOnTheAir,
-                                         isPoster: true)
+                                         isPoster: true,
+                                         isMovie: false,
+                                         isShow: true)
                 }
             }
             Group{
                 if !self.viewModel.dataSourcePopular.isEmpty {
                     MoviesPosterCarousel(title: "Popular",
                                          moviesModel: self.viewModel.dataSourcePopular,
-                                         isPoster: false)
+                                         isPoster: false,
+                                         isMovie: false,
+                                         isShow: true)
                 }
             }
             Group{
                 if !self.viewModel.dataSourceTopRated.isEmpty {
                     MoviesPosterCarousel(title: "Top rated",
                                          moviesModel: self.viewModel.dataSourceTopRated,
-                                         isPoster: true)
+                                         isPoster: true,
+                                         isMovie: false,
+                                         isShow: true)
                 }
             }
         }

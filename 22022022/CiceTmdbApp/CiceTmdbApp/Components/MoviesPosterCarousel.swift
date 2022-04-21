@@ -12,6 +12,8 @@ struct MoviesPosterCarousel: View {
     var title: String
     var moviesModel: [MoviesTVModelView]
     var isPoster: Bool
+    var isMovie: Bool
+    var isShow: Bool
     
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
@@ -29,7 +31,16 @@ struct MoviesPosterCarousel: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .top, spacing: 20) {
                     ForEach(self.moviesModel){movie in
-                        MoviePosterCell(model: movie, isPoster: self.isPoster)
+                        NavigationLink {
+                            if isMovie {
+                                DetailMovieCoordinator.view(dto: DetailMovieCoordinatorDTO(dataID: movie.id ?? 0))
+                            } else if isShow {
+                                DetailShowCoordinator.view()
+                            }
+                        } label: {
+                            MoviePosterCell(model: movie, isPoster: self.isPoster)
+                        }
+                        .buttonStyle(PlainButtonStyle())
                     }
                 }
             }

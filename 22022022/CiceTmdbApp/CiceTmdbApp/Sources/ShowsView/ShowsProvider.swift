@@ -26,7 +26,7 @@ extension ShowsProvider: ShowsProviderInputProtocol {
     func fetchDataAiringTodayProvider(){
         let request = RequestDTO(params: nil,
                                  method: .get,
-                                 endpoint: URLEnpoint.endpointShowsAiringToday,
+                                 endpoint: URLEndpoint.endpointShowsAiringToday,
                                  urlContext: .webService)
         self.networkService.requestGeneric(payloadRequest: request, entityClass: TVShowServerModel.self)
             .sink { [weak self] completion in
@@ -47,7 +47,7 @@ extension ShowsProvider: ShowsProviderInputProtocol {
     func fetchDataOnTheAirProvider() {
         let request = RequestDTO(params: nil,
                                  method: .get,
-                                 endpoint: URLEnpoint.endpointShowsOnTheAir,
+                                 endpoint: URLEndpoint.endpointShowsOnTheAir,
                                  urlContext: .webService)
         self.networkService.requestGeneric(payloadRequest: request, entityClass: TVShowServerModel.self)
             .sink { [weak self] completion in
@@ -68,7 +68,7 @@ extension ShowsProvider: ShowsProviderInputProtocol {
     func fetchDataPopularProvider() {
         let request = RequestDTO(params: nil,
                                  method: .get,
-                                 endpoint: URLEnpoint.endpointShowsPopular,
+                                 endpoint: URLEndpoint.endpointShowsPopular,
                                  urlContext: .webService)
         self.networkService.requestGeneric(payloadRequest: request, entityClass: TVShowServerModel.self)
             .sink { [weak self] completion in
@@ -89,7 +89,7 @@ extension ShowsProvider: ShowsProviderInputProtocol {
     func fetchDataTopRatedProvider() {
         let request = RequestDTO(params: nil,
                                  method: .get,
-                                 endpoint: URLEnpoint.endpointShowsTopRated,
+                                 endpoint: URLEndpoint.endpointShowsTopRated,
                                  urlContext: .webService)
         self.networkService.requestGeneric(payloadRequest: request, entityClass: TVShowServerModel.self)
             .sink { [weak self] completion in

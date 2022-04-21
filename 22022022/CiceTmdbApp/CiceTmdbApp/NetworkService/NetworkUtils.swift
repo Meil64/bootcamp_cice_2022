@@ -31,16 +31,16 @@ struct RequestDTO {
     var arrayParams: [[String: AnyObject]]?
     var method: HTTPMethods
     var endpoint: String
-    var urlContext: URLEnpoint.BaseUrlContext
+    var urlContext: URLEndpoint.BaseUrlContext
     
-    init(params: [String: AnyObject]?, method: HTTPMethods, endpoint: String, urlContext: URLEnpoint.BaseUrlContext) {
+    init(params: [String: AnyObject]?, method: HTTPMethods, endpoint: String, urlContext: URLEndpoint.BaseUrlContext) {
         self.params = params
         self.method = method
         self.endpoint = endpoint
         self.urlContext = urlContext
     }
     
-    init(arrayParams: [[String: AnyObject]]?, method: HTTPMethods, endpoint: String, urlContext: URLEnpoint.BaseUrlContext) {
+    init(arrayParams: [[String: AnyObject]]?, method: HTTPMethods, endpoint: String, urlContext: URLEndpoint.BaseUrlContext) {
         self.arrayParams = arrayParams
         self.method = method
         self.endpoint = endpoint
@@ -48,7 +48,7 @@ struct RequestDTO {
     }
 }
 
-struct URLEnpoint {
+struct URLEndpoint {
     
     #if PRO
     static let defaultEnvironment: TargetEnvironment = TargetEnvironment.PRO
@@ -65,19 +65,21 @@ struct URLEnpoint {
     }
     
     //MOVIES
-    static let endpointMoviesNowPlaying = "movie/now_playing?api_key=\(Constants.Api.getApiKey())"
-    static let endpointMoviesPopular = "movie/popular?api_key=\(Constants.Api.getApiKey())"
-    static let endpointMoviesTopRated = "movie/top_rated?api_key=\(Constants.Api.getApiKey())"
-    static let endpointMoviesUpcoming = "movie/upcoming?api_key=\(Constants.Api.getApiKey())"
+    static let endpointMoviesNowPlaying = "movie/now_playing?api_key=\(Constants.Api.getApiKey())&language=\(Utils.currentLanguage)"
+    static let endpointMoviesPopular = "movie/popular?api_key=\(Constants.Api.getApiKey())&language=\(Utils.currentLanguage)"
+    static let endpointMoviesTopRated = "movie/top_rated?api_key=\(Constants.Api.getApiKey())&language=\(Utils.currentLanguage)"
+    static let endpointMoviesUpcoming = "movie/upcoming?api_key=\(Constants.Api.getApiKey())&language=\(Utils.currentLanguage)"
+    static let endpointMovieDetail = "movie/%@?api_key=\(Constants.Api.getApiKey())&language=\(Utils.currentLanguage)&append_to_response=%@"
     
     //SHOWS
-    static let endpointShowsAiringToday = "tv/airing_today?api_key=\(Constants.Api.getApiKey())"
-    static let endpointShowsOnTheAir = "tv/on_the_air?api_key=\(Constants.Api.getApiKey())"
-    static let endpointShowsPopular = "tv/popular?api_key=\(Constants.Api.getApiKey())"
-    static let endpointShowsTopRated = "tv/top_rated?api_key=\(Constants.Api.getApiKey())"
+    static let endpointShowsAiringToday = "tv/airing_today?api_key=\(Constants.Api.getApiKey())&language=\(Utils.currentLanguage)"
+    static let endpointShowsOnTheAir = "tv/on_the_air?api_key=\(Constants.Api.getApiKey())&language=\(Utils.currentLanguage)"
+    static let endpointShowsPopular = "tv/popular?api_key=\(Constants.Api.getApiKey())&language=\(Utils.currentLanguage)"
+    static let endpointShowsTopRated = "tv/top_rated?api_key=\(Constants.Api.getApiKey())&language=\(Utils.currentLanguage)"
+    static let endpointShowDetail = "tv/%@?api_key=\(Constants.Api.getApiKey())&language=\(Utils.currentLanguage)&append_to_response=%@"
 }
 
-extension URLEnpoint{
+extension URLEndpoint{
     static func getUrlBase(urlContext: BaseUrlContext) -> String {
         switch urlContext {
         case .backend:

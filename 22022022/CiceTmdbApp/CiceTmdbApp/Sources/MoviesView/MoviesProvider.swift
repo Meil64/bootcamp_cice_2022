@@ -31,7 +31,7 @@ extension MoviesProvider: MoviesProviderInputProtocol {
     func fetchDataNowPlayingProvider(){
         let request = RequestDTO(params: nil,
                                  method: .get,
-                                 endpoint: URLEnpoint.endpointMoviesNowPlaying,
+                                 endpoint: URLEndpoint.endpointMoviesNowPlaying,
                                  urlContext: .webService)
         self.networkService.requestGeneric(payloadRequest: request, entityClass: MoviesServerModel.self)
             .sink { [weak self] completion in
@@ -52,7 +52,7 @@ extension MoviesProvider: MoviesProviderInputProtocol {
     func fetchDataPopularProvider() {
         let request = RequestDTO(params: nil,
                                  method: .get,
-                                 endpoint: URLEnpoint.endpointMoviesPopular,
+                                 endpoint: URLEndpoint.endpointMoviesPopular,
                                  urlContext: .webService)
         self.networkService.requestGeneric(payloadRequest: request, entityClass: MoviesServerModel.self)
             .sink { [weak self] completion in
@@ -73,7 +73,7 @@ extension MoviesProvider: MoviesProviderInputProtocol {
     func fetchDataTopRatedProvider() {
         let request = RequestDTO(params: nil,
                                  method: .get,
-                                 endpoint: URLEnpoint.endpointMoviesTopRated,
+                                 endpoint: URLEndpoint.endpointMoviesTopRated,
                                  urlContext: .webService)
         self.networkService.requestGeneric(payloadRequest: request, entityClass: MoviesServerModel.self)
             .sink { [weak self] completion in
@@ -94,7 +94,7 @@ extension MoviesProvider: MoviesProviderInputProtocol {
     func fetchDataUpcomingProvider() {
         let request = RequestDTO(params: nil,
                                  method: .get,
-                                 endpoint: URLEnpoint.endpointMoviesUpcoming,
+                                 endpoint: URLEndpoint.endpointMoviesUpcoming,
                                  urlContext: .webService)
         self.networkService.requestGeneric(payloadRequest: request, entityClass: MoviesServerModel.self)
             .sink { [weak self] completion in

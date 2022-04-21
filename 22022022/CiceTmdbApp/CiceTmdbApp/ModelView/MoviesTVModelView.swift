@@ -8,6 +8,8 @@
 import Foundation
 
 struct MoviesTVModelView: Identifiable {
+
+    //Este modelo de datos se utiliza tanto para Movie como para TVShow
     
     let id: Int?
     let backdropPath: String?
