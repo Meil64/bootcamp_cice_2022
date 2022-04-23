@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MovieCastCarouselView: View {
+struct CastCarouselView: View {
     
     let model: [Cast]
     
@@ -16,7 +16,7 @@ struct MovieCastCarouselView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .top, spacing: 12) {
                     ForEach(self.model) { item in
-                        MovieCastCell(model: item)
+                        CastCell(model: item)
                     }
                 }
             }
@@ -24,7 +24,7 @@ struct MovieCastCarouselView: View {
     }
 }
 
-struct MovieCastCell: View {
+struct CastCell: View {
     
     let model: Cast    
     @ObservedObject var imageLoaderVM = ImageLoader()
@@ -61,7 +61,7 @@ struct MovieCastCell: View {
 
 struct MovieCastCarouselView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieCastCarouselView(model: [Cast(adult: false,
+        CastCarouselView(model: [Cast(adult: false,
                                            gender: 1,
                                            id: 3156344,
                                            knownForDepartment: "Acting",

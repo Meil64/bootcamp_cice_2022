@@ -35,7 +35,7 @@ struct MoviesPosterCarousel: View {
                             if isMovie {
                                 DetailMovieCoordinator.view(dto: DetailMovieCoordinatorDTO(dataID: movie.id ?? 0))
                             } else if isShow {
-                                DetailShowCoordinator.view()
+                                DetailShowCoordinator.view(dto: DetailShowCoordinatorDTO(dataID: movie.id ?? 0))
                             }
                         } label: {
                             MoviePosterCell(model: movie, isPoster: self.isPoster)

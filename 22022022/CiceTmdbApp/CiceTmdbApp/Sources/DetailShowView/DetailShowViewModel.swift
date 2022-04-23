@@ -3,7 +3,7 @@ import Foundation
 
 // Output del Interactor
 protocol DetailShowInteractorOutputProtocol: BaseInteractorOutputProtocol {
-    
+    func setInformationDetailShow(data: DetailShowServerModel?)
 }
 
 final class DetailShowViewModel: BaseViewModel, ObservableObject {
@@ -14,16 +14,21 @@ final class DetailShowViewModel: BaseViewModel, ObservableObject {
     }
     
     //MARK: - Variables @Published
-
+    @Published var data: DetailShowServerModel?
     
     //MARK: - Métodos públicos para View
     func fetchData() {
-
+        self.interactor?.fetchDataDetailShowInteractor()
     }
     
 }
 
 // Output del Interactor
 extension DetailShowViewModel: DetailShowInteractorOutputProtocol {
-    
+    func setInformationDetailShow(data: DetailShowServerModel?){
+        guard let dataUnw = data else {
+            return
+        }
+        self.data = dataUnw
+    }
 }
