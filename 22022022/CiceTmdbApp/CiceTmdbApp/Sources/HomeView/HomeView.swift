@@ -34,7 +34,7 @@ struct HomeView: View {
         case .shows:
             ShowsCoordinator.navigation()
         case .people:
-            MoviesCoordinator.navigation()
+            PeoplePopularCoordinator.navigation()
         case .search:
             MoviesCoordinator.navigation()
         case .profile:

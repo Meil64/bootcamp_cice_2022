@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 // MARK: - DetailShowServerModel
 struct DetailShowServerModel: Codable {
@@ -134,6 +135,17 @@ struct DetailShowServerModel: Codable {
     
     var youtubeTrailers: [VideoApiResult]? {
         videos?.results?.filter { $0.youtubeURL != nil }
+    }
+    
+    var seasonEpisodes: String {
+        guard let seasonCountUnw = numberOfSeasons else {
+            return ""
+        }
+        guard let episodeCountUnw = numberOfEpisodes else {
+            return ""
+        }
+        
+        return "\(seasonCountUnw)" + "x" + "\(episodeCountUnw / seasonCountUnw)"
     }
 }
 

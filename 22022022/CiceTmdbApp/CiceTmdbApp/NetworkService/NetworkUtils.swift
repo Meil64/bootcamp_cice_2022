@@ -77,6 +77,9 @@ struct URLEndpoint {
     static let endpointShowsPopular = "tv/popular?api_key=\(Constants.Api.getApiKey())&language=\(Utils.currentLanguage)"
     static let endpointShowsTopRated = "tv/top_rated?api_key=\(Constants.Api.getApiKey())&language=\(Utils.currentLanguage)"
     static let endpointShowDetail = "tv/%@?api_key=\(Constants.Api.getApiKey())&language=\(Utils.currentLanguage)&append_to_response=%@"
+    
+    //PEOPLE
+    static let endpointPopularPeople = "person/popular?api_key=\(Constants.Api.getApiKey())&language=\(Utils.currentLanguage)"
 }
 
 extension URLEndpoint{

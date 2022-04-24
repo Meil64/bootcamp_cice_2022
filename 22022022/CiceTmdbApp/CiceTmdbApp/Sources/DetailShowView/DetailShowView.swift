@@ -135,8 +135,16 @@ struct DetailShowView: View {
                         .buttonStyle(PlainButtonStyle())
                     }
                 }
-                
             }
+            
+            if !(self.viewModel.data?.seasonEpisodes ?? "").isEmpty {
+                Text("Seasons")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .padding(.top)
+                Text((self.viewModel.data?.seasonEpisodes ?? "") + " episodes.")
+            }
+            
         }
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MoviesTVModelView: Identifiable {
+struct MoviesTVModel: Identifiable {
 
     //Este modelo de datos se utiliza tanto para Movie como para TVShow
     

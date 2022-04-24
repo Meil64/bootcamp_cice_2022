@@ -36,11 +36,11 @@ final class MoviesInteractor: BaseInteractor {
     }
     
     //Métodos
-    func getMoviesTVModelViewFromData(data: [MovieApiResult]?) -> [MoviesTVModelView]? {
-        var datasourceMoviesTV: [MoviesTVModelView] = []
+    func getMoviesTVModelViewFromData(data: [MovieApiResult]?) -> [MoviesTVModel]? {
+        var datasourceMoviesTV: [MoviesTVModel] = []
         if let dataUnw = data {
             for i in 0..<dataUnw.count {
-                let object = MoviesTVModelView(id: dataUnw[i].id,
+                let object = MoviesTVModel(id: dataUnw[i].id,
                                                backdropPath: dataUnw[i].backdropPath,
                                                posterPath: dataUnw[i].posterPath,
                                                title: dataUnw[i].title)
