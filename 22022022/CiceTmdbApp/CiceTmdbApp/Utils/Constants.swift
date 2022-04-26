@@ -16,4 +16,6 @@ struct Constants {
             return Obfuscator().reveal(key: apiKey)
         }
     }
+    
+    static var totalPages = 3
 }
