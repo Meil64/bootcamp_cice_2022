@@ -15,7 +15,8 @@ struct ContentView: View {
         VStack{
             
             if currentPage > Constants.totalPages {
-                HomeView()
+                //HomeView()
+                LoginView(authType: .signIn)
             } else {
                 OnboardingView()
             }
