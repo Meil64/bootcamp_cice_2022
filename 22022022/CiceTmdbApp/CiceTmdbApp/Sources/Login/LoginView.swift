@@ -29,44 +29,20 @@ struct LoginView: View {
                         CustomTextField(placeholder: "Email",
                                         title: "Email",
                                         text: self.$email)
-                            .padding(10)
-                            .background(
-                                Color(red: 239/255,
-                                      green: 243/255,
-                                      blue: 244/255,
-                                      opacity: 1)
-                            )
-                            .cornerRadius(10)
-                            .shadow(color: Color.gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                            .textFieldStyle()
                         
                         CustomSecureTextField(placeholder: "Password",
                                               title: "Password",
                                               text: self.$password,
                                               showPassword: self.showPassword)
-                            .padding(10)
-                            .background(
-                                Color(red: 239/255,
-                                      green: 243/255,
-                                      blue: 244/255,
-                                      opacity: 1)
-                            )
-                            .cornerRadius(10)
-                            .shadow(color: Color.gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                            .textFieldStyle()
                         
                         if authType == .signUp {
                             CustomSecureTextField(placeholder: "Confirm Password",
                                                   title: "Confirm Password",
                                                   text: self.$confirmPassword,
                                                   showPassword: self.showPassword)
-                                .padding(10)
-                                .background(
-                                    Color(red: 239/255,
-                                          green: 243/255,
-                                          blue: 244/255,
-                                          opacity: 1)
-                                )
-                                .cornerRadius(10)
-                                .shadow(color: Color.gray.opacity(0.3), radius: 10, x: 5, y: 5)
+                                .textFieldStyle()
                         }
                             
                         Toggle("show password", isOn: self.$showPassword)
@@ -79,13 +55,7 @@ struct LoginView: View {
                             self.authEmailTouched()
                         } label: {
                             Text(self.authType.text)
-                                .font(.headline)
-                                .lineLimit(2)
-                                .frame(width: UIScreen.main.bounds.width * 0.8, height: 50)
-                                .background(
-                                    Color(red: 239/255, green: 243/255, blue: 244/255)
-                                )
-                                .clipShape(Capsule())
+                                .buttonStyleH1()
                         }
                         .foregroundColor(.gray)
                         .padding()
@@ -95,13 +65,7 @@ struct LoginView: View {
                             self.footerTouched()
                         } label: {
                             Text(self.authType.footerText)
-                                .font(.headline)
-                                .lineLimit(2)
-                                .frame(width: UIScreen.main.bounds.width * 0.8, height: 50)
-                                .background(
-                                    Color(red: 239/255, green: 243/255, blue: 244/255)
-                                )
-                                .clipShape(Capsule())
+                                .buttonStyleH1()
                         }
                         .foregroundColor(.gray)
                         .padding()
