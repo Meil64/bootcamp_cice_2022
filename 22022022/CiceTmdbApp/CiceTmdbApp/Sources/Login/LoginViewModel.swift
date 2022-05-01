@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 enum LoginOption {
     case sessionWithApple
@@ -29,3 +30,69 @@ enum AuthenticationType: String {
         }
     }
 }
+
+final class LoginViewModel: ObservableObject {
+    
+    @Published var userLogged: User?
+    @Published var isAuthenticated = false
+    @Published var error: NSError?
+    
+    private let authenticationData = Auth.auth()
+    
+    required init() {
+        userLogged = authenticationData.currentUser
+        authenticationData.addStateDidChangeListener(stateAuthModified)
+    }
+    
+    private func stateAuthModified(with auth: Auth, user: User?) {
+        guard user != self.userLogged else { return }
+        self.userLogged = user
+    }
+    
+    //SignIn
+    func signIn(with loginOption: LoginOption) {
+        self.isAuthenticated = true
+        self.error = nil
+        switch loginOption {
+        case .sessionWithApple:
+            print("login con Apple")
+        case .emailAndPassword(let email, let password):
+            authenticationData.signIn(withEmail: email,
+                                      password: password,
+                                      completion: handlerAuthState)
+        }
+    }
+    
+    //SignUp
+    func signUp(email: String, password: String, passwordConfirmation: String) {
+        guard password == passwordConfirmation else {
+            self.error = NSError(domain: "", code: 9210, userInfo: [NSLocalizedDescriptionKey : "La password y la confirmación no son iguales"])
+            return
+        }
+        self.isAuthenticated = true
+        self.error = nil
+        authenticationData.createUser(withEmail: email, password: password, completion: handlerAuthState)
+    }
+    
+    //Logout
+    func logoutSession() {
+        do {
+            try authenticationData.signOut()
+        } catch {
+            self.error = NSError(domain: "", code: 9999, userInfo: [NSLocalizedDescriptionKey : "El usuario no ha logrado cerrar la sesión"])
+        }
+    }
+    
+    //Handler
+    private func handlerAuthState(with auth: AuthDataResult?, and error: Error?) {
+        DispatchQueue.main.async {
+            self.isAuthenticated = false
+            if let user = auth?.user {
+                self.userLogged = user
+            } else if let errorUnw = error {
+                self.error = errorUnw as NSError
+            }
+        }
+    }
+}
+
