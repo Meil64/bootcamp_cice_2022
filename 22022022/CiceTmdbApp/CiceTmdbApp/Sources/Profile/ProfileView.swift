@@ -12,7 +12,7 @@ struct ProfileView: View {
     @EnvironmentObject var viewModelSession: LoginViewModel
     
     var body: some View {
-        if self.viewModelSession.isAuthenticated {
+        if self.viewModelSession.userLogged != nil {
             Form {
                 Section("Profile data") {
                     Button {
