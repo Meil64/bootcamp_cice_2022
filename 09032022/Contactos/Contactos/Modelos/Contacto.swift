@@ -28,6 +28,7 @@ extension Contacto {
         let request: NSFetchRequest<Contacto> = Contacto.fetchRequest() as! NSFetchRequest<Contacto>
         //SQL ORDER BY NOMBRE ASC
         request.sortDescriptors = [NSSortDescriptor(key: "nombre", ascending: true)]
+        //request.predicate = 
         return request
     }
     
