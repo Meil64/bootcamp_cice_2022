@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DetalleContactoView: View {
     
+    @SwiftUI.Environment(\.presentationMode) var presentedMode //Para que refresque la vista tras editar
     var data: Contacto
     
     var body: some View {
@@ -37,7 +38,7 @@ struct DetalleContactoView: View {
                 }
                 
                 NavigationLink{
-                    Text("Editar Contacto")
+                    AgregarContactoView(esEdicion: true, data: self.data)
                 } label: {
                     Image(systemName: "pencil")
                         .circularButton(fontSize: 30,

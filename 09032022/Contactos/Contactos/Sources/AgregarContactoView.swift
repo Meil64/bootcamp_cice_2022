@@ -21,6 +21,9 @@ struct AgregarContactoView: View {
     @State private var nombre = ""
     @State private var telefono = ""
     
+    var esEdicion = false
+    var data: Contacto?
+    
     var body: some View {
         ScrollView{
             VStack(spacing: 20) {
@@ -46,10 +49,10 @@ struct AgregarContactoView: View {
                     self.salvarContacto()
                 } label: {
                     HStack(spacing: 20) {
-                        Image(systemName: "person.crop.circle")
+                        Image(systemName: esEdicion ? "pencil" : "person.crop.circle")
                             .foregroundColor(.white)
                             .font(.title)
-                        Text("Guardar contacto")
+                        Text(esEdicion ? "Editar contacto" : "Guardar contacto")
                             .foregroundColor(.white)
                             .font(.title2)
                     }
@@ -58,26 +61,53 @@ struct AgregarContactoView: View {
                     .clipShape(Capsule())
                 }
             }
+            .onAppear(perform: {
+                if esEdicion {
+                    self.nombre = data?.nombre ?? ""
+                    self.apellido = data?.apellido ?? ""
+                    self.direccion = data?.direccion ?? ""
+                    self.email = data?.email ?? ""
+                    self.telefono = data?.telefono ?? ""
+                    self.genero = data?.genero ?? ""
+                    self.edad = data?.edad ?? ""
+                }
+            })
             .padding(10)
         }
-        .navigationTitle("Agregar Contacto")
+        .navigationTitle(esEdicion ? "Editar Contacto" : "Agregar Contacto")
     }
     
     //MARK: Private methods
     private func salvarContacto() {
-        //Accedemos a la entidad que contiene la BBDD
-        let nuevoContacto = Contacto(context: self.viewContext)
+        
         let inicialN = String(self.nombre.first ?? " ")
         let inicialA = String(self.nombre.first ?? " ")
         
-        nuevoContacto.apellido = self.apellido
-        nuevoContacto.direccion = self.direccion
-        nuevoContacto.edad = self.edad
-        nuevoContacto.email = self.email
-        nuevoContacto.genero = self.genero
-        nuevoContacto.iniciales = inicialN + inicialA
-        nuevoContacto.nombre = self.nombre
-        nuevoContacto.telefono = self.telefono
+        if self.esEdicion{
+            
+            self.data?.nombre = self.nombre
+            self.data?.apellido = self.apellido
+            self.data?.direccion = self.direccion
+            self.data?.edad = self.edad
+            self.data?.email = self.email
+            self.data?.genero = self.genero
+            self.data?.iniciales = inicialN + inicialA
+            self.data?.telefono = self.telefono
+            
+        } else {
+            
+            //Accedemos a la entidad que contiene la BBDD
+            let nuevoContacto = Contacto(context: self.viewContext)
+            
+            nuevoContacto.apellido = self.apellido
+            nuevoContacto.direccion = self.direccion
+            nuevoContacto.edad = self.edad
+            nuevoContacto.email = self.email
+            nuevoContacto.genero = self.genero
+            nuevoContacto.iniciales = inicialN + inicialA
+            nuevoContacto.nombre = self.nombre
+            nuevoContacto.telefono = self.telefono
+        }
         
         do {
             try self.viewContext.save()
