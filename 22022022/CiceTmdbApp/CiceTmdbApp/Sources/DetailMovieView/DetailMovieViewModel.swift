@@ -15,10 +15,20 @@ final class DetailMovieViewModel: BaseViewModel, ObservableObject {
     
     //MARK: - Variables @Published
     @Published var data: DetailMovieServerModel?
+    @Published var isSaved = false
     
     //MARK: - Métodos públicos para View
     func fetchData() {
         self.interactor?.fetchDataDetailMovieInteractor()
+    }
+    
+    func saveDataAsFavorites() {
+        if(self.isSaved){
+            self.interactor?.removeDataFromFavoritesInteractor()
+        } else {
+            self.interactor?.saveDataAsFavoritesInteractor()
+        }
+        self.isSaved.toggle()
     }
     
 }
@@ -29,6 +39,16 @@ extension DetailMovieViewModel: DetailMovieInteractorOutputProtocol {
         guard let dataUnw = data else {
             return
         }
-        self.data = dataUnw        
+        self.data = dataUnw
+        DDBB.shared.getAllLocal { result in
+            result?.downloads.map{ item in
+                item.map{ itemX in
+                    self.isSaved = "\(self.data?.id ?? 0)" == itemX.id
+                }
+            }
+        } failure: { error in
+            debugPrint(error)
+        }
+
     }
 }

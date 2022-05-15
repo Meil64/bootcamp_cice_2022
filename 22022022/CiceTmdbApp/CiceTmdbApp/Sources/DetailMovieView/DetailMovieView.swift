@@ -44,9 +44,9 @@ struct DetailMovieView: View {
                 Spacer()
                 
                 Button{
-                    //Aqui salvaremos las peliculas como favoritas en una BBDD (1.Firebase | 2.UserDefault)
+                    self.viewModel.saveDataAsFavorites()
                 } label: {
-                    Image(systemName: "bookmark")
+                    Image(systemName: self.viewModel.isSaved ? "bookmark.fill" : "bookmark")
                 }
                 .padding()
                 .background(Color.white.opacity(0.7))

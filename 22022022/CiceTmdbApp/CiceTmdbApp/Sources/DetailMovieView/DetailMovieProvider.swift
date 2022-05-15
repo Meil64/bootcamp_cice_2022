@@ -4,6 +4,8 @@ import Combine
 // Input Protocol
 protocol DetailMovieProviderInputProtocol: BaseProviderInputProtocol {
     func fetchDataDetailMovieProvider()
+    func saveDataAsFavoritesProvider()
+    func removeDataFromFavoritesProvider()
 }
 
 final class DetailMovieProvider : BaseProvider{
@@ -40,6 +42,21 @@ extension DetailMovieProvider: DetailMovieProviderInputProtocol {
             .store(in: &cancellable)
     }
     
+    func saveDataAsFavoritesProvider(){
+        DDBB.shared.addLocal(favorite: DownloadNewModel(pId: "\(self.dataDTO?.dataID ?? 0)")) { result in
+            debugPrint("salvado correctamente")
+        } failure: { error in
+            debugPrint("Error intentando guardar: \(error ?? "")")
+        }
+    }
+    
+    func removeDataFromFavoritesProvider(){
+        DDBB.shared.deleteLocal(favorite: DownloadNewModel(pId: "\(self.dataDTO?.dataID ?? 0)")) { result in
+            debugPrint("borrado correctamente")
+        } failure: { error in
+            debugPrint("Error intentando borrar: \(error ?? "")")
+        }
+    }
 }
 
 //MARK: - Request de apoyo

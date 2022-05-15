@@ -34,6 +34,7 @@ struct DetailShowView: View {
                 
                 Spacer()
                 
+                /* TODO como en Movies
                 Button{
                     //Aqui salvaremos las series como favoritas en una BBDD (1.Firebase | 2.UserDefault)
                 } label: {
@@ -43,7 +44,7 @@ struct DetailShowView: View {
                 .background(Color.white.opacity(0.7))
                 .clipShape(Circle())
                 .padding(EdgeInsets(top: 40, leading: 20, bottom: 0, trailing: 0))
-                            
+                */
             }
             .foregroundColor(Color.red)
         }
