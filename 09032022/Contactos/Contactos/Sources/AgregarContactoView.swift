@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 struct AgregarContactoView: View {
     
@@ -113,9 +114,52 @@ struct AgregarContactoView: View {
             try self.viewContext.save()
             print("salvado correctamente")
             self.presentedMode.wrappedValue.dismiss()
+            
+            if !self.esEdicion {
+                self.localNotification()
+            }
+            
         } catch let error as NSError {
             print("Error al salvar los datos", error.localizedDescription)
         }
+    }
+    
+    private func localNotification() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { _, _ in
+            
+        }
+        
+        //Contenido
+        let contenido = UNMutableNotificationContent()
+        contenido.title = "Mi notificación"
+        contenido.subtitle = "Mi subtítulo de notificación"
+        contenido.body = "Esta es mi primera notificación"
+        contenido.sound = .defaultCritical
+        contenido.badge = 1
+        
+        //Imagen
+        if let path = Bundle.main.path(forResource: "notiimage", ofType: "jpg") {
+            let url = URL(fileURLWithPath: path)
+            do {
+                let image = try UNNotificationAttachment(identifier: "notiimage", url: url, options: nil)
+                contenido.attachments = [image]
+            } catch {
+                print("No carga la imagen")
+            }
+        }
+        
+        //Botones
+        let boton1 = UNNotificationAction(identifier: "boton1", title: "Abrir la vista detalle", options: .foreground)
+        let cancel = UNNotificationAction(identifier: "cancelar", title: "Cancelar", options: .destructive)
+        
+        let categoria = UNNotificationCategory(identifier: "acciones", actions: [boton1, cancel], intentIdentifiers: [])
+        UNUserNotificationCenter.current().setNotificationCategories([categoria])
+        contenido.categoryIdentifier = "acciones"
+        
+        //Disparador
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let request = UNNotificationRequest(identifier: "noti", content: contenido, trigger: trigger)
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
 }
 

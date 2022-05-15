@@ -19,6 +19,7 @@
 		2C2ACA65283023BD00957081 /* PersistanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2ACA64283023BD00957081 /* PersistanceViewModel.swift */; };
 		2C73FCE728311DB200B5BDD6 /* DetalleContactoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73FCE628311DB200B5BDD6 /* DetalleContactoView.swift */; };
 		2C73FCE928311DFB00B5BDD6 /* BotonCircularModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C73FCE828311DFB00B5BDD6 /* BotonCircularModifier.swift */; };
+		2C73FCEB28312C1000B5BDD6 /* notiimage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C73FCEA28312C1000B5BDD6 /* notiimage.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		2C2ACA64283023BD00957081 /* PersistanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceViewModel.swift; sourceTree = "<group>"; };
 		2C73FCE628311DB200B5BDD6 /* DetalleContactoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleContactoView.swift; sourceTree = "<group>"; };
 		2C73FCE828311DFB00B5BDD6 /* BotonCircularModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BotonCircularModifier.swift; sourceTree = "<group>"; };
+		2C73FCEA28312C1000B5BDD6 /* notiimage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = notiimage.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				2C2ACA58283017A600957081 /* Modelos */,
 				2C2ACA542830166900957081 /* CoreApp */,
 				2C2ACA4A2830164600957081 /* Assets.xcassets */,
+				2C73FCEA28312C1000B5BDD6 /* notiimage.jpg */,
 				2C2ACA4C2830164600957081 /* Preview Content */,
 				2C2ACA552830169800957081 /* Contactos.xcdatamodeld */,
 			);
@@ -190,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C2ACA4E2830164600957081 /* Preview Assets.xcassets in Resources */,
+				2C73FCEB28312C1000B5BDD6 /* notiimage.jpg in Resources */,
 				2C2ACA4B2830164600957081 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
